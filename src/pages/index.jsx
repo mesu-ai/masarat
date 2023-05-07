@@ -4,6 +4,7 @@ import HeroSection from '@/components/organizations/HeroSection';
 import Header from '@/layout/header/Header';
 import Footer from '@/layout/footer/Footer';
 import bgimage from '@/assets/images/heroBg.svg';
+import ContactUsBanner from '@/components/organizations/ContactUsBanner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +23,7 @@ const Home = () => {
   return (
    
     <>
-      <p>Test other sectin</p>
+     <ContactUsBanner/>
     </>
 
   );
