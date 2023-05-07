@@ -39,7 +39,7 @@ const Header = ({ isTransparent=false }) => {
   return (
     // <nav className={`container mx-auto px-6 xl:px-10 sm:px-0 py-6 ${isTransparent ? 'bg-transparent' : 'bg-white'}`}></nav>
     // <div className={`${isTransparent ? 'bg-transparent' : 'bg-info md:bg-white'}`}>
-      <nav style={bgstyle} className="container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3">
+      <nav  className="container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3">
         <div className="relative">
           <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
             <button

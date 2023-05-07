@@ -20,9 +20,18 @@ module.exports = {
     },
   },
   plugins: [],
+  // future: {
+  //   // add support for CSS transforms
+  //   removeDeprecatedGapUtilities: true,
+  //   purgeLayersByDefault: true,
+  //   defaultLineHeights: true,
+  //   standardFontWeights: true,
+  //   applyComplexClasses: true,
+  //   layerOrdering: true,
+  //   extendTailwindCss: true,
+  //   compatibility: {
+  //     transform: true,
+  //   },
+  // },
 }
-
-
-
-// background-image: linear-gradient(102.53deg,  #0f241fb3 3.7%,  #0F241E 102.89%);
 
