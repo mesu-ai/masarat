@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+
+.bg-gradient-greentimber {
+  color: #F8FAFC;
+  background-image: linear-gradient(102.53deg,  #0f241fb3 3.7%,  #0F241E 102.89%);
 }
