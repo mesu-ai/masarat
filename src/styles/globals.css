@@ -37,3 +37,7 @@ body {
   background-image: linear-gradient(102.06deg, rgba(155, 235, 168, 0.56) 0%, rgba(155, 235, 168, 0.8) 100.77%);;
 }
 
+.bg-gradient-darkBlack {
+  background-image: linear-gradient(98.25deg, rgba(5, 13, 9, 0.9) 43.68%, #050D0B 100%);;
+}
+

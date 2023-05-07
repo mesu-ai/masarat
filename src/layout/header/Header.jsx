@@ -58,7 +58,7 @@ const Header = ({ isTransparent=false }) => {
           <div className="flex justify-between items-center">
             <div>
               <NavLink path="/">
-              <Image src={logo} alt=''/>
+              <Image src={logo} alt='logo'/>
               </NavLink>
             </div>
 
