@@ -6,7 +6,7 @@
   xmlns='http://www.w3.org/2000/svg'
 ></svg>;
 
-const ArrowNext = ({ width = 32, height = 16, className = '' }) => {
+const ArrowNext = ({ width = 32, height = 16, className = '', color="#1A3D37" }) => {
   return (
     <svg
       width={width}

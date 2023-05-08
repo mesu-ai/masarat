@@ -6,6 +6,7 @@ import Footer from '@/layout/footer/Footer';
 import bgimage from '@/assets/images/heroBg.svg';
 import ContactUsBanner from '@/components/organizations/ContactUsBanner';
 import OurServices from '@/components/organizations/OurServices';
+import OurProjects from '@/components/organizations/OurProjects';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ const Home = () => {
   return (
     <>
       <OurServices />
+      <OurProjects/>
       <ContactUsBanner />
     </>
   );

@@ -10,7 +10,6 @@ import ParagraphText from '../atoms/ParagraphText';
 import ArrowNext from '@/assets/svgs/ArrowNext';
 
 const OurServices = () => {
-  
   const servicedatas = [
     {
       icon: statagyIcon,
@@ -61,7 +60,7 @@ const OurServices = () => {
         {servicedatas.map((item, index) => (
           <Card
             key={index}
-            className='space-y-4 bg-white/10  hover:bg-white px-7 py-8  shadow-lightShadow hover:shadow-hoverShadow border border-[#E5EAF1]'
+            className='group space-y-4 bg-white/10  hover:bg-white px-7 py-8  shadow-lightShadow hover:shadow-hoverShadow border border-[#E5EAF1]'
           >
             <Image
               className='mb-10'
@@ -74,7 +73,15 @@ const OurServices = () => {
             <Heading2XL>{item?.title}</Heading2XL>
 
             <ParagraphText>{item?.shortDecption}</ParagraphText>
-            <button className='text-lg font-medium text-timberGreen flex items-center'>Read More <ArrowNext className={` ms-4 ${i18n.language==='en' ? '' : 'rotate-180'}`}/></button>
+            <button className='text-lg font-medium  text-opacity-50 group-hover:text-opacity-100  text-timberGreen flex items-center'>
+              Read More{' '}
+              <ArrowNext
+                className={`text-opacity-50 group-hover:text-opacity-100  text-timberGreen ms-4 ${
+                  i18n.language === 'en' ? '' : 'rotate-180'
+                }`}
+                // color={`text-opacity-50 group-hover:text-opacity-100  text-timberGreen`}
+              />
+            </button>
           </Card>
         ))}
       </div>
