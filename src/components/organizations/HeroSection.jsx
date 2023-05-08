@@ -4,8 +4,10 @@ import HeadingXL from '../atoms/HeadingXL';
 import Heading6XL from '../atoms/Heading6XL';
 import ParagraphText from '../atoms/ParagraphText';
 import Button from '../atoms/Button';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+  const {t} =useTranslation();
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 '>
       <div className='grid grid-cols-2'>
@@ -14,7 +16,7 @@ const HeroSection = () => {
             <SupportIcon />
             <HeadingXL>Best Supportive Team Ever</HeadingXL>
           </li>
-          <Heading6XL>We Support To Grow Your Business</Heading6XL>
+          <Heading6XL>{t('We Support To Grow Your Business')}</Heading6XL>
           <ParagraphText className='text-slateBlue mt-10'>
             Choose Masarat Digital to get software development, AI & Tech
             Consulting support for your digital products.{' '}
