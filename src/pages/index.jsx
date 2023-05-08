@@ -7,6 +7,7 @@ import bgimage from '@/assets/images/heroBg.svg';
 import ContactUsBanner from '@/components/organizations/ContactUsBanner';
 import OurServices from '@/components/organizations/OurServices';
 import OurProjects from '@/components/organizations/OurProjects';
+import OurSolution from '@/components/organizations/OurSolution';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,6 +23,7 @@ const Home = () => {
   return (
     <>
       <OurServices />
+      <OurSolution/>
       <OurProjects/>
       <ContactUsBanner />
     </>

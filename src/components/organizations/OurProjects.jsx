@@ -11,65 +11,66 @@ const projectsdatas = [
   {
     icon: project1,
     title: 'Digital Strategy',
-    shortDecption:
-      'Lorem ipsum dolor sit amet' },
+    shortDecption: 'Lorem ipsum dolor sit amet',
+  },
   {
     icon: project2,
     title: 'Digital Strategy',
-    shortDecption:
-    'Lorem ipsum dolor sit amet'  },
+    shortDecption: 'Lorem ipsum dolor sit amet',
+  },
   {
     icon: project3,
     title: 'Digital Strategy',
-    shortDecption:
-    'Lorem ipsum dolor sit amet'  },
+    shortDecption: 'Lorem ipsum dolor sit amet',
+  },
   {
     icon: project1,
     title: 'Digital Strategy',
-    shortDecption:
-    'Lorem ipsum dolor sit amet'  },
+    shortDecption: 'Lorem ipsum dolor sit amet',
+  },
   {
     icon: project2,
     title: 'Digital Strategy',
-    shortDecption:
-    'Lorem ipsum dolor sit amet'  },
+    shortDecption: 'Lorem ipsum dolor sit amet',
+  },
   {
     icon: project3,
     title: 'Digital Strategy',
-    shortDecption:
-    'Lorem ipsum dolor sit amet'  },
+    shortDecption: 'Lorem ipsum dolor sit amet',
+  },
 ];
 
 const OurProjects = () => {
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3'>
-    <div className='text-center space-y-4'>
-      <HeadingL>Our Projects</HeadingL>
-      <Heading5XL>Latest Project We Have Delivered</Heading5XL>
-    </div>
-    <div className='mt-4 grid grid-cols-3 gap-8 lg:gap-14  py-12 '>
-      {projectsdatas.map((item, index) => (
-        <Card
-          key={index}
-          className='group relative rounded-2xl  bg-white/10  hover:bg-white  shadow-lightShadow hover:shadow-hoverShadow hover:border-4 border-lightBlue'
-        >
-          <Image
-            className=' '
-            src={item?.icon}
-            alt='icon'
-            // width={20}
-            // height={20}
-          />
+      <div className='text-center space-y-4'>
+        <HeadingL>Our Projects</HeadingL>
+        <Heading5XL>Latest Project We Have Delivered</Heading5XL>
+      </div>
+      <div className='mt-4 grid grid-cols-3 gap-8 lg:gap-14  py-12 '>
+        {projectsdatas.map((item, index) => (
+          <Card
+            key={index}
+            className='group relative rounded-2xl  bg-white/10  hover:bg-white  shadow-lightShadow hover:shadow-hoverShadow hover:border-4 border-lightBlue'
+          >
+            <Image
+              className=' '
+              src={item?.icon}
+              alt='icon'
+              // width={20}
+              // height={20}
+            />
 
-          <div className='hidden group-hover:block absolute -bottom-10 right-10 bg-white rounded-lg py-3.5 px-5'>
-           <HeadingL className='text-blackPearl'>{item?.title}</HeadingL>
-           <HeadingL className='text-slateBlue'>{item?.shortDecption}</HeadingL>
-
-          </div>
-        </Card>
-      ))}
+            <div className='hidden group-hover:block absolute -bottom-10 right-10 bg-white rounded-lg py-3.5 px-5'>
+              <HeadingL className='text-blackPearl'>{item?.title}</HeadingL>
+              <HeadingL className='text-slateBlue'>
+                {item?.shortDecption}
+              </HeadingL>
+            </div>
+          </Card>
+        ))}
+      </div>
     </div>
-  </div>
   );
 };
 
