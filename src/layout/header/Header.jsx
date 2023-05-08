@@ -103,10 +103,6 @@ const Header = ({ isTransparent = false }) => {
           </div>
 
           <div className='hidden lg:flex items-center'>
-            {/* <Button
-              title='Eng (UK)'
-              className='border border-slateBlue'
-            /> */}
 
             <LangChange />
 

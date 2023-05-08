@@ -3,9 +3,9 @@ import React from 'react';
 const SupportIcon = ({ width = 40, height = 40, className = '' }) => {
   return (
     <svg
-      width={height}
-      height={width}
-      viewBox={`0 0 ${height} ${width} `}
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
       className={className}
       fill='none'
       xmlns='http://www.w3.org/2000/svg'
