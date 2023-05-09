@@ -11,7 +11,7 @@ import Heading from '../molecules/Heading';
 
 const ContactUsBanner = () => {
   const { t, i18n } = useTranslation();
-  console.log(t, i18n);
+  // console.log(t, i18n);
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 mt-28 mb-20'>
       <Card className='grid md:grid-cols-2 rounded-[32px] bg-lightGreen/50 py-10 md:py-0'>

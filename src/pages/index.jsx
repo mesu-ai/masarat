@@ -16,7 +16,7 @@ const bgstyle = {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
-  // transform: 'rotate(5.2deg)',
+  // transform: 'rotate(5.2deg) scale(1.2)',
 };
 
 const Home = () => {
@@ -35,7 +35,7 @@ const Home = () => {
 Home.getLayout = (page) => (
   <>
     <div style={bgstyle}>
-      <div>
+      <div >
         <Header />
         <HeroSection />
       </div>
