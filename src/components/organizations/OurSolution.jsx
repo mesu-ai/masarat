@@ -19,9 +19,7 @@ const solutionsData = [
 
 const OurSolution = () => {
   return (
-    // <div>
-
-    // </div>
+    
     <div className='bg-gradient-thinLightGreen container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3'>
       <div className='grid grid-cols-2 content-center '>
         <div className=''>

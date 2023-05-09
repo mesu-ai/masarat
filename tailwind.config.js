@@ -10,7 +10,9 @@ module.exports = {
         'blackPearl': '#0F172A',
         'slateBlue': '#657790',
         'lightBlue':'#BDD5FF',
-        'lightGreen': '#9BEBA8'
+        'lightGreen': '#9BEBA8',
+        'thinGreen':'#E6FAE9'
+
         // 'slateGray':'rgba(15, 23, 42, 0.5);'
       },
       backgroundImage: {

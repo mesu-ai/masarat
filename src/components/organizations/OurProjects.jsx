@@ -6,6 +6,7 @@ import project1 from '@/assets/images/project1.png';
 import project2 from '@/assets/images/project2.png';
 import project3 from '@/assets/images/project3.png';
 import Card from '../atoms/Card';
+import Heading from '../molecules/Heading';
 
 const projectsdatas = [
   {
@@ -43,10 +44,7 @@ const projectsdatas = [
 const OurProjects = () => {
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3'>
-      <div className='text-center space-y-4'>
-        <HeadingL>Our Projects</HeadingL>
-        <Heading5XL>Latest Project We Have Delivered</Heading5XL>
-      </div>
+      <Heading className='text-center' keyword='Our Projects' title='Latest Project We Have Delivered'/>
       <div className='mt-4 grid grid-cols-3 gap-8 lg:gap-14  py-12 '>
         {projectsdatas.map((item, index) => (
           <Card

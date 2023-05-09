@@ -8,6 +8,7 @@ import Card from '../atoms/Card';
 import Heading2XL from '../atoms/Heading2XL';
 import ParagraphText from '../atoms/ParagraphText';
 import ArrowNext from '@/assets/svgs/ArrowNext';
+import Heading from '../molecules/Heading';
 
 const OurServices = () => {
   const servicedatas = [
@@ -52,10 +53,8 @@ const OurServices = () => {
   const { i18n } = useTranslation();
   return (
     <div className='container mx-auto px-3 sm:px-0 xl:px-5  py-0 lg:py-3'>
-      <div className='text-center space-y-4'>
-        <HeadingL>Our Products & Services</HeadingL>
-        <Heading5XL>What You Can Get From Us</Heading5XL>
-      </div>
+      
+      <Heading className='text-center' keyword='Our Products & Services' title='What You Can Get From Us'/>
       <div className='mt-4 grid grid-cols-3 gap-8 lg:gap-14 bg-gradient-thinGreen py-12 px-3 xl:px-5'>
         {servicedatas.map((item, index) => (
           <Card

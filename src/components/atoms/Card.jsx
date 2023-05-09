@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Card = ({ children, className = '' }) => {
-  return <div className={`rounded-xl ${className}`}>{children}</div>;
+const Card = ({ children, className = '', borderRadius='rounded-xl' }) => {
+  return <div className={`${borderRadius} ${className}`}>{children}</div>;
 };
 
 export default Card;
