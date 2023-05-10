@@ -44,7 +44,7 @@ const Testimonial = () => {
             {/* <Heading className='' keyword='Testimonial' title='Latest Project We Have Delivered'/> */}
           </div>
           <div className=''>
-            <SliderShow showDot={false} showArrow={true}>
+            <SliderShow showDot={false} showArrow={true} >
               {reviewers &&
                 reviewers.map((review, index) => (
                   <SlideCard

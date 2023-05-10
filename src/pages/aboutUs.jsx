@@ -1,5 +1,6 @@
 import AboutUsSection from '@/components/organizations/AboutUsSection';
 import ContactUsBanner from '@/components/organizations/ContactUsBanner';
+import OurTeam from '@/components/organizations/OurTeam';
 import OurVisions from '@/components/organizations/OurVisions';
 import OurWorks from '@/components/organizations/OurWorks';
 import ProjectCountsection from '@/components/organizations/ProjectCountsection';
@@ -14,6 +15,7 @@ const aboutus = () => {
       <ProjectManagerInfo/>
       <ProjectCountsection/>
       <OurVisions/>
+      <OurTeam/>
       <OurWorks/>
       <Testimonial/>
       <ContactUsBanner/>

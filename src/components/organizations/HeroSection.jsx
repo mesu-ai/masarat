@@ -56,7 +56,7 @@ const HeroSection = () => {
           ></Button>
 
           <div className='mt-8 lg:mt-16 '>
-            <SliderShow>
+            <SliderShow >
               {reviewers &&
                 reviewers.map((review, index) => (
                   <SlideCard

@@ -10,32 +10,32 @@ import Heading from '../molecules/Heading';
 
 const projectsdatas = [
   {
-    icon: project1,
+    coverPhoto: project1,
     title: 'Digital Strategy',
     shortDecption: 'Lorem ipsum dolor sit amet',
   },
   {
-    icon: project2,
+    coverPhoto: project2,
     title: 'Digital Strategy',
     shortDecption: 'Lorem ipsum dolor sit amet',
   },
   {
-    icon: project3,
+    coverPhoto: project3,
     title: 'Digital Strategy',
     shortDecption: 'Lorem ipsum dolor sit amet',
   },
   {
-    icon: project1,
+    coverPhoto: project1,
     title: 'Digital Strategy',
     shortDecption: 'Lorem ipsum dolor sit amet',
   },
   {
-    icon: project2,
+    coverPhoto: project2,
     title: 'Digital Strategy',
     shortDecption: 'Lorem ipsum dolor sit amet',
   },
   {
-    icon: project3,
+    coverPhoto: project3,
     title: 'Digital Strategy',
     shortDecption: 'Lorem ipsum dolor sit amet',
   },
@@ -43,7 +43,7 @@ const projectsdatas = [
 
 const OurProjects = () => {
   return (
-    <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3'>
+    <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 '>
       <Heading className='text-center' keyword='Our Projects' title='Latest Project We Have Delivered'/>
       <div className='mt-4 grid grid-cols-3 gap-8 lg:gap-14  py-12 '>
         {projectsdatas.map((item, index) => (
@@ -53,13 +53,13 @@ const OurProjects = () => {
           >
             <Image
               className='w-full'
-              src={item?.icon}
-              alt='icon'
+              src={item?.coverPhoto}
+              alt='project'
               // width={20}
               // height={20}
             />
 
-            <div className='hidden group-hover:block absolute -bottom-10 right-10 bg-white rounded-lg px-2 py-2 xl:py-3.5 xl:px-5'>
+            <div className='z-40 shadow-lg hidden group-hover:block absolute -bottom-10 right-10 bg-white rounded-lg px-2 py-2 xl:py-3.5 xl:px-5'>
               <HeadingL className='text-blackPearl'>{item?.title}</HeadingL>
               <HeadingL className='text-slateBlue'>
                 {item?.shortDecption}
