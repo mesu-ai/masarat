@@ -38,7 +38,9 @@ module.exports = {
 
     },
   },
+  important: true,
   plugins: [],
+
   // future: {
   //   // add support for CSS transforms
   //   removeDeprecatedGapUtilities: true,

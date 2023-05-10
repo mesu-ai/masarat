@@ -16,29 +16,23 @@ const partners = [
 ];
 
 const responsive = [
-  {
-    breakpoint: 1297,
-    settings: {
-      slidesToShow: 5,
-      slidesToScroll: 1,
-    },
-  },
+ 
   {
     breakpoint: 1024,
-    settings: {
-      slidesToShow: 4,
-      slidesToScroll: 1,
-    },
-  },
-  {
-    breakpoint: 768,
     settings: {
       slidesToShow: 3,
       slidesToScroll: 1,
     },
   },
   {
-    breakpoint: 460,
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+    },
+  },
+  {
+    breakpoint: 480,
     settings: {
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -63,7 +57,7 @@ const OurPartner = () => {
           {partners &&
             partners.map((item, index) => (
               
-              <div key={index} className='mx-5 '>
+              <div key={index} className='flex !important justify-center ' >
                 <Image
                   className='h-7 w-32'
                   key={index}

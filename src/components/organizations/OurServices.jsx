@@ -54,7 +54,7 @@ const OurServices = () => {
     <div className='container mx-auto px-3 sm:px-0 xl:px-5  mb-20 xl:mb-36'>
       
       <Heading className='text-center' keyword='Our Products & Services' title='What You Can Get From Us'/>
-      <div className='mt-4 grid grid-cols-3 gap-8 lg:gap-14 bg-gradient-thinGreen py-12 px-3 xl:px-5'>
+      <div className='mt-4 grid sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-14 bg-gradient-thinGreen py-12 px-3 xl:px-5'>
         {servicedatas.map((item, index) => (
           <Card
             key={index}

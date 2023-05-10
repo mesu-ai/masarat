@@ -44,7 +44,7 @@ const OurProjects = () => {
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 '>
       <Heading className='text-center' keyword='Our Projects' title='Latest Project We Have Delivered'/>
-      <div className='mt-4 grid grid-cols-3 gap-8 lg:gap-14  py-12 '>
+      <div className='mt-4 grid  sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-14  py-12 '>
         {projectsdatas.map((item, index) => (
           <Card
             key={index}

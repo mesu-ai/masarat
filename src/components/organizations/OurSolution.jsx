@@ -20,7 +20,7 @@ const OurSolution = () => {
   return (
     
     <div className='bg-gradient-thinLightGreen container mx-auto px-6 sm:px-0 xl:px-10   mb-20 xl:mb-36'>
-      <div className='grid grid-cols-2 content-center '>
+      <div className='grid sm:grid-cols-2 content-center pt-5'>
         <div className=''>
           <HeadingL className='mb-4 text-timberGreen'>Our Solutions</HeadingL>
           <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl  leading-9 font-medium text-blackPearl'>What Makes <span className='text-timberGreen'>Musarat</span>  Different</h2>
@@ -40,7 +40,7 @@ const OurSolution = () => {
             ))}
           </ul>
         </div>
-        <div className='flex justify-center items-center'>
+        <div className='hidden sm:flex justify-center items-center'>
           <Image className='max-w-md max-h-[438]'  src={solutionCover} alt='solution_cover'/>
         </div>
       </div>

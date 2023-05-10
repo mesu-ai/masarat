@@ -6,7 +6,7 @@ import headerRoutes from '@/routes/headerRoutes';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Button from '@/components/atoms/Button';
-import bgimage from '@/assets/images/heroBg.svg';
+import bgimage from '@/assets/images/beroBg.png';
 import { useTranslation } from 'react-i18next';
 import LangChange from '@/components/molecules/LangChange';
 // import CloseIcon from '../../assets/svgs/CloseIcon';
@@ -56,7 +56,7 @@ const Header = ({ isTransparent = false }) => {
     // <div className={`${isTransparent ? 'bg-transparent' : 'bg-info md:bg-white'}`}>
     <nav className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3'>
       <div className='relative'>
-        <div className='absolute inset-y-0 right-0 flex items-center lg:hidden'>
+        <div className='absolute inset-y-0 right-0 rtl:right-auto rtl:left-0 flex items-center lg:hidden'>
           <button
             type='button'
             onClick={() => setOpen(!open)}
@@ -116,8 +116,8 @@ const Header = ({ isTransparent = false }) => {
       {/* style={bgstyle} */}
       {open && (
         <ul
-          style={bgstyle}
-          className='block lg:hidden  absolute pt-4 h-screen w-full right-0  z-50 scroll '
+          // style={bgstyle}
+          className='block bg-white lg:hidden  absolute pt-4 h-screen w-full right-0  z-50 scroll '
         >
           <div className='px-10 pt-2 pb-3 space-y-3'>
             {headerRoutes &&
@@ -138,12 +138,14 @@ const Header = ({ isTransparent = false }) => {
           </div>
 
           <div className='flex justify-start mt-6 mx-10'>
-            <NavLink path='/#contact'>
+            {/* <NavLink path='/#contact'>
               <Button
                 title='Eng (UK)'
                 className='border border-slateBlue'
               />
-            </NavLink>
+            </NavLink> */}
+
+            <LangChange />
 
             <NavLink path='/#contact'>
               <Button title='Contact Us' />

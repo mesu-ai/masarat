@@ -1,5 +1,5 @@
-import ArrowDown from "@/assets/svgs/ArrowDown";
-import ArrowUp from "@/assets/svgs/ArrowUp";
+import ArrowDown from "@/assets/svgs/DownIcon";
+import ArrowUp from "@/assets/svgs/UpIcon";
 import { useState } from "react";
 import ParagraphText from "../atoms/ParagraphText";
 import { useTranslation } from "react-i18next";

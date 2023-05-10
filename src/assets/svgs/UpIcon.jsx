@@ -1,5 +1,5 @@
 
-const ArrowUp = ({ width = 14, height = 9, className = '' }) => {
+const UpIcon = ({ width = 14, height = 9, className = '' }) => {
   return (
     <svg
       width={width}
@@ -15,5 +15,5 @@ const ArrowUp = ({ width = 14, height = 9, className = '' }) => {
   );
 };
 
-export default ArrowUp;
+export default UpIcon;
 

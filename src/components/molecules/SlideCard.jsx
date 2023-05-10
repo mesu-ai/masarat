@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import Heading2XL from '../atoms/Heading2XL';
 import profile from '@/assets/images/profile.png';
 import { useTranslation } from 'react-i18next';
 import Rating from '../atoms/Rating';

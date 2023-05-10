@@ -1,4 +1,4 @@
-const ArrowDown = ({ width = 14, height = 9, className = '' }) => {
+const DownIcon = ({ width = 14, height = 9, className = '' }) => {
   return (
     <svg
       width={width}
@@ -19,4 +19,4 @@ const ArrowDown = ({ width = 14, height = 9, className = '' }) => {
   );
 };
 
-export default ArrowDown;
+export default DownIcon;
