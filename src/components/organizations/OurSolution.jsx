@@ -8,6 +8,7 @@ import TeamIcon from '@/assets/svgs/TeamIcon';
 import CallIcon from '@/assets/svgs/CallIcon';
 import HeadingXL from '../atoms/HeadingXL';
 import Image from 'next/image';
+import { useTranslation } from 'react-i18next';
 
 const solutionsData = [
   { icon: <FastIcon />, title: 'Fast Working Process' },
@@ -17,17 +18,16 @@ const solutionsData = [
 ];
 
 const OurSolution = () => {
+  const {t}=useTranslation();
   return (
     
     <div className='bg-gradient-thinLightGreen container mx-auto px-6 sm:px-0 xl:px-10   mb-20 xl:mb-36'>
       <div className='grid sm:grid-cols-2 content-center pt-5'>
         <div className=''>
           <HeadingL className='mb-4 text-timberGreen'>Our Solutions</HeadingL>
-          <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl  leading-9 font-medium text-blackPearl'>What Makes <span className='text-timberGreen'>Musarat</span>  Different</h2>
+          <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl  leading-9 font-medium text-blackPearl'>{t('What Makes')} <span className='text-timberGreen'>Musarat</span>{t('Different')}</h2>
           <ParagraphText className='text-slateBlue my-14'>
-            Reach the right decisions by accessing your stats at a glance.
-            Analyze your performance and gain flexibility with our intuitive
-            dashboard to achieve
+          Reach the right decisions by accessing your stats at a glance. Analyze your performance and gain flexibility with our intuitive dashboard to achieve.
           </ParagraphText>
           <ul className='space-y-6'>
             {solutionsData.map((item,index) => (

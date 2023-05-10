@@ -46,6 +46,7 @@ const Header = ({ isTransparent = false }) => {
   useEffect(() => {
     if (open) {
       document.body.style.overflowY = 'hidden';
+      
     } else {
       document.body.style.overflowY = '';
     }

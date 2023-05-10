@@ -1,28 +1,28 @@
 const footerRoutes = [
   {
     title: 'Quick Links', lists: [
-      { name: 'Home', path: '/', exact: true },
-      { name: 'About', path: '/aboutUs', exact: true },
-      { name: 'Service', path: '/service', exact: true },
-      { name: 'Solution', path: '/solution', exact: true },
-      { name: 'Team', path: '/team', exact: true }
+      { name: 'Home',name_ar:'بيت', path: '/', exact: true },
+      { name: 'About',name_ar:'عن', path: '/aboutUs', exact: true },
+      { name: 'Service',name_ar:'خدمة', path: '/service', exact: true },
+      { name: 'Solution',name_ar:'حل', path: '/solution', exact: true },
+      { name: 'Team',name_ar:'فريق', path: '/team', exact: true }
 
     ]
   },
 
   {
     title: 'About us', lists: [
-      { name: 'Our Vision', path: '/ourVision', exact: true },
-      { name: 'Our Team', path: '/ourTeam', exact: true },
-      { name: 'Our Works', path: '/ourWorks', exact: true }
+      { name: 'Our Vision',name_ar:'رؤيتنا', path: '/ourVision', exact: true },
+      { name: 'Our Team',name_ar:'فريقنا', path: '/ourTeam', exact: true },
+      { name: 'Our Works',name_ar:'أعمالنا', path: '/ourWorks', exact: true }
     ]
   },
 
   {
     title: 'Help', lists: [
-      { name: 'Privacy Policy', path: '/privacyPolicy', exact: true },
-      { name: 'Terms & Conditions', path: '/termsAndConditions', exact: true },
-      { name: 'Contact us', path: '/contactUs', exact: true }
+      { name: 'Privacy Policy',name_ar:'سياسة الخصوصية', path: '/privacyPolicy', exact: true },
+      { name: 'Terms & Conditions',name_ar:'البنود و الظروف', path: '/termsAndConditions', exact: true },
+      { name: 'Contact us',name_ar:'اتصل بنا', path: '/contactUs', exact: true }
     ]
   },
 ]

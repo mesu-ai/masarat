@@ -9,9 +9,12 @@ import HeadingL from '../atoms/HeadingL';
 import Heading5XL from '../atoms/Heading5XL';
 import InputField from '../atoms/InputField';
 import Button from '../atoms/Button';
+import { useTranslation } from 'react-i18next';
 
 const ContractForm = () => {
-  const [data,setData]=useState({})
+  const [data,setData]=useState({});
+  const {t}=useTranslation();
+  
   const handleBlur = (e) => {
     const name=e.target.name;
     const value=e.target.value;
@@ -86,7 +89,7 @@ const ContractForm = () => {
               name='description'
               id='description'
               onBlur={handleBlur}
-              placeholder='Your Quenstions'
+              placeholder={t('Your Quenstions')}
               rows={5}
             />
 
