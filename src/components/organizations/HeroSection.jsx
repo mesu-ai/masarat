@@ -13,7 +13,7 @@ const reviewers = [
     phote: '',
     name: 'kamal',
     designation: 'CEO, Supreme World',
-    rating:4,
+    rating: 4,
     review:
       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
   },
@@ -21,7 +21,7 @@ const reviewers = [
     phote: '',
     name: 'jamal',
     designation: 'ceo',
-    rating:5,
+    rating: 5,
     review:
       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
   },
@@ -29,7 +29,7 @@ const reviewers = [
     phote: '',
     name: 'rubel',
     designation: 'ceo',
-    rating:3,
+    rating: 3,
     review:
       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
   },
@@ -55,25 +55,16 @@ const HeroSection = () => {
             className='bg-gradient-lightGreen text-slateBlue mt-8'
           ></Button>
 
-{/* rtl:-scale-x-100 */}
           <div className='mt-8 lg:mt-16 '>
             <SliderShow>
               {reviewers &&
-                reviewers.map((review,index) => (
+                reviewers.map((review, index) => (
                   <SlideCard
                     key={index}
                     review={review}
                   />
                 ))}
             </SliderShow>
-
-            {/* {reviewers &&
-                reviewers.map((review,index) => (
-                  <SlideCard
-                    key={index}
-                    review={review}
-                  />
-                ))} */}
           </div>
         </div>
       </div>

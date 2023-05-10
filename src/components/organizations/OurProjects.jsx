@@ -59,7 +59,7 @@ const OurProjects = () => {
               // height={20}
             />
 
-            <div className='hidden group-hover:block absolute -bottom-10 right-10 bg-white rounded-lg py-3.5 px-5'>
+            <div className='hidden group-hover:block absolute -bottom-10 right-10 bg-white rounded-lg px-2 py-2 xl:py-3.5 xl:px-5'>
               <HeadingL className='text-blackPearl'>{item?.title}</HeadingL>
               <HeadingL className='text-slateBlue'>
                 {item?.shortDecption}

@@ -8,6 +8,8 @@ import ContactUsBanner from '@/components/organizations/ContactUsBanner';
 import OurServices from '@/components/organizations/OurServices';
 import OurProjects from '@/components/organizations/OurProjects';
 import OurSolution from '@/components/organizations/OurSolution';
+import OurPartner from '@/components/organizations/OurPartner';
+import OurTeam from '@/components/organizations/OurTeam';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,9 +24,11 @@ const bgstyle = {
 const Home = () => {
   return (
     <>
+      <OurPartner />
       <OurServices />
-      <OurSolution/>
-      <OurProjects/>
+      <OurSolution />
+      <OurProjects />
+      <OurTeam/>
       <ContactUsBanner />
     </>
   );
@@ -35,7 +39,7 @@ const Home = () => {
 Home.getLayout = (page) => (
   <>
     <div style={bgstyle}>
-      <div >
+      <div>
         <Header />
         <HeroSection />
       </div>

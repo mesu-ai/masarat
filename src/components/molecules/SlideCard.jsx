@@ -5,10 +5,10 @@ import profile from '@/assets/images/profile.png';
 import { useTranslation } from 'react-i18next';
 import Rating from '../atoms/Rating';
 
-const SlideCard = ({ review = {} }) => {
+const SlideCard = ({ review = {},className='' }) => {
   const { t } = useTranslation();
   return (
-    <div className='flex flex-col justify-end'>
+    <div className={`${className}`}>
       <Rating stars={review?.rating} />
       <p className='mt-4 text-sm text-slateBlue rtl:text-end'>{review?.review}</p>
       <ul className='mt-6 flex items-center gap-4 mb-6 rtl:ms-auto rtl:flex-row-reverse'>

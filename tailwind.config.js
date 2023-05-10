@@ -13,9 +13,10 @@ module.exports = {
         'lightGreen': '#9BEBA8',
         'thinGreen':'#E6FAE9',
         'mercury':'#E5EAF1',
-        'whiteGreen':'#F7FDF8'
+        'whiteGreen':'#F7FDF8',
+        'slateGray':'#AFAFAF',
+        'offWhite':'#F6F7FB'
 
-        // 'slateGray':'rgba(15, 23, 42, 0.5);'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

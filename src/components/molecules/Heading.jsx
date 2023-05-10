@@ -8,10 +8,6 @@ const Heading = ({ className='', keyword = '', title = '' }) => {
       <HeadingL>{keyword}</HeadingL>
 
       <Heading5XL>{title}</Heading5XL>
-
-      {/* <div className="mt-16">
-      <p className="text-base font-normal text-[#657790] md:text-lg">text and paragrap</p>
-    </div> */}
     </div>
   );
 };

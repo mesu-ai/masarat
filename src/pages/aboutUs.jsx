@@ -4,6 +4,7 @@ import OurVisions from '@/components/organizations/OurVisions';
 import OurWorks from '@/components/organizations/OurWorks';
 import ProjectCountsection from '@/components/organizations/ProjectCountsection';
 import ProjectManagerInfo from '@/components/organizations/ProjectManagerInfo';
+import Testimonial from '@/components/organizations/Testimonial';
 import React from 'react';
 
 const aboutus = () => {
@@ -14,6 +15,7 @@ const aboutus = () => {
       <ProjectCountsection/>
       <OurVisions/>
       <OurWorks/>
+      <Testimonial/>
       <ContactUsBanner/>
       
     </div>
