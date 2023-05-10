@@ -1,4 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import { useTranslation } from 'react-i18next';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
@@ -44,6 +45,8 @@ const settings = {
   pauseOnHover: true,
   slidesToShow: 1,
   slidesToScroll: 1,
+  arrows: false,
+  rtl: true,
   // nextArrow: <NextButton />,
   // prevArrow: <PrevButton />,
   appendDots: dots => <ul>{dots}</ul>,
@@ -55,8 +58,11 @@ const settings = {
 };
 
 const SliderShow = ({ children }) => {
+  const {i18n}=useTranslation();
+  settings.rtl= i18n.language !== 'en'
+   
   return (
-    <Slider {...settings} style={{}}>
+    <Slider {...settings } style={{}}>
       {children || <div />}
     </Slider>
   );
