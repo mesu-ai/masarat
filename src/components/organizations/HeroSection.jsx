@@ -47,8 +47,7 @@ const HeroSection = () => {
           </li>
           <Heading6XL>{t('We Support To Grow Your Business')}</Heading6XL>
           <ParagraphText className='text-slateBlue mt-10'>
-            Choose Masarat Digital to get software development, AI & Tech
-            Consulting support for your digital products.{' '}
+          Choose Masarat Digital to get software development, AI & Tech Consulting support for your digital products.
           </ParagraphText>
           <Button
             title='Contact Us'

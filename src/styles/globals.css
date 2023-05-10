@@ -116,9 +116,11 @@ body {
   }
 }
 
+.ourPartner-flex{
+  display: flex !important;
+}
+
 /* slider custom dot */
-  
-  /* Custom Slick Dots */
 
   @keyframes loading {
     from {
