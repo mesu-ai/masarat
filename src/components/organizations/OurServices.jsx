@@ -1,7 +1,6 @@
 import React from 'react';
 import HeadingL from '../atoms/HeadingL';
 import { useTranslation } from 'react-i18next';
-import Heading5XL from '../atoms/Heading5XL';
 import Image from 'next/image';
 import statagyIcon from '@/assets/images/stategyIcon.png';
 import Card from '../atoms/Card';
@@ -52,14 +51,14 @@ const OurServices = () => {
 
   const { i18n } = useTranslation();
   return (
-    <div className='container mx-auto px-3 sm:px-0 xl:px-5  py-0 lg:py-3'>
+    <div className='container mx-auto px-3 sm:px-0 xl:px-5  mb-20 xl:mb-36'>
       
       <Heading className='text-center' keyword='Our Products & Services' title='What You Can Get From Us'/>
       <div className='mt-4 grid grid-cols-3 gap-8 lg:gap-14 bg-gradient-thinGreen py-12 px-3 xl:px-5'>
         {servicedatas.map((item, index) => (
           <Card
             key={index}
-            className='group space-y-4 bg-white/10  hover:bg-white px-7 py-8  shadow-lightShadow hover:shadow-hoverShadow border border-[#E5EAF1]'
+            className='group space-y-4 bg-white/10  hover:bg-white px-7 py-8  shadow-deepShadow hover:shadow-lightShadow border border-[#E5EAF1]'
           >
             <Image
               className='mb-10'

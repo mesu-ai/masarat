@@ -1,9 +1,10 @@
+import ContractForm from '@/components/organizations/ContractForm';
 import React from 'react';
 
 const contactUs = () => {
   return (
     <div>
-      contact us
+      <ContractForm/>
       
     </div>
   );

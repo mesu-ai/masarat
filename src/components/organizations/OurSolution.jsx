@@ -1,6 +1,5 @@
 import React from 'react';
 import HeadingL from '../atoms/HeadingL';
-import Heading5XL from '../atoms/Heading5XL';
 import ParagraphText from '../atoms/ParagraphText';
 import FastIcon from '@/assets/svgs/FastIcon';
 import ProtectionIcon from '@/assets/svgs/ProtectionIcon';
@@ -20,7 +19,7 @@ const solutionsData = [
 const OurSolution = () => {
   return (
     
-    <div className='bg-gradient-thinLightGreen container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3'>
+    <div className='bg-gradient-thinLightGreen container mx-auto px-6 sm:px-0 xl:px-10   mb-20 xl:mb-36'>
       <div className='grid grid-cols-2 content-center '>
         <div className=''>
           <HeadingL className='mb-4 text-timberGreen'>Our Solutions</HeadingL>

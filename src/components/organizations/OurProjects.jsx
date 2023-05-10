@@ -1,6 +1,5 @@
 import React from 'react';
 import HeadingL from '../atoms/HeadingL';
-import Heading5XL from '../atoms/Heading5XL';
 import Image from 'next/image';
 import project1 from '@/assets/images/project1.png';
 import project2 from '@/assets/images/project2.png';
@@ -49,7 +48,7 @@ const OurProjects = () => {
         {projectsdatas.map((item, index) => (
           <Card
             key={index}
-            className='group relative rounded-2xl  bg-white/10  hover:bg-white  shadow-lightShadow hover:shadow-hoverShadow hover:border-4 border-lightBlue'
+            className='group relative rounded-2xl  bg-white/10  hover:bg-white  shadow-deepShadow hover:shadow-lightShadow hover:border-4 border-lightBlue'
           >
             <Image
               className='w-full'

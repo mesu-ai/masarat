@@ -15,7 +15,8 @@ module.exports = {
         'mercury':'#E5EAF1',
         'whiteGreen':'#F7FDF8',
         'slateGray':'#AFAFAF',
-        'offWhite':'#F6F7FB'
+        'offWhite':'#F6F7FB',
+        'lightwhite':'#EDEDED'
 
       },
       backgroundImage: {
@@ -26,8 +27,9 @@ module.exports = {
       },
 
       boxShadow: {
-        'lightShadow': ' 11px 22px 64px rgba(0, 0, 0, 0.15)',
-        'hoverShadow': '2px 4px 64px rgba(35, 40, 105, 0.14)'
+        'deepShadow': ' 11px 22px 64px rgba(0, 0, 0, 0.15)',
+        'lightShadow': '2px 4px 64px rgba(35, 40, 105, 0.14)'
+
       },
       scale: {
         
