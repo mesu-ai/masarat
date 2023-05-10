@@ -11,7 +11,8 @@ module.exports = {
         'slateBlue': '#657790',
         'lightBlue':'#BDD5FF',
         'lightGreen': '#9BEBA8',
-        'thinGreen':'#E6FAE9'
+        'thinGreen':'#E6FAE9',
+        'mercury':'#E5EAF1'
 
         // 'slateGray':'rgba(15, 23, 42, 0.5);'
       },
