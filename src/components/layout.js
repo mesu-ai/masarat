@@ -1,13 +1,18 @@
 import Footer from '@/layout/footer/Footer';
 import Header from '@/layout/header/Header';
 import React from 'react';
+import BreadCrumb from './molecules/BreadCrumb';
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <>
-      <Header/>
-       <main>{children}</main>
-      <Footer /> 
+      <div className='bg-whiteGreen mb-20'>
+        <Header />
+        <BreadCrumb/>
+      </div>
+
+      <main>{children}</main>
+      <Footer />
     </>
   );
 };

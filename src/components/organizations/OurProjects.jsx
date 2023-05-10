@@ -52,7 +52,7 @@ const OurProjects = () => {
             className='group relative rounded-2xl  bg-white/10  hover:bg-white  shadow-lightShadow hover:shadow-hoverShadow hover:border-4 border-lightBlue'
           >
             <Image
-              className=' '
+              className='w-full'
               src={item?.icon}
               alt='icon'
               // width={20}
