@@ -1,5 +1,11 @@
 import Layout from '@/components/layout'
 import i18n from '@/i18n/config'
+// import "~slick-carousel/slick/slick.css"; 
+// import "~slick-carousel/slick/slick-theme.css";
+
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 
 import '@/styles/globals.css'
 import { useEffect } from 'react';

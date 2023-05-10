@@ -27,7 +27,10 @@ module.exports = {
       boxShadow: {
         'lightShadow': ' 11px 22px 64px rgba(0, 0, 0, 0.15)',
         'hoverShadow': '2px 4px 64px rgba(35, 40, 105, 0.14)'
-      }
+      },
+      scale: {
+        
+    }
 
 
     },

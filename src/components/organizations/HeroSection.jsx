@@ -5,9 +5,35 @@ import Heading6XL from '../atoms/Heading6XL';
 import ParagraphText from '../atoms/ParagraphText';
 import Button from '../atoms/Button';
 import { useTranslation } from 'react-i18next';
+import SliderShow from '../molecules/SliderShow';
+import SlideCard from '../molecules/SlideCard';
+
+const reviewers = [
+  {
+    phote: '',
+    name: 'kamal',
+    designation: 'CEO, Supreme World.',
+    review:
+      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
+  },
+  {
+    phote: '',
+    name: 'jamal',
+    designation: 'ceo',
+    review:
+      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
+  },
+  {
+    phote: '',
+    name: 'rubel',
+    designation: 'ceo',
+    review:
+      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
+  },
+];
 
 const HeroSection = () => {
-  const {t} =useTranslation();
+  const { t } = useTranslation();
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 '>
       <div className='grid grid-cols-2'>
@@ -25,9 +51,21 @@ const HeroSection = () => {
             title='Contact Us'
             className='bg-gradient-lightGreen text-slateBlue mt-8'
           ></Button>
+
+          <div className='mt-8 lg:mt-16'>
+            <SliderShow>
+              {reviewers &&
+                reviewers.map((review) => (
+                  <SlideCard
+                    key={review.id}
+                    review={review}
+                  />
+                ))}
+            </SliderShow>
+          </div>
         </div>
-        <div/>
       </div>
+      <div />
     </div>
   );
 };

@@ -17,7 +17,7 @@ const ContactUsBanner = () => {
       <Card className='grid md:grid-cols-2 rounded-[32px] bg-lightGreen/50 py-10 md:py-0'>
         <div className='hidden md:block'>
           <Image
-            className='lg:-mt-20 mx-auto'
+            className='lg:-mt-20 mx-auto rtl:-scale-x-100'
             src={contactCover}
             alt=''
           />
