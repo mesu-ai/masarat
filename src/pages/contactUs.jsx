@@ -4,8 +4,7 @@ import React from 'react';
 const contactUs = () => {
   return (
     <div>
-      <ContractForm/>
-      
+      <ContractForm />
     </div>
   );
 };
