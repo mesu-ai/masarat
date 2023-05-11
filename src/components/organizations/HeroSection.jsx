@@ -7,36 +7,41 @@ import Button from '../atoms/Button';
 import { useTranslation } from 'react-i18next';
 import SliderShow from '../molecules/SliderShow';
 import SlideCard from '../molecules/SlideCard';
+import { getAllData } from '@/lib/customApi';
 
-const reviewers = [
-  {
-    phote: '',
-    name: 'kamal',
-    designation: 'CEO, Supreme World',
-    rating: 4,
-    review:
-      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-  },
-  {
-    phote: '',
-    name: 'jamal',
-    designation: 'ceo',
-    rating: 5,
-    review:
-      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-  },
-  {
-    phote: '',
-    name: 'rubel',
-    designation: 'ceo',
-    rating: 3,
-    review:
-      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-  },
-];
+// const reviewers = [
+//   {
+//     phote: '',
+//     name: 'kamal',
+//     designation: 'CEO, Supreme World',
+//     rating: 4,
+//     review:
+//       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
+//   },
+//   {
+//     phote: '',
+//     name: 'jamal',
+//     designation: 'ceo',
+//     rating: 5,
+//     review:
+//       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
+//   },
+//   {
+//     phote: '',
+//     name: 'rubel',
+//     designation: 'ceo',
+//     rating: 3,
+//     review:
+//       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
+//   },
+// ];
 
-const HeroSection = () => {
+const HeroSection = ({clientReviews=[]}) => {
+
   const { t } = useTranslation();
+
+  console.log(clientReviews);
+  
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 '>
       <div className='grid grid-cols-2'>
@@ -56,8 +61,8 @@ const HeroSection = () => {
 
           <div className='mt-8 lg:mt-16 '>
             <SliderShow >
-              {reviewers &&
-                reviewers.map((review, index) => (
+              {clientReviews &&
+                clientReviews?.map((review, index) => (
                   <SlideCard
                     key={index}
                     review={review}
@@ -73,3 +78,15 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+// export async function getStaticProps() {
+//   const clientReviews = getAllData(
+//     ['name', 'photo', 'designation', 'rating', 'slug', 'opinion'],
+//     'content/clientReview'
+//   );
+
+//   return {
+//     props: { clientReviews },
+//   };
+// }

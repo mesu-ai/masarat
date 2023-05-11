@@ -44,6 +44,87 @@ export default defineConfig({
           router: ({ document }) => `/demo/blog/${document._sys.filename}`,
         },
       },
+      {
+        name: "clientReview",
+        label: "Client Review",
+        path: "content/clientReview",
+        fields: [
+          {
+            type: "string",
+            name: "name",
+            label: "Name",
+            isName: true,
+            required: true,
+          },
+
+          // {
+          //   type: "datetime",
+          //   name: "date",
+          //   label: "Date",
+          //   // ui: {
+          //   //   timeFormat: "HH:mm"
+          //   // },
+          //   isDate:true,
+          //   required:true,
+          // },
+
+          {
+            type: 'image',
+            label: 'Photo',
+            name: 'photo',
+            isImage: true,
+            required: true,
+          },
+          // {
+          //   type: 'image',
+          //   label: 'Thumbnail Image',
+          //   name: 'thumbnailImage',
+          //   isThumbnail:true,
+          //   required:true,
+          // },
+
+          {
+            type: "string",
+            name: "designation",
+            label: "Designation",
+            isDesignation: true,
+            required: true,
+          },
+
+          {
+            type: "number",
+            name:"rating",
+            label:"Rating",
+            isRating:true,
+            required:true,
+          },
+
+          {
+            type: "string",
+            name: "opinion",
+            label: "Opinion",
+            isOpinion: true,
+            required: true,
+
+            ui: {
+              component: "textarea"
+            }
+          },
+
+
+          // {
+          //   type: "rich-text",
+          //   name: "description",
+          //   label: "Description",
+          //   isDescription: true,
+          //   required: true,
+          // },
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/home/${document._sys.filename}`,
+        },
+      },
     ],
   },
 });

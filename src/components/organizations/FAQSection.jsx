@@ -24,7 +24,7 @@ const faqDatas = [
 const FAQSection = () => {
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 2xl:pt-20'>
-      <div className='grid md:grid-cols-2  gap-10 lg:gap-14 '>
+      <div className='grid lg:grid-cols-2  gap-10 lg:gap-14 '>
         <div className=''>
           <Heading
             className='mb-10'
@@ -47,14 +47,14 @@ const FAQSection = () => {
             </div>
           ))}
         </div>
-        <div className='flex items-center justify-center sm:justify-between gap-2 sm:gap-6'>
+        <div className=' flex items-center justify-center sm:justify-between gap-2 sm:gap-6'>
           <Image
-            className=' rounded-lg w-auto sm:w-56'
+            className=' rounded-lg w-auto  sm:w-56 '
             src={leftImage}
             alt=''
           />
          <Image
-            className='md:-mt-20 rounded-lg w-auto sm:w-56'
+            className='lg:-mt-20 rounded-lg w-auto sm:w-56'
             src={middleImage}
             alt=''
           />

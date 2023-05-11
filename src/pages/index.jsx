@@ -10,6 +10,8 @@ import OurProjects from '@/components/organizations/OurProjects';
 import OurSolution from '@/components/organizations/OurSolution';
 import OurPartner from '@/components/organizations/OurPartner';
 import OurTeam from '@/components/organizations/OurTeam';
+import { getAllPosts } from '@/lib/api';
+// import { getAllData } from '@/lib/customApi';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,7 +23,9 @@ const bgstyle = {
   // transform: 'rotate(5.2deg) scale(1.2)',
 };
 
-const Home = () => {
+const Home = ({clientReviews=[]}) => {
+
+  // console.log({allPosts})
   return (
     <>
       <OurPartner />
@@ -36,12 +40,13 @@ const Home = () => {
 
 // style={bgstyle}
 // style={{transform:'rotate(-5deg)'}}
-Home.getLayout = (page) => (
-  <>
+Home.getLayout = (page) => {
+  // console.log(page?.props?.children?.props)
+  return(<>
     <div style={bgstyle}>
       <div>
         <Header />
-        <HeroSection />
+        <HeroSection clientReviews={page?.props?.children?.props?.clientReviews}/>
       </div>
     </div>
 
@@ -49,7 +54,28 @@ Home.getLayout = (page) => (
       <main>{page}</main>
       <Footer />
     </div>
-  </>
-);
+  </>)
+};
 
 export default Home;
+
+
+export async function getStaticProps() {
+  const clientReviews = getAllPosts(['name', 'photo', 'designation', 'rating', 'slug', 'opinion'])
+  // console.log({clientReviews})
+  return {
+    props: { clientReviews },
+  }
+}
+
+
+// export async function getStaticProps() {
+//   const clientReviews = getAllData(
+//     ['name', 'photo', 'designation', 'rating', 'slug', 'opinion'],
+//     'content/clientReview'
+//   );
+
+//   return {
+//     props: { clientReviews },
+//   };
+// }

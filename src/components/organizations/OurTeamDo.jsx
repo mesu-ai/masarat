@@ -35,13 +35,25 @@ const OurTeamDo = () => {
         keyword='Detail Service'
         title='What Our Team Do'
       />
-      <Card className='grid sm:grid-cols-3 gap-8 xl:gap-14 border border-mercury mt-16 p-11'>
+      <Card className='flex flex-col   md:flex-row md:justify-between  border border-mercury mt-16 p-7 lg:p-11'>
         {workingProcess?.map((process, index) => (
-          <div className={`text-start  ${workingProcess.length === index+1 ? '' : 'border-b sm:border-b-0 sm:border-e border-mercury pb-8 sm:pe-8 xl:pe-14'}`} key={index}>
-            <div className='mb-8 md:mb-16'>{process.icon}</div>
-            <div className='space-y-3'>
-              <Heading2XL>{process?.title}</Heading2XL>
-              <ParagraphText>{process?.shortDecption}</ParagraphText>
+          <div
+            key={index}
+            className={`w-full  ${
+              index > 0 && index + 1 !== workingProcess.length
+                ? 'border-y md:border-x md:border-y-0 border-mercury my-7 md:my-0 py-7 md:py-0'
+                : ''
+            }`}
+          >
+            <div
+              className={` md:mx-auto md:max-w-[243px] 2xl:max-w-sm ltr:text-start rtl:text-end   `}
+              key={index}
+            >
+              <div className='mb-8 md:mb-16'>{process.icon}</div>
+              <div className='space-y-3'>
+                <Heading2XL>{process?.title}</Heading2XL>
+                <ParagraphText>{process?.shortDecption}</ParagraphText>
+              </div>
             </div>
           </div>
         ))}

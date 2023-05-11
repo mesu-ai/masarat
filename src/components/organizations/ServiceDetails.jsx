@@ -77,13 +77,13 @@ const ServiceDetails = () => {
                     {service?.title}
                   </p>
                   <NextIcon
-                    className={`group-hover:hidden ${
+                    className={`group-hover:hidden rtl:rotate-180 ${
                       service.title === selectService.title ? 'hidden' : ''
                     }`}
                     color='#657791 '
                   />
                   <NextIcon
-                    className={`group-hover:block ${
+                    className={`group-hover:block rtl:rotate-180 ${
                       service.title === selectService.title ? 'block' : 'hidden'
                     }`}
                   />

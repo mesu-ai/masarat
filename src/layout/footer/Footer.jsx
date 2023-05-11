@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer className='bg-gradient-darkBlack'>
       <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-5 md:pt-14 md:pb-11'>
-        <div className='grid grid-cols-1 md:grid-cols-2  text-center md:text-start gap-3'>
+        <div className='grid grid-cols-1 md:grid-cols-2  text-center ltr:md:text-start rtl:md:text-end gap-3'>
           <div className=''>
             <NavLink path='/'>
               <Image
