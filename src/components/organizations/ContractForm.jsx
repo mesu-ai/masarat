@@ -12,28 +12,22 @@ import Button from '../atoms/Button';
 import { useTranslation } from 'react-i18next';
 
 const ContractForm = () => {
-  const [data,setData]=useState({});
-  const {t}=useTranslation();
-  
+  const [data, setData] = useState({});
+  const { t } = useTranslation();
+
   const handleBlur = (e) => {
-    const name=e.target.name;
-    const value=e.target.value;
+    const name = e.target.name;
+    const value = e.target.value;
 
-    const newArr={...data};
-    newArr[name]=value;
-    setData(newArr)
-
-    
+    const newArr = { ...data };
+    newArr[name] = value;
+    setData(newArr);
   };
 
-  const handleSubmit=(e)=>{
-
-    console.log(data)
+  const handleSubmit = (e) => {
+    console.log(data);
     e.preventDefault();
-
-  }
-
-  
+  };
 
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 2xl:pt-20'>
@@ -49,9 +43,7 @@ const ContractForm = () => {
           <ul className='space-y-8'>
             <li className='flex items-center gap-5'>
               <LocationIcon />
-              <ParagraphText>
-                Al Dabab Street, Al Ma'azer Dist.Riyadh
-              </ParagraphText>
+              <ParagraphText>Al Dabab Street, Al Ma'azer Dist.Riyadh</ParagraphText>
             </li>
             <li className='flex items-center gap-5'>
               <PhoneIcon />
@@ -65,24 +57,10 @@ const ContractForm = () => {
         </div>
         <div className='my-auto mt-5 md:mt-auto'>
           <form className='space-y-8' onSubmit={handleSubmit}>
-            <InputField
-              name='name'
-              placeholder='Name'
-              handleBlur={handleBlur}
-            />
+            <InputField name='name' placeholder='Name' handleBlur={handleBlur} />
             <div className='grid sm:grid-cols-2 gap-7'>
-              <InputField
-                name='email'
-                type='email'
-                placeholder='Email'
-                handleBlur={handleBlur}
-              />
-              <InputField
-                name='phone'
-                type='number'
-                placeholder='Phone'
-                handleBlur={handleBlur}
-              />
+              <InputField name='email' type='email' placeholder='Email' handleBlur={handleBlur} />
+              <InputField name='phone' type='number' placeholder='Phone' handleBlur={handleBlur} />
             </div>
             <textarea
               className={`w-full text-sm text-slateBlue p-3 placeholder:text-slateBlue outline-0 border border-lightwhite`}
@@ -94,10 +72,9 @@ const ContractForm = () => {
             />
 
             <Button
-            type='submit'
+              type='submit'
               title='Send Message'
-              className='bg-gradient-lightGreen text-slateBlue'
-            ></Button>
+              className='bg-gradient-lightGreen text-slateBlue'></Button>
           </form>
         </div>
       </div>

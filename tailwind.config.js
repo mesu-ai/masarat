@@ -9,14 +9,14 @@ module.exports = {
         'timberGreen': '#1A3D37',
         'blackPearl': '#0F172A',
         'slateBlue': '#657790',
-        'lightBlue':'#BDD5FF',
+        'lightBlue': '#BDD5FF',
         'lightGreen': '#9BEBA8',
-        'thinGreen':'#E6FAE9',
-        'mercury':'#E5EAF1',
-        'whiteGreen':'#F7FDF8',
-        'slateGray':'#AFAFAF',
-        'offWhite':'#F6F7FB',
-        'lightwhite':'#EDEDED'
+        'thinGreen': '#E6FAE9',
+        'mercury': '#E5EAF1',
+        'whiteGreen': '#F7FDF8',
+        'slateGray': '#AFAFAF',
+        'offWhite': '#F6F7FB',
+        'lightwhite': '#EDEDED'
 
       },
       backgroundImage: {
@@ -32,14 +32,14 @@ module.exports = {
 
       },
       scale: {
-        
-    }
+
+      }
 
 
     },
   },
   // important: true,
-  plugins: [],
+  plugins: []
 
   // future: {
   //   // add support for CSS transforms
