@@ -21,70 +21,35 @@ export default defineConfig({
   schema: {
     
     collections: [
+
       // {
-      //   name: 'page',
-      //   label: 'A page of the website',
-      //   format: 'mdx',
-      //   templates: [
+      //   name: "post",
+      //   label: "Posts",
+      //   path: "content/posts",
+      //   fields: [
       //     {
-      //       name: 'content',
-      //       label: 'Content Page',
-      //       path: 'content/pages',
-      //       fields: [
-      //         {
-      //           type: "string",
-      //           name: "name",
-      //           label: "Name",
-      //           isTitle: true,
-      //           required: true,
-      //         },
-      //       ],
+      //       type: "string",
+      //       name: "title",
+      //       label: "Title",
+      //       isTitle: true,
+      //       required: true,
       //     },
       //     {
-      //       name: 'marketing',
-      //       label: 'Marketing Page',
-      //       path: 'content/marketing',
-      //       fields: [
-      //         {
-      //           type: "string",
-      //           name: "name",
-      //           label: "Name",
-      //           isTitle: true,
-      //           required: true,
-      //         },
-      //       ],
+      //       type: "rich-text",
+      //       name: "body",
+      //       label: "Body",
+      //       isBody: true,
       //     },
       //   ],
+      //   ui: {
+      //     // This is an DEMO router. You can remove this to fit your site
+      //     router: ({ document }) => `/demo/blog/${document._sys.filename}`,
+      //   },
       // },
-
-      {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
-        fields: [
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
-            required: true,
-          },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
-      },
       
       {
         name: "partner",
-        label: "Our Partner",
+        label: "Our Partners",
         path: "content/partners",
         fields: [
           {
@@ -105,6 +70,153 @@ export default defineConfig({
         ui: {
           // This is an DEMO router. You can remove this to fit your site
           router: ({ document }) => `/home/${document._sys.filename}`,
+        },
+      },
+
+      {
+        name: "projects",
+        label: "Our Projects",
+        path: "content/projects",
+        fields: [
+          {
+            type: "string",
+            name: "name",
+            label: "Project Name",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "type",
+            label: "Project Type",
+            required: true,
+          },
+          {
+            type: "image",
+            name: "coverPhoto",
+            label: "Project Logo/Cover Image",
+            required: true,
+            
+          },
+          // {
+          //   type: "string",
+          //   name: "Shot Description",
+          //   label: "Shot Description",
+          //   required: true,
+
+          //   ui: {
+          //     component: "textarea"
+          //   }
+          // },
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/home/${document._sys.filename}`,
+        },
+      },
+
+      {
+        name: "teamMeambers",
+        label: "Team Members",
+        path: "content/teamMembers",
+        fields: [
+          {
+            type: "string",
+            name: "name",
+            label: "Name",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "designation",
+            label: "Designation",
+            required: true,
+          },
+          {
+            type: "image",
+            name: "photo",
+            label: "Photo",
+            required: true,
+            
+          },
+         
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/home/${document._sys.filename}`,
+        },
+      },
+      {
+        name: "teamWorkingProcess",
+        label: "Working Process",
+        path: "content/workingProcess",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "title_ar",
+            label: "Title In Arabic",
+            required: true,
+          },
+         
+
+          {
+            type: "string",
+            name: "shortDescription",
+            label: "Short Description",
+            required: true,
+
+            ui: {
+              component: "textarea"
+            }
+          },
+          {
+            type: "string",
+            name: "shortDescription_ar",
+            label: "Short Description In Arabic",
+            // required: true,
+
+            ui: {
+              component: "textarea"
+            }
+          },
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/productAndService/${document._sys.filename}`,
+        },
+      },
+
+      {
+        name: "workingVideo",
+        label: "Working Video",
+        path: "content/videos",
+        fields: [
+          {
+            type: "string",
+            name: "videoType",
+            label: "Type of Video/Name",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "workingVideoLink",
+            label: "Video Link (Suggest Youtube)",
+            required: true,
+          },
+          
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/aboutUs/${document._sys.filename}`,
         },
       },
       
@@ -230,6 +342,152 @@ export default defineConfig({
           router: ({ document }) => `/productAndService/${document._sys.filename}`,
         },
       },
+
+      {
+        name: "aboutUsInfo",
+        label: "About Us",
+        path: "content/aboutUs",
+        fields: [{
+          label: "Masarat Information",
+          name: "aboutMasarat",
+          type: "object",
+          list: true,
+          templates: [
+            {
+              label: "About Masarat",
+              name: "aboutMasarat",
+              fields: [
+                {
+                  label: "Title",
+                  name: "title",
+                  type: "string",
+                  required: true
+                },
+                {
+                  label: "Title In Arabic",
+                  name: "title_ar",
+                  type: "string"
+                },
+                {
+                  label:"Cover Photo",
+                  name:'coverPhoto',
+                  type:'image',
+                  required:true
+                },
+                {
+                  label: "Description",
+                  name: "description",
+                  type: "string",
+                  required: true,
+                  ui: {
+                    component: "textarea"
+                  }
+                },
+                {
+                  label: "Description In Arabic",
+                  name: "description_ar",
+                  type: "string",
+                  ui: {
+                    component: "textarea"
+                  }
+                }
+              ]
+            },
+            {
+              label: "Management Info",
+              name: "managementInfo",
+              fields: [
+                {
+                  label: "Name",
+                  name: "name",
+                  type: "string",
+                  required:true
+                },
+                {
+                  label: "Designation",
+                  name: "designation",
+                  type: "string",
+                  required:true
+                },
+                {
+                  label:"Photo",
+                  name:'photo',
+                  type:'image',
+                  required:true
+                },
+                
+                {
+                  label: "Quote",
+                  name: "quote",
+                  type: "object",
+                  fields:[
+                    {
+                      label: "Title",
+                      name: "title",
+                      type: "string",
+                      required:true
+                    },
+                    {
+                      label: "Title In Arabic",
+                      name: "title_ar",
+                      type: "string",
+                     
+                    },
+                    {
+                      label: "Description",
+                      name: "description",
+                      type: "string",
+                      required:true,
+                      ui: {
+                        component: "textarea"
+                      }
+                    },
+                    {
+                      label: "Description In Arabic",
+                      name: "description_ar",
+                      type: "string",
+                      
+                      ui: {
+                        component: "textarea"
+                      }
+                    }
+                  ]
+                  
+                }
+              ]
+            },
+            {
+              label: "Project Summery",
+              name: "projectSummery",
+              fields: [
+                {
+                  label: "Happy Clients",
+                  name: "happyClients",
+                  type: "string",
+                  required:true
+                },
+                {
+                  label: "Project Completed",
+                  name: "projectCompleted",
+                  type: "string",
+                  required:true
+                },
+                {
+                  label: "Cooperation Company",
+                  name: "cooperationCompany",
+                  type: "string",
+                  required:true
+                }
+              ]
+            }
+          ]
+        }],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/aboutUs/${document._sys.filename}`,
+        },
+      },
+    
       {
         name: "contactInfo",
         label: "Contact Info",

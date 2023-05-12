@@ -6,6 +6,7 @@ import Button from '../atoms/Button';
 import Card from '../atoms/Card';
 import { useTranslation } from 'react-i18next';
 import Heading from '../molecules/Heading';
+import Link from 'next/link';
 
 const ContactUsBanner = () => {
   const { t, i18n } = useTranslation();
@@ -29,7 +30,14 @@ const ContactUsBanner = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididun.
           </ParagraphText>
-          <Button title='Contact Us' />
+          <div>
+            <Link
+              href='/contactUs'
+              className='mt-4'
+            >
+              <Button title='Contact Us' />
+            </Link>
+          </div>
         </div>
       </Card>
     </div>

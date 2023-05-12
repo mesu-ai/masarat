@@ -9,8 +9,8 @@ import OurServices from '@/components/organizations/OurServices';
 import OurProjects from '@/components/organizations/OurProjects';
 import OurSolution from '@/components/organizations/OurSolution';
 import OurPartner from '@/components/organizations/OurPartner';
-import OurTeam from '@/components/organizations/OurTeam';
 import { getAllPosts } from '@/lib/api';
+import OurTeamMember from '@/components/organizations/OurTeamMember';
 // import { getAllData } from '@/lib/customApi';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -23,15 +23,15 @@ const bgstyle = {
   // transform: 'rotate(5.2deg) scale(1.2)',
 };
 
-const Home = ({clientReviews=[] , ourPartners=[]}) => {
+const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[]}) => {
 
   return (
     <>
       <OurPartner ourPartners={ourPartners}/>
       <OurServices />
       <OurSolution />
-      <OurProjects />
-      <OurTeam/>
+      <OurProjects projects={ourProjects}/>
+      <OurTeamMember teamMeambers={ourMembers}/>
       <ContactUsBanner />
     </>
   );
@@ -60,10 +60,12 @@ export default Home;
 
 
 export async function getStaticProps() {
-  const clientReviews = getAllPosts(['name', 'photo', 'designation', 'rating', 'slug', 'opinion'],'content/clientReview')
-  const ourPartners = getAllPosts(['name', 'logo'],'content/partners')
+  const clientReviews = getAllPosts(['name', 'photo', 'designation', 'rating', 'slug', 'opinion'],'content/clientReview');
+  const ourPartners = getAllPosts(['name', 'logo'],'content/partners');
+  const ourMembers=getAllPosts(['name','designation','photo'],'content/teamMembers');
+  const ourProjects=getAllPosts(['name','type','coverPhoto'],'content/projects')
   
   return {
-    props: { clientReviews, ourPartners },
+    props: { clientReviews, ourPartners,ourMembers,ourProjects },
   }
 }

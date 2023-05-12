@@ -8,8 +8,9 @@ import Button from '../atoms/Button';
 import aboutBanner from '@/assets/images/aboutBanner.png';
 import { useTranslation } from 'react-i18next';
 
-const AboutUsSection = () => {
+const AboutUsSection = ({aboutMasarat={}}) => {
   const {t,i18n}=useTranslation();
+  console.log(aboutMasarat)
   return (
     <div className={`${i18n.language==='en' ? 'ltr:container-left ' : 'rtl:container-right'}`}>
       <div className=' grid  lg:grid-cols-2 gap-10 mx-auto ltr:ps-6 ltr:sm:ps-0 ltr:xl:ps-10 rtl:pe-6 rtl:sm:pe-0 rtl:xl:pe-10  py-0 lg:py-3 mb-20 xl:mb-36'>
@@ -18,16 +19,10 @@ const AboutUsSection = () => {
             <HeadingL>About Us</HeadingL>
 
             <Heading5XL>
-              We Have 15 Years Of Experience On Business Development area
+              {i18n.language==='en' ? aboutMasarat?.title :  aboutMasarat?.title_ar ? aboutMasarat?.title_ar : aboutMasarat?.title }
             </Heading5XL>
             <ParagraphText>
-              Masarat Digital is a Technology company that provide software
-              development, AI & Tech Consulting. Masarat Digital Company is
-              advance technology enabler in various industries/ tracks / paths
-              (HR, Healthcare, Supply Chain & Sports). For the consulting area,
-              Masarat is focusing on digital strategy, process reengineering,
-              digital marketing, digital transformation, digital enablement, and
-              advanced analytics.
+            {i18n.language==='en' ? aboutMasarat?.description :  aboutMasarat?.description_ar ? aboutMasarat?.description_ar : aboutMasarat?.description }
             </ParagraphText>
           </div>
 
@@ -49,9 +44,11 @@ const AboutUsSection = () => {
         </div>
         <div className='ltr:ms-auto rtl:me-auto'>
           <Image
-            src={aboutBanner}
+            src={aboutMasarat?.coverPhoto}
             alt='about_cover'
             className='rtl:-scale-x-100'
+            width={800}
+            height={800}
             // className=' ltr:lg:right-0 rtl:lg:left-0 rtl:-scale-x-100  lg:absolute   w-full lg:w-auto h-full '
           />
         </div>
