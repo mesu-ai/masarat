@@ -25,7 +25,7 @@ export default serviceDetailsPage;
 export async function getStaticProps({ params }) {
   const data = getPostBySlug(
     params.slug,
-    (['name','name_ar','icon','shortDescription','shortDescription_ar','slug','description']),'content/services'
+    (['name','name_ar','icon','shortDescription','shortDescription_ar','slug','serviceDetails']),'content/services'
   );
 
   // const allData = getAllData(
@@ -35,15 +35,16 @@ export async function getStaticProps({ params }) {
 
   // const similarBlogs = allBlogs.filter((item) => item.tag === data?.tag);
 
-  const description = await markdownToHtml(data?.description || '');
+
+  const serviceDetails = await markdownToHtml(data?.serviceDetails || '');
 
   console.log(data)
 
   return {
     props: {
       data: {
-        ...data,
-        description,
+       ...data,
+        serviceDetails,
       },
       // datas: allData,
     },

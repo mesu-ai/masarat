@@ -116,21 +116,19 @@ export default defineConfig({
               component: "textarea"
             }
           },
-
-         {
+          {
             type: "rich-text",
-            name: "description",
-            label: "Description",
-            // isBody: true,
+            name: "serviceDetails",
+            label: "Service Details",
+            isDescription: true,
             required:true,
-            
           },
          
         ],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/home/${document._sys.filename}`,
-        // },
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/productAndService/${document._sys.filename}`,
+        },
       },
 
       {
