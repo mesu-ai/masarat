@@ -23,12 +23,13 @@ const bgstyle = {
   // transform: 'rotate(5.2deg) scale(1.2)',
 };
 
-const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[]}) => {
+const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[],ourServices=[]}) => {
+  console.log({ourServices})
 
   return (
     <>
       <OurPartner ourPartners={ourPartners}/>
-      <OurServices />
+      <OurServices services={ourServices}/>
       <OurSolution />
       <OurProjects projects={ourProjects}/>
       <OurTeamMember teamMeambers={ourMembers}/>
@@ -63,9 +64,10 @@ export async function getStaticProps() {
   const clientReviews = getAllPosts(['name', 'photo', 'designation', 'rating', 'slug', 'opinion'],'content/clientReview');
   const ourPartners = getAllPosts(['name', 'logo'],'content/partners');
   const ourMembers=getAllPosts(['name','designation','photo'],'content/teamMembers');
-  const ourProjects=getAllPosts(['name','type','coverPhoto'],'content/projects')
+  const ourProjects=getAllPosts(['name','type','coverPhoto'],'content/projects');
+  const ourServices=getAllPosts(['name','name_ar','icon','shortDescription','shortDescription_ar','slug'],'content/services');
   
   return {
-    props: { clientReviews, ourPartners,ourMembers,ourProjects },
+    props: { clientReviews, ourPartners,ourMembers,ourProjects,ourServices },
   }
 }

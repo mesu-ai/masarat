@@ -16,7 +16,7 @@ const aboutUs = ({clientReviews=[],ourMembers=[],ourvideo,aboutMasarat={},aboutM
 
   return (
     <div>
-      <AboutUsSection aboutMasarat={aboutMasarat}/>
+      <AboutUsSection aboutMasarat={aboutMasarat} aboutSummery={aboutSummery}/>
       <ProjectManagerInfo aboutManagement={aboutManagement}/>
       <ProjectSummery aboutSummery={aboutSummery}/>
       <OurVisions/>

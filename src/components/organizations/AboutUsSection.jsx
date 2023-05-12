@@ -7,40 +7,54 @@ import Heading2XL from '../atoms/Heading2XL';
 import Button from '../atoms/Button';
 import aboutBanner from '@/assets/images/aboutBanner.png';
 import { useTranslation } from 'react-i18next';
+import Link from 'next/link';
 
-const AboutUsSection = ({aboutMasarat={}}) => {
-  const {t,i18n}=useTranslation();
-  console.log(aboutMasarat)
+const AboutUsSection = ({ aboutMasarat = {},aboutSummery={} }) => {
+  const { t, i18n } = useTranslation();
+  
   return (
-    <div className={`${i18n.language==='en' ? 'ltr:container-left ' : 'rtl:container-right'}`}>
+    <div
+      className={`${
+        i18n.language === 'en' ? 'ltr:container-left ' : 'rtl:container-right'
+      }`}
+    >
       <div className=' grid  lg:grid-cols-2 gap-10 mx-auto ltr:ps-6 ltr:sm:ps-0 ltr:xl:ps-10 rtl:pe-6 rtl:sm:pe-0 rtl:xl:pe-10  py-0 lg:py-3 mb-20 xl:mb-36'>
         <div className='my-auto'>
           <div className='space-y-6 max-w-2xl lg:max-w-4xl'>
             <HeadingL>About Us</HeadingL>
 
             <Heading5XL>
-              {i18n.language==='en' ? aboutMasarat?.title :  aboutMasarat?.title_ar ? aboutMasarat?.title_ar : aboutMasarat?.title }
+              {i18n.language === 'en'
+                ? aboutMasarat?.title
+                : aboutMasarat?.title_ar
+                ? aboutMasarat?.title_ar
+                : aboutMasarat?.title}
             </Heading5XL>
             <ParagraphText>
-            {i18n.language==='en' ? aboutMasarat?.description :  aboutMasarat?.description_ar ? aboutMasarat?.description_ar : aboutMasarat?.description }
+              {i18n.language === 'en'
+                ? aboutMasarat?.description
+                : aboutMasarat?.description_ar
+                ? aboutMasarat?.description_ar
+                : aboutMasarat?.description}
             </ParagraphText>
           </div>
 
           <ul className='flex gap-10 mt-8'>
             <li className='space-y-2'>
-              <Heading2XL>1432+</Heading2XL>
+              <Heading2XL>{aboutSummery?.happyClients}</Heading2XL>
               <ParagraphText>Happy Clients</ParagraphText>
             </li>
             <li className='space-y-2'>
-              <Heading2XL>1432+</Heading2XL>
+              <Heading2XL>{aboutSummery?.projectCompleted}</Heading2XL>
               <ParagraphText>Project Completed</ParagraphText>
             </li>
           </ul>
-
-          <Button
-            title='View Services'
-            className='bg-gradient-lightGreen text-slateBlue mt-10'
-          ></Button>
+          <Link href='/productAndService'>
+            <Button
+              title='View Services'
+              className='bg-gradient-lightGreen text-slateBlue mt-10'
+            />
+          </Link>
         </div>
         <div className='ltr:ms-auto rtl:me-auto'>
           <Image

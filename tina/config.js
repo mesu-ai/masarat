@@ -74,6 +74,67 @@ export default defineConfig({
       },
 
       {
+        name: "services",
+        label: "Our Services",
+        path: "content/services",
+        fields: [
+          {
+            type: "string",
+            name: "name",
+            label: "Service Name",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "name_ar",
+            label: "Service Name In Arabic",
+            required: true,
+          },
+          {
+            type:"image",
+            name:"icon",
+            label:"Service Logo",
+            required: true
+          },
+          {
+            type: "string",
+            name: "shortDescription",
+            label: "Short Description",
+            required: true,
+            ui: {
+              component: "textarea"
+            }
+          
+          },
+          {
+            type: "string",
+            name: "shortDescription_ar",
+            label: "Short Description In Arabic",
+            required: true,
+            ui: {
+              component: "textarea"
+            }
+          },
+
+         {
+            type: "rich-text",
+            name: "description",
+            label: "Description",
+            
+            isBody: true,
+            required:true,
+            
+          },
+         
+        ],
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/home/${document._sys.filename}`,
+        // },
+      },
+
+      {
         name: "projects",
         label: "Our Projects",
         path: "content/projects",
@@ -98,16 +159,7 @@ export default defineConfig({
             required: true,
             
           },
-          // {
-          //   type: "string",
-          //   name: "Shot Description",
-          //   label: "Shot Description",
-          //   required: true,
-
-          //   ui: {
-          //     component: "textarea"
-          //   }
-          // },
+          
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
