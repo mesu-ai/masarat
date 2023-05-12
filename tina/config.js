@@ -19,7 +19,44 @@ export default defineConfig({
     },
   },
   schema: {
+    
     collections: [
+      // {
+      //   name: 'page',
+      //   label: 'A page of the website',
+      //   format: 'mdx',
+      //   templates: [
+      //     {
+      //       name: 'content',
+      //       label: 'Content Page',
+      //       path: 'content/pages',
+      //       fields: [
+      //         {
+      //           type: "string",
+      //           name: "name",
+      //           label: "Name",
+      //           isTitle: true,
+      //           required: true,
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       name: 'marketing',
+      //       label: 'Marketing Page',
+      //       path: 'content/marketing',
+      //       fields: [
+      //         {
+      //           type: "string",
+      //           name: "name",
+      //           label: "Name",
+      //           isTitle: true,
+      //           required: true,
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // },
+
       {
         name: "post",
         label: "Posts",
@@ -44,6 +81,32 @@ export default defineConfig({
           router: ({ document }) => `/demo/blog/${document._sys.filename}`,
         },
       },
+      
+      {
+        name: "partner",
+        label: "Our Partner",
+        path: "content/partners",
+        fields: [
+          {
+            type: "string",
+            name: "name",
+            label: "Brand Name",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "image",
+            name: "logo",
+            label: "Brand Logo",
+            required: true,
+            
+          },
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/home/${document._sys.filename}`,
+        },
+      },
       {
         name: "clientReview",
         label: "Client Review",
@@ -53,7 +116,7 @@ export default defineConfig({
             type: "string",
             name: "name",
             label: "Name",
-            isName: true,
+            isTitle: true,
             required: true,
           },
 
@@ -72,7 +135,6 @@ export default defineConfig({
             type: 'image',
             label: 'Photo',
             name: 'photo',
-            isImage: true,
             required: true,
           },
           // {
@@ -87,7 +149,6 @@ export default defineConfig({
             type: "string",
             name: "designation",
             label: "Designation",
-            isDesignation: true,
             required: true,
           },
 
@@ -95,7 +156,6 @@ export default defineConfig({
             type: "number",
             name:"rating",
             label:"Rating",
-            isRating:true,
             required:true,
           },
 
@@ -103,7 +163,6 @@ export default defineConfig({
             type: "string",
             name: "opinion",
             label: "Opinion",
-            isOpinion: true,
             required: true,
 
             ui: {
