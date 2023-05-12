@@ -9,32 +9,32 @@ import SliderShow from '../molecules/SliderShow';
 import SlideCard from '../molecules/SlideCard';
 import { getAllData } from '@/lib/customApi';
 
-// const reviewers = [
-//   {
-//     phote: '',
-//     name: 'kamal',
-//     designation: 'CEO, Supreme World',
-//     rating: 4,
-//     review:
-//       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-//   },
-//   {
-//     phote: '',
-//     name: 'jamal',
-//     designation: 'ceo',
-//     rating: 5,
-//     review:
-//       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-//   },
-//   {
-//     phote: '',
-//     name: 'rubel',
-//     designation: 'ceo',
-//     rating: 3,
-//     review:
-//       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-//   },
-// ];
+const clientReviewss = [
+  {
+    phote: '',
+    name: 'kamal',
+    designation: 'CEO, Supreme World',
+    rating: 4,
+    review:
+      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
+  },
+  {
+    phote: '',
+    name: 'jamal',
+    designation: 'ceo',
+    rating: 5,
+    review:
+      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
+  },
+  {
+    phote: '',
+    name: 'rubel',
+    designation: 'ceo',
+    rating: 3,
+    review:
+      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
+  },
+];
 
 const HeroSection = ({clientReviews=[]}) => {
 
