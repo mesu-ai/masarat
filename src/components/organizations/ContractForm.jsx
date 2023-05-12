@@ -11,7 +11,7 @@ import InputField from '../atoms/InputField';
 import Button from '../atoms/Button';
 import { useTranslation } from 'react-i18next';
 
-const ContractForm = () => {
+const ContractForm = ({contactInfo}) => {
   const [data, setData] = useState({});
   const { t } = useTranslation();
 
@@ -29,6 +29,8 @@ const ContractForm = () => {
     e.preventDefault();
   };
 
+  console.log({contactInfo})
+
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 2xl:pt-20'>
       <div className='shadow-lightShadow grid md:grid-cols-2  gap-10 lg:gap-14  px-10 lg:px-16 py-8 lg:py-12  '>
@@ -43,15 +45,15 @@ const ContractForm = () => {
           <ul className='space-y-8'>
             <li className='flex items-center gap-5'>
               <LocationIcon />
-              <ParagraphText>Al Dabab Street, Al Ma'azer Dist.Riyadh</ParagraphText>
+              <ParagraphText>{contactInfo.contactInformation?.location}</ParagraphText>
             </li>
             <li className='flex items-center gap-5'>
               <PhoneIcon />
-              <ParagraphText>(01) 4044875</ParagraphText>
+              <ParagraphText>{contactInfo.contactInformation?.phone}</ParagraphText>
             </li>
             <li className='flex items-center gap-5'>
               <EmailIcon />
-              <ParagraphText>info@masadigi.sa</ParagraphText>
+              <ParagraphText>{contactInfo.contactInformation?.email}</ParagraphText>
             </li>
           </ul>
         </div>

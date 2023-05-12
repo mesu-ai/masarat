@@ -33,7 +33,7 @@ const reviewers = [
   },
 ];
 
-const Testimonial = () => {
+const Testimonial = ({clientReviews=[]}) => {
   return (
     <div>
       <div className='container  mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36  mt-36'>
@@ -45,8 +45,8 @@ const Testimonial = () => {
           </div>
           <div className=''>
             <SliderShow showDot={false} showArrow={true} >
-              {reviewers &&
-                reviewers.map((review, index) => (
+              {clientReviews &&
+                clientReviews.map((review, index) => (
                   <SlideCard
                     key={index}
                     review={review}

@@ -11,9 +11,9 @@ const DownIcon = ({ width = 14, height = 9, className = '' }) => {
       <path
         d='M12.8327 1.58215L6.99935 7.41549L1.16602 1.58215'
         stroke='#0F172A'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </svg>
   );

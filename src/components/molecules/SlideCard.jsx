@@ -6,6 +6,8 @@ import Rating from '../atoms/Rating';
 
 const SlideCard = ({ review = {} , className='' }) => {
   const { t } = useTranslation();
+
+  // console.log(review)
   return (
     <div className={`${className}`}>
       <Rating stars={review?.rating} />

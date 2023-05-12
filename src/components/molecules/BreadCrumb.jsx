@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 const BreadCrumb = () => {
   const route = useRouter();
-  console.log({ route });
+  // console.log({ route });
   return (
     <div className='text-center space-y-6 pt-5 pb-5'>
       <Heading6XL>

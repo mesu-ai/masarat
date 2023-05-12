@@ -107,6 +107,7 @@ export default defineConfig({
           router: ({ document }) => `/home/${document._sys.filename}`,
         },
       },
+      
       {
         name: "clientReview",
         label: "Client Review",
@@ -184,6 +185,87 @@ export default defineConfig({
           router: ({ document }) => `/home/${document._sys.filename}`,
         },
       },
+      {
+        name: "faq",
+        label: "FAQ Section",
+        path: "content/faq",
+        fields: [
+          {
+            type: "string",
+            name: "question",
+            label: "Question",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "question_ar",
+            label: "Question In Arabic",
+            // required: true,
+          },
+
+          {
+            type: "string",
+            name: "answer",
+            label: "Answer",
+            required: true,
+
+            ui: {
+              component: "textarea"
+            }
+          },
+          {
+            type: "string",
+            name: "answer_ar",
+            label: "Answer In Arabic",
+            // required: true,
+
+            ui: {
+              component: "textarea"
+            }
+          },
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/productAndService/${document._sys.filename}`,
+        },
+      },
+      {
+        name: "contactInfo",
+        label: "Contact Info",
+        path: "content/contactInfo",
+        
+        fields: [
+          {name:'contactInformation',label:'Contact Information', type:'object',fields:[
+            {
+              type: "string",
+              name: "location",
+              label: "Location",
+              required: true,
+            },
+            {
+              type: "string",
+              name: "phone",
+              label: "Phone Number",
+              required: true,
+            },
+            {
+              type: "string",
+              name: "email",
+              label: "Email Address",
+              required: true,
+              
+            },
+
+          ]}
+          
+        ],
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/contactUs/${document._sys.filename}`,
+        },
+      },
+      
     ],
   },
 });

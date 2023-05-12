@@ -23,9 +23,8 @@ const bgstyle = {
   // transform: 'rotate(5.2deg) scale(1.2)',
 };
 
-const Home = ({clientReviews=[],ourPartners=[]}) => {
+const Home = ({clientReviews=[] , ourPartners=[]}) => {
 
-  console.log({ourPartners})
   return (
     <>
       <OurPartner ourPartners={ourPartners}/>
@@ -63,20 +62,8 @@ export default Home;
 export async function getStaticProps() {
   const clientReviews = getAllPosts(['name', 'photo', 'designation', 'rating', 'slug', 'opinion'],'content/clientReview')
   const ourPartners = getAllPosts(['name', 'logo'],'content/partners')
-  // console.log({clientReviews})
+  
   return {
     props: { clientReviews, ourPartners },
   }
 }
-
-
-// export async function getStaticProps() {
-//   const clientReviews = getAllData(
-//     ['name', 'photo', 'designation', 'rating', 'slug', 'opinion'],
-//     'content/clientReview'
-//   );
-
-//   return {
-//     props: { clientReviews },
-//   };
-// }

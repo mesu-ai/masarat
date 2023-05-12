@@ -83,13 +83,3 @@ const HeroSection = ({ clientReviews = [] }) => {
 
 export default HeroSection;
 
-// export async function getStaticProps() {
-//   const clientReviews = getAllData(
-//     ['name', 'photo', 'designation', 'rating', 'slug', 'opinion'],
-//     'content/clientReview'
-//   );
-
-//   return {
-//     props: { clientReviews },
-//   };
-// }

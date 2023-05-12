@@ -20,7 +20,7 @@ const Accrodion = ({
 				onClick={() => setOpen((prevState) => !prevState)}
 				className='w-full  py-4 flex justify-between'
 			>
-				<p className={`ltr:text-start rtl:text-end text-lg font-bold  ${titleStyle}`}>{t(`${title}`)}</p>
+				<p className={`ltr:text-start rtl:text-end text-lg font-bold  ${titleStyle}`}>{title}</p>
 				{open ? <ArrowUp /> : <ArrowDown />}
         
 			</button>
