@@ -121,8 +121,7 @@ export default defineConfig({
             type: "rich-text",
             name: "description",
             label: "Description",
-            
-            isBody: true,
+            // isBody: true,
             required:true,
             
           },

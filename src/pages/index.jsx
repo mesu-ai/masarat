@@ -65,7 +65,7 @@ export async function getStaticProps() {
   const ourPartners = getAllPosts(['name', 'logo'],'content/partners');
   const ourMembers=getAllPosts(['name','designation','photo'],'content/teamMembers');
   const ourProjects=getAllPosts(['name','type','coverPhoto'],'content/projects');
-  const ourServices=getAllPosts(['name','name_ar','icon','shortDescription','shortDescription_ar','slug'],'content/services');
+  const ourServices=getAllPosts(['name','name_ar','icon','shortDescription','shortDescription_ar','slug','description'],'content/services');
   
   return {
     props: { clientReviews, ourPartners,ourMembers,ourProjects,ourServices },
