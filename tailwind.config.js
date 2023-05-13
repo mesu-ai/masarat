@@ -31,6 +31,11 @@ module.exports = {
         'lightShadow': '2px 4px 64px rgba(35, 40, 105, 0.14)'
 
       },
+      truncate: {
+        lines: {
+          4: '4',
+        },
+      },
       scale: {
 
       }

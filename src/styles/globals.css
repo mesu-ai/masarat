@@ -29,29 +29,41 @@ body {
 /* custome gradient color  */
 
 .bg-gradient-greentimber {
-  color: #F8FAFC;
-  background-image: linear-gradient(102.53deg,  #0f241fb3 3.7%,  #0F241E 102.89%);
+  color: #f8fafc;
+  background-image: linear-gradient(102.53deg, #0f241fb3 3.7%, #0f241e 102.89%);
 }
 
-
 .bg-gradient-lightGreen {
-  background-image: linear-gradient(102.06deg, rgba(155, 235, 168, 0.56) 0%, rgba(155, 235, 168, 0.8) 100.77%);;
+  background-image: linear-gradient(
+    102.06deg,
+    rgba(155, 235, 168, 0.56) 0%,
+    rgba(155, 235, 168, 0.8) 100.77%
+  );
 }
 
 .bg-gradient-darkBlack {
-  background-image: linear-gradient(98.25deg, rgba(5, 13, 9, 0.9) 43.68%, #050D0B 100%);;
+  background-image: linear-gradient(
+    98.25deg,
+    rgba(5, 13, 9, 0.9) 43.68%,
+    #050d0b 100%
+  );
 }
-
 
 .bg-gradient-thinGreen {
-  background-image: linear-gradient(172.92deg, rgba(238, 252, 240, 0.6) -4.77%, rgba(238, 252, 240, 0) 77.13%);
-
+  background-image: linear-gradient(
+    172.92deg,
+    rgba(238, 252, 240, 0.6) -4.77%,
+    rgba(238, 252, 240, 0) 77.13%
+  );
 }
 
-.bg-gradient-thinLightGreen{
-  background-image: linear-gradient(212.4deg, rgba(230, 250, 233, 0.6) 1.78%, rgba(230, 250, 233, 0) 80.59%);;
+.bg-gradient-thinLightGreen {
+  background-image: linear-gradient(
+    212.4deg,
+    rgba(230, 250, 233, 0.6) 1.78%,
+    rgba(230, 250, 233, 0) 80.59%
+  );
 }
-
 
 /* custome container */
 
@@ -166,70 +178,111 @@ body {
   }
 }
 
-.ourPartner-flex{
+.ourPartner-flex {
   display: flex !important;
 }
 
 /* slider custom dot */
 
-  @keyframes loading {
-    from {
-      width: 0%;
-    }
-
-    to {
-      width: 100%;
-    }
+@keyframes loading {
+  from {
+    width: 0%;
   }
 
-  .slick-dots {
-    display: flex;
-    align-items: center;
+  to {
+    width: 100%;
   }
+}
 
-  body[dir="rtl"] .slick-dots {
-    justify-content: flex-end;
+.slick-dots {
+  display: flex;
+  align-items: center;
+}
 
-  }
+body[dir='rtl'] .slick-dots {
+  justify-content: flex-end;
+}
 
-  .ft-slick__dots--custom {
+.ft-slick__dots--custom {
+  height: 10px;
+  width: 10px;
+  /* background-color: #e5e7e9; */
+  border-radius: 100%;
+  background-color: #657790;
+  position: relative;
+}
+
+.slick-dots li {
+  width: 10px;
+  margin: 0 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.slick-dots .slick-active {
+  width: 50px;
+
+  transition: width 0.3s ease-in-out;
+  border-radius: 50px;
+}
+
+.slick-dots .slick-active .ft-slick__dots--custom {
+  width: 50px;
+  border-radius: 50px;
+  background-color: #1a3d37;
+  top: 0px;
+  overflow: hidden;
+
+  .loading {
     height: 10px;
-    width: 10px;
-    /* background-color: #e5e7e9; */
-    border-radius: 100%;
-    background-color: #657790;
-    position: relative;
+    animation: loading 5s ease-in;
+    background-image: linear-gradient(270deg, #4fd15a, #03ac0e);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
   }
+}
 
-  .slick-dots li {
-    width: 10px;
-    margin: 0 2px;
-    transition: width 0.3s ease-in-out;
-  }
+/* markdown to html */
 
-  .slick-dots .slick-active {
-    width: 50px;
-   
-    transition: width 0.3s ease-in-out;
-    border-radius: 50px;
-   
-  }
+.markdown {
+  @apply text-lg leading-relaxed;
+}
 
-  .slick-dots .slick-active .ft-slick__dots--custom {
-    width: 50px;
-    border-radius: 50px;
-    background-color:  #1A3D37;
-    top: 0px;
-    overflow: hidden;
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-3;
+}
 
-    .loading {
-      height: 10px;
-      animation: loading 5s ease-in;
-      background-image: linear-gradient(270deg, #4fd15a, #03ac0e);
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-radius: 4px;
-    }
-     }
+.markdown ul {
+  @apply list-disc mx-6;
+}
+
+.markdown h2 {
+  @apply text-3xl mt-12 mb-4 leading-snug;
+}
+
+.markdown h3 {
+  @apply text-2xl mt-8 mb-4 leading-snug;
+}
+
+.markdown img {
+  @apply w-1/2 mx-auto py-4;
+}
+
+.markdown iframe {
+  @apply w-1/2 mx-auto py-6 rounded-t-xl;
+}
+
+
+/* turncate after 4 line */
+
+.truncate-4-lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4; /* number of lines to show */
+}

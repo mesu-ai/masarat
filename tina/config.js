@@ -120,7 +120,12 @@ export default defineConfig({
             type: "rich-text",
             name: "serviceDetails",
             label: "Service Details",
-            isDescription: true,
+            required:true,
+          },
+          {
+            type: "rich-text",
+            name: "serviceDetails_ar",
+            label: "Service Details In Arabic",
             required:true,
           },
          

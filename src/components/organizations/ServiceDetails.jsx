@@ -4,50 +4,21 @@ import Heading5XL from '../atoms/Heading5XL';
 import Heading2XL from '../atoms/Heading2XL';
 import NextIcon from '@/assets/svgs/NextIcon';
 import ParagraphText from '../atoms/ParagraphText';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
+import HtmlToMarkdown from '../molecules/HtmlToMarkdown';
 
-const services = [
-  {
-    // icon: statagyIcon,
-    title: 'Digital Strategy',
-    shortDecption:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-    description:
-      'Our Digital Strategy service is designed to help businesses develop a cohesive and effective plan for their online presence. We start by understanding your business goals and objectives, and then we analyse your digital footprint to identify areas for improvement. Our team of experts will work with you to create a customised strategy that includes search engine optimisation, social media marketing, content marketing and online advertising',
-  },
-  {
-    // icon: statagyIcon,
-    title: 'process Re-Engineering',
-    shortDecption:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-  },
-  {
-    // icon: statagyIcon,
-    title: 'Digital Marketing',
-    shortDecption:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-  },
-  {
-    // icon: statagyIcon,
-    title: 'Digital Transformation',
-    shortDecption:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-  },
-  {
-    // icon: statagyIcon,
-    title: 'Digital Enablement',
-    shortDecption:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-  },
-  {
-    // icon: statagyIcon,
-    title: 'Advanced Analytics',
-    shortDecption:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-  },
-];
 
-const ServiceDetails = () => {
-  const [selectService, setSelectService] = useState(services[0]);
+const ServiceDetails = ({ services = [], service = {} }) => {
+  const router = useRouter();
+  // console.log(router?.query?.slug)
+
+  const [selectService, setSelectService] = useState(
+    router?.query?.slug ? service : services[0]
+  );
+  const { i18n } = useTranslation();
+
+  console.log({ selectService });
 
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 2xl:pt-20'>
@@ -58,33 +29,41 @@ const ServiceDetails = () => {
           </Heading2XL>
           <ul className='mt-6 space-y-6'>
             {services &&
-              services.map((service, index) => (
+              services.map((serviceItem, index) => (
                 <button
                   key={index}
                   type='button'
-                  onClick={() => setSelectService(service)}
+                  onClick={() => setSelectService(serviceItem)}
                   className={`w-full group rounded-lg shadow-lightShadow hover:bg-timberGreen  flex items-center justify-between py-3 px-5 ${
-                    service.title === selectService.title
+                    serviceItem?.name === selectService?.name
                       ? 'bg-timberGreen'
                       : ''
                   }`}
                 >
                   <p
                     className={`font-medium text-blackPearl group-hover:text-white ${
-                      service.title === selectService.title ? 'text-white' : ''
+                      serviceItem?.name === selectService?.name
+                        ? 'text-white'
+                        : ''
                     }`}
                   >
-                    {service?.title}
+                    {i18n.language === 'en'
+                      ? serviceItem?.name
+                      : serviceItem?.name_ar
+                      ? serviceItem?.name_ar
+                      : serviceItem?.name}
                   </p>
                   <NextIcon
                     className={`group-hover:hidden rtl:rotate-180 ${
-                      service.title === selectService.title ? 'hidden' : ''
+                      serviceItem?.name === selectService?.name ? 'hidden' : ''
                     }`}
                     color='#657791 '
                   />
                   <NextIcon
                     className={`group-hover:block rtl:rotate-180 ${
-                      service.title === selectService.title ? 'block' : 'hidden'
+                      serviceItem?.name === selectService?.name
+                        ? 'block'
+                        : 'hidden'
                     }`}
                   />
                 </button>
@@ -95,19 +74,24 @@ const ServiceDetails = () => {
           <div className='space-y-3 mb-10'>
             <HeadingL>Detail Service</HeadingL>
             <Heading5XL className='text-blackPearl font-bold'>
-              {selectService?.title}
+              {i18n.language === 'en'
+                ? selectService?.name
+                : selectService?.name_ar
+                ? selectService?.name_ar
+                : selectService?.name}
             </Heading5XL>
           </div>
           <div className='mt-14'>
-            <ParagraphText>
-              Our Digital Strategy service is designed to help businesses
-              develop a cohesive and effective plan for their online presence.
-              We start by understanding your business goals and objectives, and
-              then we analyse your digital footprint to identify areas for
-              improvement. Our team of experts will work with you to create a
-              customised strategy that includes search engine optimisation,
-              social media marketing, content marketing and online advertising
-            </ParagraphText>
+            <HtmlToMarkdown
+              content={
+                i18n.language === 'en'
+                  ? selectService?.serviceDetails
+                  : selectService?.serviceDetails_ar
+                  ? selectService?.serviceDetails_ar
+                  : selectService?.serviceDetails
+              }
+            />
+
           </div>
         </div>
       </div>

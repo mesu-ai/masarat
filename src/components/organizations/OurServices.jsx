@@ -81,15 +81,16 @@ const OurServices = ({ services = [] }) => {
                   : item?.name}
               </Heading2XL>
 
-              <ParagraphText>
+              <ParagraphText className='truncate-4-lines text-slateBlue'>
                 {i18n.language === 'en'
                   ? item?.shortDescription
                   : item?.shortDescription_ar
                   ? item?.shortDescription_ar
                   : item?.shortDescription}
               </ParagraphText>
+             
 
-              <Link href={`/productAndService/${item?.slug}`}>
+              <Link href={`/service/${item?.slug}`}>
               <button className='mt-4 text-lg font-medium  text-opacity-50 group-hover:text-opacity-100  text-timberGreen flex items-center'>
                 Read More
                 <ArrowNext
