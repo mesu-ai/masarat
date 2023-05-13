@@ -219,6 +219,12 @@ export default defineConfig({
             label: "Title In Arabic",
             required: true,
           },
+          {
+            type: "image",
+            name: "photo",
+            label: "Image/Icon",
+            required: true,
+          },
          
 
           {

@@ -6,17 +6,10 @@ import headerRoutes from '@/routes/headerRoutes';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Button from '@/components/atoms/Button';
-import bgimage from '@/assets/images/beroBg.png';
+import bgimage from '@/assets/images/heroBg.png';
 import { useTranslation } from 'react-i18next';
 import LangChange from '@/components/molecules/LangChange';
-// import CloseIcon from '../../assets/svgs/CloseIcon';
-// import Logo from '../../assets/svgs/Logo';
-// import LogoWhite from '../../assets/svgs/LogoWhite';
-// import MenuIcon from '../../assets/svgs/MenuIcon';
-// import NavLink from '../../components/atoms/NavLink';
-// import headerRoutes from '../../routes/headerRoutes';
 
-// const Header = ({ isTransparent }) => {
 const Header = ({ isTransparent = false }) => {
   const [open, setOpen] = useState(false);
 
@@ -53,8 +46,7 @@ const Header = ({ isTransparent = false }) => {
   }, [open]);
 
   return (
-    // <nav className={`container mx-auto px-6 xl:px-10 sm:px-0 py-6 ${isTransparent ? 'bg-transparent' : 'bg-white'}`}></nav>
-    // <div className={`${isTransparent ? 'bg-transparent' : 'bg-info md:bg-white'}`}>
+   
     <nav className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3'>
       <div className='relative'>
         <div className='absolute inset-y-0 right-0 rtl:right-auto rtl:left-0 flex items-center lg:hidden'>
@@ -107,7 +99,7 @@ const Header = ({ isTransparent = false }) => {
 
             <LangChange />
 
-            <NavLink path='/#contact'>
+            <NavLink path='/contactUs'>
               <Button title='Contact Us' />
             </NavLink>
           </div>
@@ -139,23 +131,16 @@ const Header = ({ isTransparent = false }) => {
           </div>
 
           <div className='flex justify-start mt-6 mx-10'>
-            {/* <NavLink path='/#contact'>
-              <Button
-                title='Eng (UK)'
-                className='border border-slateBlue'
-              />
-            </NavLink> */}
 
             <LangChange />
 
-            <NavLink path='/#contact'>
+            <NavLink path='/contactUs'>
               <Button title='Contact Us' />
             </NavLink>
           </div>
         </ul>
       )}
     </nav>
-    // </div>
   );
 };
 

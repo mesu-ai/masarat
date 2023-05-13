@@ -7,12 +7,12 @@ import markdownToHtml from '@/lib/markdownToHtml';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const productAndService = ({faqDatas=[], allServices}) => {
+const productAndService = ({faqDatas=[], allServices=[],teamWorkingProcess=[]}) => {
 
   return (
     <div>
       <ServiceDetails services={allServices}/>
-      <OurTeamDo/>
+      <OurTeamDo workingProcess={teamWorkingProcess}/>
       <FAQSection faqDatas={faqDatas}/>
       <ContactUsBanner />
     </div>
@@ -23,6 +23,7 @@ export default productAndService;
 
 export async function getStaticProps() {
   const faqDatas = getAllPosts(['question','question_ar','answer','answer_ar'],'content/faq');
+  const teamWorkingProcess = getAllPosts(['photo','title','title_ar','shortDescription','shortDescription_ar'],'content/workingProcess');
 
   const services = getAllPosts(
     [
@@ -47,7 +48,7 @@ export async function getStaticProps() {
   }));
  
   return {
-    props: { faqDatas,  allServices}
+    props: { faqDatas,  allServices, teamWorkingProcess}
   }
 }
 

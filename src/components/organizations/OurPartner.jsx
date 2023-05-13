@@ -38,7 +38,7 @@ const responsive = [
 const OurPartner = ({ourPartners=[]}) => {
   const {t}=useTranslation();
   return (
-    <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 text-center mt-36'>
+    <div id='ourpartner' className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 text-center mt-36'>
       <p className='font-medium text-slateGray'>
       {t('Over 1,700+ trusted partner around the world')}
       </p>

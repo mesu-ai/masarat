@@ -12,8 +12,12 @@ const BreadCrumb = () => {
         {route.pathname.includes('productAndService')
           ? 'Detail Service'
           : route.pathname.includes('aboutUs')
-          ? 'About us'
-          : 'Contact us'}
+          ? 'About us' 
+          : route.pathname.includes('/service') 
+          ? 'Service Details'
+          : route.pathname.includes('contactUs') 
+          ? 'Contact us'
+          : 'Nothing'}
       </Heading6XL>
     
       <h3 className='text-base md:text-lg font-normal text-slateBlue'>
@@ -22,7 +26,11 @@ const BreadCrumb = () => {
           ? 'Detail Service'
           : route.pathname.includes('aboutUs')
           ? 'About us'
-          : 'Contact us'}
+          : route.pathname.includes('/service') 
+          ? 'Service Details'
+          : route.pathname.includes('contactUs') 
+          ? 'Contact us'
+          : 'Nothing'}
       </h3>
     </div>
   );

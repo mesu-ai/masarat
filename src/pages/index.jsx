@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import HeroSection from '@/components/organizations/HeroSection';
 import Header from '@/layout/header/Header';
 import Footer from '@/layout/footer/Footer';
-import bgimage from '@/assets/images/beroBg.png';
+import bgimage from '@/assets/images/heroBg.png';
 import ContactUsBanner from '@/components/organizations/ContactUsBanner';
 import OurServices from '@/components/organizations/OurServices';
 import OurProjects from '@/components/organizations/OurProjects';
