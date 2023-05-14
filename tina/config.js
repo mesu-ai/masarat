@@ -46,12 +46,12 @@ export default defineConfig({
                 name: "titleKeyword_ar",
                 label: "Title Keyword  In Arabic(short)",
               },
-              {
-                type: "image",
-                name: "keyLogo",
-                label: "Icon/Logo",
-                required: true,
-              },
+              // {
+              //   type: "image",
+              //   name: "keyLogo",
+              //   label: "Icon/Logo",
+              //   required: true,
+              // },
 
               {
                 type: "string",
