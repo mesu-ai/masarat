@@ -3,7 +3,7 @@ import { getAllPosts } from '@/lib/api';
 
 import React from 'react';
 
-const contactUs = ({contactInfo={}}) => {
+const contactUs = ({contactInfo={},socialMediaAccount={}, footerInfo={}}) => {
   // const con_info= contactInfo[0].masaratcontactInfo.filter(item=>item?._template === 'contactInfo');
 
   return (
@@ -19,10 +19,14 @@ export async function getStaticProps() {
   const masaratContactInfo = getAllPosts(['masaratcontactInfo'],'content/contactUs');
 
   const contactInfo= masaratContactInfo[0].masaratcontactInfo.find(item=>item?._template === 'contactInfo');
+
+  const footerSection=getAllPosts(['masaratFooter'],'content/footerSection');
+  const socialMediaAccount=footerSection[0].masaratFooter.find(item=>item?._template === 'socialMedia')
+  const footerInfo=footerSection[0].masaratFooter.find(item=>item?._template === 'footerInformation')
   
  
   return {
-    props: { contactInfo },
+    props: { contactInfo , socialMediaAccount, footerInfo},
   }
 }
 

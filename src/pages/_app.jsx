@@ -11,7 +11,8 @@ import '@/styles/globals.css'
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-export default function App({ Component, pageProps }) {
+
+export default function App({ Component, pageProps}) {
 
   const { i18n } = useTranslation();
 

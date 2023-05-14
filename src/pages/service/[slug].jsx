@@ -7,7 +7,7 @@ import markdownToHtml from '@/lib/markdownToHtml';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const serviceDetailsPage = ({ serivce = {}, allServices = [] }) => {
+const serviceDetailsPage = ({ serivce = {}, allServices = [],socialMediaAccount={},footerInfo={} }) => {
   
 
   return (
@@ -55,20 +55,6 @@ export async function getStaticProps({ params }) {
     'content/services'
   );
 
-  // const allServices = services.map((item) => {
-  //   return {
-  //     ...item,
-  //     serviceDetails: markdownToHtml(item?.serviceDetails || ''),
-  //     serviceDetails_ar: markdownToHtml(item?.serviceDetails_ar || ''),
-  //   };
-  // });
-
-  // const allServices =services && services.map(async (item) => {
-  //   return {
-  //     serviceDetails: await markdownToHtml(item?.serviceDetails || ''),
-  //     serviceDetails_ar: await markdownToHtml(item?.serviceDetails_ar || ''),
-  //   };
-  // });
 
   const allServices = await Promise.all(services.map(async (item) => {
     return {
@@ -77,6 +63,10 @@ export async function getStaticProps({ params }) {
       serviceDetails_ar: await markdownToHtml(item?.serviceDetails_ar || ''),
     };
   }));
+
+  const footerSection=getAllPosts(['masaratFooter'],'content/footerSection');
+  const socialMediaAccount=footerSection[0].masaratFooter.find(item=>item?._template === 'socialMedia')
+  const footerInfo=footerSection[0].masaratFooter.find(item=>item?._template === 'footerInformation')
 
   
  
@@ -91,6 +81,7 @@ export async function getStaticProps({ params }) {
         serviceDetails_ar,
       },
       allServices: { allServices },
+      socialMediaAccount,footerInfo
     },
   };
 }

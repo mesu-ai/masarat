@@ -90,10 +90,10 @@ export default defineConfig({
 
         ],
 
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/${document._sys.filename}`,
+        // },
       },
 
       {
@@ -116,10 +116,10 @@ export default defineConfig({
 
           },
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/${document._sys.filename}`,
+        // },
       },
 
       {
@@ -183,7 +183,7 @@ export default defineConfig({
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/productAndService/${document._sys.filename}`,
+          router: ({ document }) => `/service/${document._sys.filename}`,
         },
       },
 
@@ -214,10 +214,10 @@ export default defineConfig({
           },
 
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/${document._sys.filename}`,
+        // },
       },
 
       {
@@ -247,10 +247,10 @@ export default defineConfig({
           },
 
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/${document._sys.filename}`,
+        // },
       },
       {
         name: "teamWorkingProcess",
@@ -299,10 +299,10 @@ export default defineConfig({
             }
           },
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/productAndService/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/productAndService/${document._sys.filename}`,
+        // },
       },
 
       {
@@ -325,10 +325,10 @@ export default defineConfig({
           },
 
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/aboutUs/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/aboutUs/${document._sys.filename}`,
+        // },
       },
 
       {
@@ -344,30 +344,12 @@ export default defineConfig({
             required: true,
           },
 
-          // {
-          //   type: "datetime",
-          //   name: "date",
-          //   label: "Date",
-          //   // ui: {
-          //   //   timeFormat: "HH:mm"
-          //   // },
-          //   isDate:true,
-          //   required:true,
-          // },
-
           {
             type: 'image',
             label: 'Photo',
             name: 'photo',
             required: true,
           },
-          // {
-          //   type: 'image',
-          //   label: 'Thumbnail Image',
-          //   name: 'thumbnailImage',
-          //   isThumbnail:true,
-          //   required:true,
-          // },
 
           {
             type: "string",
@@ -395,13 +377,7 @@ export default defineConfig({
           },
 
 
-          // {
-          //   type: "rich-text",
-          //   name: "description",
-          //   label: "Description",
-          //   isDescription: true,
-          //   required: true,
-          // },
+        
         ],
         // ui: {
         //   // This is an DEMO router. You can remove this to fit your site
@@ -448,10 +424,10 @@ export default defineConfig({
             }
           },
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/productAndService/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/productAndService/${document._sys.filename}`,
+        // },
       },
 
       {
@@ -699,6 +675,101 @@ export default defineConfig({
 
         ],
       },
+
+      {
+        name: "footerSection",
+        label: "Footer",
+        path: "content/footerSection",
+        // ui: {
+        //   allowedActions: {
+        //     create: false,
+        //     delete: false,
+        //   },
+        // },
+        fields: [
+          {
+            name: 'masaratFooter',
+            label: 'Masarat Footer Section',
+            type: 'object',
+            list: true,
+
+            templates: [
+              {
+                label: 'Footer Information',
+                name: 'footerInformation',
+                fields: [
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Footer Description",
+                    required: true,
+                    ui:{
+                      component:'textarea'
+                    }
+                  },
+                  {
+                    type: "string",
+                    name: "description_ar",
+                    label: "Footer Description In Arabic",
+
+                    ui:{
+                      component:'textarea'
+                    }
+                    
+                  }
+                ]
+              },
+              {
+                label: 'Social Media Account',
+                name: 'socialMedia',
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'discord',
+                    label: 'Discord',
+                    required: true,
+                  },
+                  {
+                    type: 'string',
+                    name: 'tweeter',
+                    label: 'Tweeter',
+                    required:true,
+
+                  },
+                  {
+                    type: 'string',
+                    name: 'telegram',
+                    label: 'Telegram',
+                    required: true,
+                  },
+                  {
+                    type: 'string',
+                    name: 'youtube',
+                    label: 'Youtube',
+                    required:true,
+
+                  },
+                  
+                  
+
+                ],
+                disabled: true,
+              }
+
+
+            ],
+
+
+
+          }
+
+        ],
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/productAndService/${document._sys.filename}`,
+        // },
+      },
+
 
 
 

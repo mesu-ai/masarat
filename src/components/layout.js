@@ -4,6 +4,7 @@ import React from 'react';
 import BreadCrumb from './molecules/BreadCrumb';
 
 const Layout = ({ children }) => {
+
   return (
     <>
       <div className='bg-whiteGreen mb-20'>
@@ -12,7 +13,7 @@ const Layout = ({ children }) => {
       </div>
 
       <main>{children}</main>
-      <Footer />
+      <Footer socialMediaAccount={children?.props?.socialMediaAccount} footerInfo={children?.props?.footerInfo}/>
     </>
   );
 };

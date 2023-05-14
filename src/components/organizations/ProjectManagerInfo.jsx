@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 const ProjectManagerInfo = ({aboutManagement={}}) => {
   const {i18n}=useTranslation();
-  console.log({aboutManagement})
+  // console.log({aboutManagement})
 
   return (
     <div className='container mx-auto grid sm:grid-cols-3 gap-10 xl:gap-20 px-6 sm:px-0 xl:px-10  py-0 lg:py-3 mb-20 xl:mb-36'>

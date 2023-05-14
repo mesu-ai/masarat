@@ -3,9 +3,9 @@ const footerRoutes = [
     title: 'Quick Links', lists: [
       { name: 'Home',name_ar:'بيت', path: '/', exact: true },
       { name: 'About',name_ar:'عن', path: '/aboutUs', exact: true },
-      { name: 'Service',name_ar:'خدمة', path: '/service', exact: true },
-      { name: 'Solution',name_ar:'حل', path: '/solution', exact: true },
-      { name: 'Team',name_ar:'فريق', path: '/team', exact: true }
+      { name: 'Service',name_ar:'خدمة', path: '/productAndService', exact: true },
+      { name: 'Solution',name_ar:'حل', path: '/#solution', exact: true },
+      { name: 'Team',name_ar:'فريق', path: '/#team', exact: true }
 
     ]
   },
@@ -13,7 +13,7 @@ const footerRoutes = [
   {
     title: 'About us', lists: [
       { name: 'Our Vision',name_ar:'رؤيتنا', path: '/ourVision', exact: true },
-      { name: 'Our Team',name_ar:'فريقنا', path: '/ourTeamMember', exact: true },
+      { name: 'Our Team',name_ar:'فريقنا', path: '/#team', exact: true },
       { name: 'Our Works',name_ar:'أعمالنا', path: '/ourWorks', exact: true }
     ]
   },

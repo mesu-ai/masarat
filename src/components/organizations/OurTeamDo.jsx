@@ -9,30 +9,10 @@ import DecisionIcon from '@/assets/svgs/DecisionIcon';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 
-// const workingProcess = [
-//   {
-//     icon: <PlanIcon />,
-//     title: 'Planning',
-//     shortDecption:
-//       'Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt',
-//   },
-//   {
-//     icon: <ValidationIcon />,
-//     title: 'Validation',
-//     shortDecption:
-//       'Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt',
-//   },
-//   {
-//     icon: <DecisionIcon />,
-//     title: 'Decision',
-//     shortDecption:
-//       'Lorem ipsum dolor sit amet,consectetur adipiscing elit, sed do eiusmod tempor incididunt',
-//   },
-// ];
 
 const OurTeamDo = ({ workingProcess = [] }) => {
   const { i18n } = useTranslation();
-  console.log({ workingProcess });
+  
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 text-center'>
       <Heading

@@ -18,7 +18,7 @@ const ServiceDetails = ({ services = [], service = {} }) => {
   );
   const { i18n } = useTranslation();
 
-  console.log({ selectService });
+ 
 
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 2xl:pt-20'>

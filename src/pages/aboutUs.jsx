@@ -6,12 +6,11 @@ import OurWorks from '@/components/organizations/OurWorks';
 import ProjectManagerInfo from '@/components/organizations/ProjectManagerInfo';
 import ProjectSummery from '@/components/organizations/ProjectSummery';
 import Testimonial from '@/components/organizations/Testimonial';
+import Footer from '@/layout/footer/Footer';
 import { getAllPosts } from '@/lib/api';
 import React from 'react';
 
-const aboutUs = ({clientReviews=[],ourMembers=[],ourvideo,aboutMasarat={},aboutManagement={},aboutSummery={},contactBanner={}}) => {
-
-  
+const aboutUs = ({clientReviews=[],ourMembers=[],ourvideo,aboutMasarat={},aboutManagement={},aboutSummery={},contactBanner={}, socialMediaAccount={},footerInfo={}}) => {
 
 
   return (
@@ -24,6 +23,7 @@ const aboutUs = ({clientReviews=[],ourMembers=[],ourvideo,aboutMasarat={},aboutM
       <OurWorks ourvideo={ourvideo}/>
       <Testimonial clientReviews={clientReviews}/>
       <ContactUsBanner contactBanner={contactBanner}/>
+      
       
     </div>
   );
@@ -51,8 +51,16 @@ export async function getStaticProps() {
 
   const contactBanner= masaratContactInfo[0].masaratcontactInfo.find(item=>item?._template === 'contactBanner');
 
+
+  const footerSection=getAllPosts(['masaratFooter'],'content/footerSection');
+  const socialMediaAccount=footerSection[0].masaratFooter.find(item=>item?._template === 'socialMedia')
+  const footerInfo=footerSection[0].masaratFooter.find(item=>item?._template === 'footerInformation')
+
  
   return {
-    props: {clientReviews,ourMembers,ourvideo, aboutMasarat,aboutManagement,aboutSummery,contactBanner},
+    props: {clientReviews,ourMembers,ourvideo, aboutMasarat,aboutManagement,aboutSummery,contactBanner,socialMediaAccount,footerInfo},
   }
 }
+
+
+

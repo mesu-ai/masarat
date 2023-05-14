@@ -24,7 +24,6 @@ const bgstyle = {
 
 const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[],ourServices=[],contactBanner={},heroSection={}}) => {
 
-  console.log(heroSection)
  
 
   return (
@@ -41,9 +40,9 @@ const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[],ou
 
 
 Home.getLayout = (page) => {
-  console.log(page?.props?.children?.props)
+  // console.log(page?.props?.children?.props)
   // page?.props?.children?.props?.clientReviews
-  const {clientReviews,heroSection}=page?.props?.children?.props;
+  const {clientReviews,heroSection,socialMediaAccount,footerInfo}=page?.props?.children?.props;
   return(<>
     <div style={bgstyle}>
       <div>
@@ -54,7 +53,7 @@ Home.getLayout = (page) => {
 
     <div>
       <main>{page}</main>
-      <Footer />
+      <Footer footerInfo={footerInfo} socialMediaAccount={socialMediaAccount}/>
     </div>
   </>)
 };
@@ -72,13 +71,19 @@ export async function getStaticProps() {
   const masaratContactInfo = getAllPosts(['masaratcontactInfo'],'content/contactUs');
   const masaratHeroSection = getAllPosts(['homeheroSection'],'content/heroSection');
 
+  
+  const footerSection=getAllPosts(['masaratFooter'],'content/footerSection');
+
+
   const contactBanner= masaratContactInfo[0].masaratcontactInfo.find(item=>item?._template === 'contactBanner');
+  const heroSection=masaratHeroSection[0].homeheroSection[0];
+  // const footer=footerSection[0].masaratFooter;
+  const socialMediaAccount=footerSection[0].masaratFooter.find(item=>item?._template === 'socialMedia')
+  const footerInfo=footerSection[0].masaratFooter.find(item=>item?._template === 'footerInformation')
 
-  const heroSection=masaratHeroSection[0].homeheroSection[0]
-
-  // console.log({heroSection})
+ 
   
   return {
-    props: { clientReviews, ourPartners,ourMembers,ourProjects,ourServices,contactBanner,heroSection },
+    props: { clientReviews, ourPartners,ourMembers,ourProjects,ourServices,contactBanner,heroSection,socialMediaAccount,footerInfo },
   }
 }

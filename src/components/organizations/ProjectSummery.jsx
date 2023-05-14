@@ -3,14 +3,10 @@ import Card from '../atoms/Card';
 import Heading5XL from '../atoms/Heading5XL';
 import ParagraphText from '../atoms/ParagraphText';
 
-// const countData = [
-//   { name: 'Complete Projects', count: '1600+' },
-//   { name: 'Cooperation company', count: '1600+' },
-//   { name: 'Happy Clients', count: '1600+' },
-// ];
+
 
 const ProjectSummery = ({aboutSummery={}}) => {
-  console.log({aboutSummery})
+  
   return (
     <div className=' container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 '>
       <div className='bg-thinGreen grid sm:grid-cols-3 gap-7 text-center rounded-[36px] py-[45px] md:py-[70px]'>

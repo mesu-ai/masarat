@@ -10,8 +10,9 @@ import TelegramIcon from '@/assets/svgs/TelegramIcon';
 import YoutubeIcon from '@/assets/svgs/YoutubeIcon';
 import { useTranslation } from 'react-i18next';
 
-const Footer = () => {
+const Footer = ({ footerInfo = {}, socialMediaAccount = {} }) => {
   const { t, i18n } = useTranslation();
+
   return (
     <footer className='bg-gradient-darkBlack'>
       <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-5 md:pt-14 md:pb-11'>
@@ -38,13 +39,21 @@ const Footer = () => {
                     {t(`${item?.title}`)}
                   </li>
                   {item?.lists.map((listItem, idx) => (
-                    <li
+                    <Link
                       key={idx}
-                      className='text-white/50 text-sm leading-8'
+                      href={`${listItem?.path}`}
+                    
                     >
-                      {/* {item?.name} */}
-                      {i18n.language === 'en' ? listItem?.name : listItem?.name_ar}
-                    </li>
+                      <li
+                        key={idx}
+                        className='text-white/50 text-sm leading-8  '
+                      >
+
+                        {i18n.language === 'en'
+                          ? listItem?.name
+                          : listItem?.name_ar}
+                      </li>
+                    </Link>
                   ))}
                 </ul>
               ))}
@@ -58,28 +67,32 @@ const Footer = () => {
             <p className='text-sm'>{t('Follow us on')}:</p>
             <ul className='flex items-center gap-4'>
               <Link
-                href='#'
+                href={`${socialMediaAccount?.discord}`}
+                target='_blank'
                 className='bg-white/80 p-2 rounded'
               >
-                <DiscordIcon />{' '}
+                <DiscordIcon />
               </Link>
               <Link
-                href='#'
+                href={`${socialMediaAccount?.twitter}`}
+                target='_blank'
                 className='bg-white/80 p-2 rounded'
               >
-                <TwitterIcon />{' '}
+                <TwitterIcon />
               </Link>
               <Link
-                href='#'
+                href={`${socialMediaAccount?.telegram}`}
+                target='_blank'
                 className='bg-white/80 p-2 rounded'
               >
-                <TelegramIcon />{' '}
+                <TelegramIcon />
               </Link>
               <Link
-                href='#'
+                href={`${socialMediaAccount?.youtube}`}
+                target='_blank'
                 className='bg-white/80 p-2 rounded'
               >
-                <YoutubeIcon />{' '}
+                <YoutubeIcon />
               </Link>
             </ul>
           </div>

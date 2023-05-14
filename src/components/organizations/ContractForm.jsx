@@ -25,7 +25,7 @@ const ContractForm = ({contactInfo={}}) => {
   };
 
   const handleSubmit = (e) => {
-    console.log(data);
+    // console.log(data);
     e.preventDefault();
   };
 

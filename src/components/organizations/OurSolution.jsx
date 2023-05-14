@@ -21,7 +21,7 @@ const OurSolution = () => {
   const {t}=useTranslation();
   return (
     
-    <div className='bg-gradient-thinLightGreen container mx-auto px-6 sm:px-0 xl:px-10   mb-20 xl:mb-36'>
+    <div id='solution' className='bg-gradient-thinLightGreen container mx-auto px-6 sm:px-0 xl:px-10   mb-20 xl:mb-36'>
       <div className='grid sm:grid-cols-2 content-center pt-5'>
         <div className=''>
           <HeadingL className='mb-4 text-timberGreen'>Our Solutions</HeadingL>

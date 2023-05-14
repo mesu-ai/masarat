@@ -6,32 +6,7 @@ import SliderShow from '../molecules/SliderShow';
 import HeadingL from '../atoms/HeadingL';
 import Heading5XL from '../atoms/Heading5XL';
 
-const reviewers = [
-  {
-    phote: '',
-    name: 'kamal',
-    designation: 'CEO, Supreme World',
-    rating: 4,
-    review:
-      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-  },
-  {
-    phote: '',
-    name: 'jamal',
-    designation: 'ceo',
-    rating: 5,
-    review:
-      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-  },
-  {
-    phote: '',
-    name: 'rubel',
-    designation: 'ceo',
-    rating: 3,
-    review:
-      ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-  },
-];
+
 
 const Testimonial = ({clientReviews=[]}) => {
   return (
@@ -56,15 +31,7 @@ const Testimonial = ({clientReviews=[]}) => {
             </SliderShow>
           </div>
         </div>
-        {/* <SliderShow showDot={false}>
-              {reviewers &&
-                reviewers.map((review, index) => (
-                  <SlideCard
-                    key={index}
-                    review={review}
-                  />
-                ))}
-          </SliderShow> */}
+        
       </div>
     </div>
   );

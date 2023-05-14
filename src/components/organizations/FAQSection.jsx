@@ -7,20 +7,7 @@ import rightImage from '@/assets/images/right.png'
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
-// const faqDatas = [
-//   {
-//     title: 'Lorem ipsum dolor sit amet, consect etur adipiscing elit ',
-//     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque purus diam, elementum sed lectus eu, sollicitrutrum odio. Vivamus finibus scelerisque massa, necefficitur lacus bibendum a.',
-//   },
-//   {
-//     title: 'Lorem ipsum dolor sit amet, consect etur adipiscing elit ',
-//     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque purus diam, elementum sed lectus eu, sollicitrutrum odio. Vivamus finibus scelerisque massa, necefficitur lacus bibendum a.',
-//   },
-//   {
-//     title: 'Lorem ipsum dolor sit amet, consect etur adipiscing elit ',
-//     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.Quisque purus diam, elementum sed lectus eu, sollicitrutrum odio. Vivamus finibus scelerisque massa, necefficitur lacus bibendum a.',
-//   },
-// ];
+
 
 const FAQSection = ({faqDatas=[]}) => {
   const {i18n}=useTranslation();

@@ -7,7 +7,7 @@ import markdownToHtml from '@/lib/markdownToHtml';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-const productAndService = ({faqDatas=[], allServices=[],teamWorkingProcess=[]}) => {
+const productAndService = ({faqDatas=[], allServices=[],teamWorkingProcess=[],contactBanner={},socialMediaAccount={},footerInfo={}}) => {
 
   return (
     <div>
@@ -39,6 +39,13 @@ export async function getStaticProps() {
     'content/services'
   );
 
+  const masaratContactInfo = getAllPosts(['masaratcontactInfo'],'content/contactUs');
+  const contactBanner= masaratContactInfo[0].masaratcontactInfo.find(item=>item?._template === 'contactBanner');
+
+  const footerSection=getAllPosts(['masaratFooter'],'content/footerSection');
+  const socialMediaAccount=footerSection[0].masaratFooter.find(item=>item?._template === 'socialMedia')
+  const footerInfo=footerSection[0].masaratFooter.find(item=>item?._template === 'footerInformation')
+
   const allServices = await Promise.all(services.map(async (item) => {
     return {
       ...item,
@@ -48,7 +55,7 @@ export async function getStaticProps() {
   }));
  
   return {
-    props: { faqDatas,  allServices, teamWorkingProcess}
+    props: { faqDatas,  allServices, teamWorkingProcess,contactBanner, socialMediaAccount,footerInfo}
   }
 }
 
