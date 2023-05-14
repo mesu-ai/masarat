@@ -50,7 +50,7 @@ import Link from 'next/link';
 // ];
 
 const OurServices = ({ services = [] }) => {
-  const { i18n } = useTranslation();
+  const {t, i18n } = useTranslation();
   return (
     <div className='container mx-auto px-3 sm:px-0 xl:px-5  mb-20 xl:mb-36'>
       <Heading
@@ -92,7 +92,7 @@ const OurServices = ({ services = [] }) => {
 
               <Link href={`/service/${item?.slug}`}>
               <button className='mt-4 text-lg font-medium  text-opacity-50 group-hover:text-opacity-100  text-timberGreen flex items-center'>
-                Read More
+                {t('Read More')}
                 <ArrowNext
                   className={`text-opacity-0 group-hover:text-opacity-20  text-timberGreen  ${
                     i18n.language === 'en' ? 'ms-3' : 'rotate-180 me-3'

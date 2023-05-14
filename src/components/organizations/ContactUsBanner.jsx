@@ -7,10 +7,12 @@ import Card from '../atoms/Card';
 import { useTranslation } from 'react-i18next';
 import Heading from '../molecules/Heading';
 import Link from 'next/link';
+import Heading5XL from '../atoms/Heading5XL';
+import HeadingL from '../atoms/HeadingL';
 
-const ContactUsBanner = () => {
+const ContactUsBanner = ({contactBanner={}}) => {
   const { t, i18n } = useTranslation();
-  // console.log(t, i18n);
+  
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 mt-28 mb-20'>
       <Card className='grid md:grid-cols-2 rounded-[32px] bg-lightGreen/50 py-10 px-10 md:py-0'>
@@ -22,13 +24,24 @@ const ContactUsBanner = () => {
           />
         </div>
         <div className='text-center my-auto space-y-3 lg:space-y-4 px-10 sm:px-3  ltr:md:-ms-20 rtl:md:-me-20   lg:pe-10'>
-          <Heading
-            keyword='Contact us'
-            title='We help you to grow your business faster & easier.'
-          />
-          <ParagraphText>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididun.
+          {/* <Heading
+            keyword='Contact us' title=''
+            // title='We help you to grow your business faster & easier.'
+          /> */}
+           <HeadingL>Contact us</HeadingL>
+           <Heading5XL className='truncate-2-lines text-blackPearl font-medium'>{i18n.language === 'en'
+                  ? contactBanner?.title
+                  : contactBanner?.title_ar
+                  ? contactBanner?.title_ar
+                  : contactBanner?.title}
+            </Heading5XL>
+
+          <ParagraphText className='truncate-2-lines text-slateBlue'>
+          {i18n.language === 'en'
+                  ? contactBanner?.shortDescription
+                  : contactBanner?.shortDescription_ar
+                  ? contactBanner?.shortDescription_ar
+                  : contactBanner?.shortDescription}
           </ParagraphText>
           <div>
             <Link

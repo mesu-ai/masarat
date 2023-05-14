@@ -34,6 +34,7 @@ module.exports = {
       truncate: {
         lines: {
           4: '4',
+          2:'2',
         },
       },
       scale: {

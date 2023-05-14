@@ -10,37 +10,11 @@ import SlideCard from '../molecules/SlideCard';
 import { getAllData } from '@/lib/customApi';
 import Link from 'next/link';
 
-// const clientReviewss = [
-//   {
-//     phote: '',
-//     name: 'kamal',
-//     designation: 'CEO, Supreme World',
-//     rating: 4,
-//     review:
-//       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-//   },
-//   {
-//     phote: '',
-//     name: 'jamal',
-//     designation: 'ceo',
-//     rating: 5,
-//     review:
-//       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-//   },
-//   {
-//     phote: '',
-//     name: 'rubel',
-//     designation: 'ceo',
-//     rating: 3,
-//     review:
-//       ' Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Utenimad minim veniam.',
-//   },
-// ];
 
-const HeroSection = ({ clientReviews = [] }) => {
-  const { t } = useTranslation();
+const HeroSection = ({ clientReviews = [],heroSection={} }) => {
+  const { t,i18n } = useTranslation();
 
-  // console.log(clientReviews);
+  // console.log(heroSection);
 
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 '>
@@ -48,12 +22,25 @@ const HeroSection = ({ clientReviews = [] }) => {
         <div>
           <li className='list-none flex items-center gap-6 mb-6'>
             <SupportIcon />
-            <HeadingXL>Best Supportive Team Ever</HeadingXL>
+            <HeadingXL>{i18n.language === 'en'
+                  ? heroSection?.titleKeyword
+                  : heroSection?.titleKeyword_ar
+                  ? heroSection?.titleKeyword_ar
+                  : heroSection?.titleKeyword}
+            </HeadingXL>
           </li>
-          <Heading6XL>{t('We Support To Grow Your Business')}</Heading6XL>
+          <Heading6XL>{i18n.language === 'en'
+                  ? heroSection?.title
+                  : heroSection?.title_ar
+                  ? heroSection?.title_ar
+                  : heroSection?.title}
+                  </Heading6XL>
           <ParagraphText className='text-slateBlue mt-10'>
-            Choose Masarat Digital to get software development, AI & Tech
-            Consulting support for your digital products.
+          {i18n.language === 'en'
+                  ? heroSection?.shortDescription
+                  : heroSection?.shortDescription_ar
+                  ? heroSection?.shortDescription_ar
+                  : heroSection?.shortDescription}
           </ParagraphText>
 
           <Link href='/contactUs'>

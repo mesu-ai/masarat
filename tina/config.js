@@ -19,34 +19,83 @@ export default defineConfig({
     },
   },
   schema: {
-    
+
     collections: [
 
-      // {
-      //   name: "post",
-      //   label: "Posts",
-      //   path: "content/posts",
-      //   fields: [
-      //     {
-      //       type: "string",
-      //       name: "title",
-      //       label: "Title",
-      //       isTitle: true,
-      //       required: true,
-      //     },
-      //     {
-      //       type: "rich-text",
-      //       name: "body",
-      //       label: "Body",
-      //       isBody: true,
-      //     },
-      //   ],
-      //   ui: {
-      //     // This is an DEMO router. You can remove this to fit your site
-      //     router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-      //   },
-      // },
-      
+      {
+        name: "masaratHeroSection",
+        label: "Hero Section",
+        path: "content/heroSection",
+
+        fields: [
+          {
+            name: 'homeheroSection',
+            label: 'Home Page Hero Section',
+            list:true,
+            type: 'object',
+            fields: [
+              {
+                type: "string",
+                name: "titleKeyword",
+                label: "Title Keyword (short)",
+                isTitle: true,
+                required: true,
+              },
+              {
+                type: "string",
+                name: "titleKeyword_ar",
+                label: "Title Keyword  In Arabic(short)",
+              },
+              {
+                type: "image",
+                name: "keyLogo",
+                label: "Icon/Logo",
+                required: true,
+              },
+
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "title_ar",
+                label: "Title In Arabic",
+                required: true,
+              },
+
+              {
+                type: "string",
+                name: "shortDescription",
+                label: "Short Description",
+                required: true,
+
+                ui: {
+                  component: "textarea"
+                }
+              },
+              {
+                type: "string",
+                name: "shortDescription_ar",
+                label: "Short Description In Arabic",
+
+                ui: {
+                  component: "textarea"
+                }
+              },
+            ],
+          }
+
+        ],
+
+        ui: {
+          // This is an DEMO router. You can remove this to fit your site
+          router: ({ document }) => `/${document._sys.filename}`,
+        },
+      },
+
       {
         name: "partner",
         label: "Our Partners",
@@ -64,12 +113,12 @@ export default defineConfig({
             name: "logo",
             label: "Brand Logo",
             required: true,
-            
+
           },
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/home/${document._sys.filename}`,
+          router: ({ document }) => `/${document._sys.filename}`,
         },
       },
 
@@ -92,9 +141,9 @@ export default defineConfig({
             required: true,
           },
           {
-            type:"image",
-            name:"icon",
-            label:"Service Logo",
+            type: "image",
+            name: "icon",
+            label: "Service Logo",
             required: true
           },
           {
@@ -105,7 +154,7 @@ export default defineConfig({
             ui: {
               component: "textarea"
             }
-          
+
           },
           {
             type: "string",
@@ -120,15 +169,17 @@ export default defineConfig({
             type: "rich-text",
             name: "serviceDetails",
             label: "Service Details",
-            required:true,
+            isBody: true,
+            required: true,
           },
           {
             type: "rich-text",
             name: "serviceDetails_ar",
             label: "Service Details In Arabic",
-            required:true,
+            isBody: true,
+            required: true,
           },
-         
+
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
@@ -159,13 +210,13 @@ export default defineConfig({
             name: "coverPhoto",
             label: "Project Logo/Cover Image",
             required: true,
-            
+
           },
-          
+
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/home/${document._sys.filename}`,
+          router: ({ document }) => `/${document._sys.filename}`,
         },
       },
 
@@ -192,13 +243,13 @@ export default defineConfig({
             name: "photo",
             label: "Photo",
             required: true,
-            
+
           },
-         
+
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/home/${document._sys.filename}`,
+          router: ({ document }) => `/${document._sys.filename}`,
         },
       },
       {
@@ -225,7 +276,7 @@ export default defineConfig({
             label: "Image/Icon",
             required: true,
           },
-         
+
 
           {
             type: "string",
@@ -272,14 +323,14 @@ export default defineConfig({
             label: "Video Link (Suggest Youtube)",
             required: true,
           },
-          
+
         ],
         ui: {
           // This is an DEMO router. You can remove this to fit your site
           router: ({ document }) => `/aboutUs/${document._sys.filename}`,
         },
       },
-      
+
       {
         name: "clientReview",
         label: "Client Review",
@@ -327,9 +378,9 @@ export default defineConfig({
 
           {
             type: "number",
-            name:"rating",
-            label:"Rating",
-            required:true,
+            name: "rating",
+            label: "Rating",
+            required: true,
           },
 
           {
@@ -352,10 +403,10 @@ export default defineConfig({
           //   required: true,
           // },
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/home/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/${document._sys.filename}`,
+        // },
       },
       {
         name: "faq",
@@ -407,6 +458,12 @@ export default defineConfig({
         name: "aboutUsInfo",
         label: "About Us",
         path: "content/aboutUs",
+        ui: {
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
+        },
         fields: [{
           label: "Masarat Information",
           name: "aboutMasarat",
@@ -429,10 +486,10 @@ export default defineConfig({
                   type: "string"
                 },
                 {
-                  label:"Cover Photo",
-                  name:'coverPhoto',
-                  type:'image',
-                  required:true
+                  label: "Cover Photo",
+                  name: 'coverPhoto',
+                  type: 'image',
+                  required: true
                 },
                 {
                   label: "Description",
@@ -461,43 +518,43 @@ export default defineConfig({
                   label: "Name",
                   name: "name",
                   type: "string",
-                  required:true
+                  required: true
                 },
                 {
                   label: "Designation",
                   name: "designation",
                   type: "string",
-                  required:true
+                  required: true
                 },
                 {
-                  label:"Photo",
-                  name:'photo',
-                  type:'image',
-                  required:true
+                  label: "Photo",
+                  name: 'photo',
+                  type: 'image',
+                  required: true
                 },
-                
+
                 {
                   label: "Quote",
                   name: "quote",
                   type: "object",
-                  fields:[
+                  fields: [
                     {
                       label: "Title",
                       name: "title",
                       type: "string",
-                      required:true
+                      required: true
                     },
                     {
                       label: "Title In Arabic",
                       name: "title_ar",
                       type: "string",
-                     
+
                     },
                     {
                       label: "Description",
                       name: "description",
                       type: "string",
-                      required:true,
+                      required: true,
                       ui: {
                         component: "textarea"
                       }
@@ -506,13 +563,13 @@ export default defineConfig({
                       label: "Description In Arabic",
                       name: "description_ar",
                       type: "string",
-                      
+
                       ui: {
                         component: "textarea"
                       }
                     }
                   ]
-                  
+
                 }
               ]
             },
@@ -524,66 +581,127 @@ export default defineConfig({
                   label: "Happy Clients",
                   name: "happyClients",
                   type: "string",
-                  required:true
+                  required: true
                 },
                 {
                   label: "Project Completed",
                   name: "projectCompleted",
                   type: "string",
-                  required:true
+                  required: true
                 },
                 {
                   label: "Cooperation Company",
                   name: "cooperationCompany",
                   type: "string",
-                  required:true
+                  required: true
                 }
               ]
             }
           ]
         }],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/aboutUs/${document._sys.filename}`,
-        },
+        // ui: {
+        //   // This is an DEMO router. You can remove this to fit your site
+        //   router: ({ document }) => `/aboutUs/${document._sys.filename}`,
+        // },
       },
-    
-      {
-        name: "contactInfo",
-        label: "Contact Info",
-        path: "content/contactInfo",
-        
-        fields: [
-          {name:'contactInformation',label:'Contact Information', type:'object',fields:[
-            {
-              type: "string",
-              name: "location",
-              label: "Location",
-              required: true,
-            },
-            {
-              type: "string",
-              name: "phone",
-              label: "Phone Number",
-              required: true,
-            },
-            {
-              type: "string",
-              name: "email",
-              label: "Email Address",
-              required: true,
-              
-            },
 
-          ]}
-          
-        ],
+      {
+        name: "contactUsInfo",
+        label: "Contact Us",
+        path: "content/contactUs",
         ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/contactUs/${document._sys.filename}`,
+          allowedActions: {
+            create: false,
+            delete: false,
+          },
         },
+        fields: [
+          {
+            name: 'masaratcontactInfo',
+            label: 'Masarat Contact Information',
+            type: 'object',
+            list: true,
+
+            templates: [
+              {
+                label: 'Contact Information',
+                name: 'contactInfo',
+                fields: [
+                  {
+                    type: "string",
+                    name: "location",
+                    label: "Location",
+                    required: true,
+
+                  },
+                  {
+                    type: "string",
+                    name: "phone",
+                    label: "Phone Number",
+                    required: true,
+                  },
+                  {
+                    type: "string",
+                    name: "email",
+                    label: "Email Address",
+                    required: true,
+
+                  }
+
+                ]
+              },
+              {
+                label: 'Contact Us Banner',
+                name: 'contactBanner',
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'title',
+                    label: 'Title',
+                    required: true,
+                  },
+                  {
+                    type: 'string',
+                    name: 'title_ar',
+                    label: 'Title In Arabic',
+
+                  },
+                  {
+                    label: "Short Description",
+                    name: "shortDescription",
+                    type: "string",
+                    required: true,
+
+                    ui: {
+                      component: "textarea"
+                    }
+                  },
+                  {
+                    label: "Short Description In Arabic",
+                    name: "shortDescription_ar",
+                    type: "string",
+
+                    ui: {
+                      component: "textarea"
+                    }
+                  }
+
+                ],
+                disabled: true,
+              }
+
+
+            ],
+
+
+
+          }
+
+        ],
       },
-      
+
+
+
     ],
   },
 });

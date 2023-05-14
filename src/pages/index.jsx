@@ -20,11 +20,12 @@ const bgstyle = {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
-  // transform: 'rotate(5.2deg) scale(1.2)',
 };
 
-const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[],ourServices=[]}) => {
-  console.log({ourServices})
+const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[],ourServices=[],contactBanner={},heroSection={}}) => {
+
+  console.log(heroSection)
+ 
 
   return (
     <>
@@ -33,20 +34,21 @@ const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[],ou
       <OurSolution />
       <OurProjects projects={ourProjects}/>
       <OurTeamMember teamMeambers={ourMembers}/>
-      <ContactUsBanner />
+      <ContactUsBanner contactBanner={contactBanner}/>
     </>
   );
 };
 
-// style={bgstyle}
-// style={{transform:'rotate(-5deg)'}}
+
 Home.getLayout = (page) => {
-  // console.log(page?.props?.children?.props)
+  console.log(page?.props?.children?.props)
+  // page?.props?.children?.props?.clientReviews
+  const {clientReviews,heroSection}=page?.props?.children?.props;
   return(<>
     <div style={bgstyle}>
       <div>
         <Header />
-        <HeroSection clientReviews={page?.props?.children?.props?.clientReviews}/>
+        <HeroSection clientReviews={clientReviews} heroSection={heroSection}/>
       </div>
     </div>
 
@@ -66,8 +68,17 @@ export async function getStaticProps() {
   const ourMembers=getAllPosts(['name','designation','photo'],'content/teamMembers');
   const ourProjects=getAllPosts(['name','type','coverPhoto'],'content/projects');
   const ourServices=getAllPosts(['name','name_ar','icon','shortDescription','shortDescription_ar','slug','description'],'content/services');
+
+  const masaratContactInfo = getAllPosts(['masaratcontactInfo'],'content/contactUs');
+  const masaratHeroSection = getAllPosts(['homeheroSection'],'content/heroSection');
+
+  const contactBanner= masaratContactInfo[0].masaratcontactInfo.find(item=>item?._template === 'contactBanner');
+
+  const heroSection=masaratHeroSection[0].homeheroSection[0]
+
+  // console.log({heroSection})
   
   return {
-    props: { clientReviews, ourPartners,ourMembers,ourProjects,ourServices },
+    props: { clientReviews, ourPartners,ourMembers,ourProjects,ourServices,contactBanner,heroSection },
   }
 }

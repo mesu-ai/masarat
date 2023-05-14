@@ -3,11 +3,12 @@ import { getAllPosts } from '@/lib/api';
 
 import React from 'react';
 
-const contactUs = ({contactInfo=[]}) => {
-  console.log(contactInfo)
+const contactUs = ({contactInfo={}}) => {
+  // const con_info= contactInfo[0].masaratcontactInfo.filter(item=>item?._template === 'contactInfo');
+
   return (
     <div>
-      <ContractForm contactInfo={contactInfo[0]}/>
+      <ContractForm contactInfo={contactInfo}/>
     </div>
   );
 };
@@ -15,7 +16,10 @@ const contactUs = ({contactInfo=[]}) => {
 export default contactUs;
 
 export async function getStaticProps() {
-  const contactInfo = getAllPosts(['contactInformation'],'content/contactInfo')
+  const masaratContactInfo = getAllPosts(['masaratcontactInfo'],'content/contactUs');
+
+  const contactInfo= masaratContactInfo[0].masaratcontactInfo.find(item=>item?._template === 'contactInfo');
+  
  
   return {
     props: { contactInfo },

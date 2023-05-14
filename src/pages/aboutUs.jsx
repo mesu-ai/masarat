@@ -9,7 +9,7 @@ import Testimonial from '@/components/organizations/Testimonial';
 import { getAllPosts } from '@/lib/api';
 import React from 'react';
 
-const aboutUs = ({clientReviews=[],ourMembers=[],ourvideo,aboutMasarat={},aboutManagement={},aboutSummery={}}) => {
+const aboutUs = ({clientReviews=[],ourMembers=[],ourvideo,aboutMasarat={},aboutManagement={},aboutSummery={},contactBanner={}}) => {
 
   
 
@@ -23,7 +23,7 @@ const aboutUs = ({clientReviews=[],ourMembers=[],ourvideo,aboutMasarat={},aboutM
       <OurTeamMember teamMeambers={ourMembers}/>
       <OurWorks ourvideo={ourvideo}/>
       <Testimonial clientReviews={clientReviews}/>
-      <ContactUsBanner/>
+      <ContactUsBanner contactBanner={contactBanner}/>
       
     </div>
   );
@@ -37,7 +37,7 @@ export async function getStaticProps() {
   const ourMembers=getAllPosts(['name','designation','photo'],'content/teamMembers');
   const ourvideo=getAllPosts(['workingVideoLink'],'content/videos');
   const aboutMasaratInfo=getAllPosts(['aboutMasarat'],'content/aboutUs');
-
+  const masaratContactInfo = getAllPosts(['masaratcontactInfo'],'content/contactUs');
 
   const aboutMasarat=aboutMasaratInfo[aboutMasaratInfo.length - 1]?.aboutMasarat
   .find(item=>item?._template==='aboutMasarat');
@@ -46,8 +46,13 @@ export async function getStaticProps() {
   const aboutSummery=aboutMasaratInfo[aboutMasaratInfo.length - 1]?.aboutMasarat
   .find(item=>item?._template==='projectSummery');
 
+
+ 
+
+  const contactBanner= masaratContactInfo[0].masaratcontactInfo.find(item=>item?._template === 'contactBanner');
+
  
   return {
-    props: {clientReviews,ourMembers,ourvideo, aboutMasarat,aboutManagement,aboutSummery},
+    props: {clientReviews,ourMembers,ourvideo, aboutMasarat,aboutManagement,aboutSummery,contactBanner},
   }
 }
