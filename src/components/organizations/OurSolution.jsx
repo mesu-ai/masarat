@@ -59,14 +59,14 @@ const OurSolution = () => {
               ))}
             </ul>
           </div>
-          <div/>
-          {/* <div className='hidden sm:flex justify-center items-center'>
+          
+          <div className='hidden sm:flex justify-center items-center'>
             <Image
               className='max-w-md max-h-[438]'
               src={solutionCover}
               alt='solution_cover'
             />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
