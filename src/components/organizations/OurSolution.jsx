@@ -40,7 +40,7 @@ const OurSolution = () => {
             <HeadingL className='mb-4 text-timberGreen'>Our Solutions</HeadingL>
             <h2 className='text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl  leading-9 font-medium text-blackPearl'>
               {t('What Makes')}{' '}
-              <span className='text-timberGreen'>Musarat</span>
+              <span className='text-timberGreen'>Musarat</span>{' '}
               {t('Different')}
             </h2>
             <ParagraphText className='text-slateBlue my-14'>
