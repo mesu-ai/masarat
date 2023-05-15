@@ -116,10 +116,7 @@ export default defineConfig({
 
           },
         ],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/${document._sys.filename}`,
-        // },
+       
       },
 
       {
@@ -214,10 +211,7 @@ export default defineConfig({
           },
 
         ],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/${document._sys.filename}`,
-        // },
+        
       },
 
       {
@@ -247,10 +241,7 @@ export default defineConfig({
           },
 
         ],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/${document._sys.filename}`,
-        // },
+       
       },
       {
         name: "teamWorkingProcess",
@@ -299,10 +290,7 @@ export default defineConfig({
             }
           },
         ],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/productAndService/${document._sys.filename}`,
-        // },
+       
       },
 
       {
@@ -325,10 +313,7 @@ export default defineConfig({
           },
 
         ],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/aboutUs/${document._sys.filename}`,
-        // },
+        
       },
 
       {
@@ -379,10 +364,7 @@ export default defineConfig({
 
 
         ],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/${document._sys.filename}`,
-        // },
+       
       },
       {
         name: "faq",
@@ -424,10 +406,7 @@ export default defineConfig({
             }
           },
         ],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/productAndService/${document._sys.filename}`,
-        // },
+        
       },
 
       {
@@ -575,10 +554,7 @@ export default defineConfig({
             }
           ]
         }],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/aboutUs/${document._sys.filename}`,
-        // },
+       
       },
 
       {
@@ -764,10 +740,7 @@ export default defineConfig({
           }
 
         ],
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/productAndService/${document._sys.filename}`,
-        // },
+      
       },
 
 
