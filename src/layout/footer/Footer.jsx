@@ -13,6 +13,8 @@ import { useTranslation } from 'react-i18next';
 const Footer = ({ footerInfo = {}, socialMediaAccount = {} }) => {
   const { t, i18n } = useTranslation();
 
+  console.log({footerInfo})
+
   return (
     <footer className='bg-gradient-darkBlack'>
       <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-5 md:pt-14 md:pb-11'>
@@ -26,9 +28,11 @@ const Footer = ({ footerInfo = {}, socialMediaAccount = {} }) => {
               />
             </NavLink>
             <p className='text-sm text-white/50  xl:max-w-md'>
-              {t(
-                'Masarat Digital Company is advance technology enabler in various industries/ tracks paths (HR, Healthcare,Supply Chain & Sports). For the consulting area.'
-              )}
+            {i18n.language === 'en'
+                  ? footerInfo?.description
+                  : footerInfo?.description_ar
+                  ? footerInfo?.description_ar
+                  : footerInfo?.description}
             </p>
           </div>
           <div className='grid  sm:grid-cols-3 mt-7 md:mt-0  gap-3 '>

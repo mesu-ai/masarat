@@ -20,6 +20,7 @@ const bgstyle = {
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
+  
 };
 
 const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[],ourServices=[],contactBanner={},heroSection={}}) => {
