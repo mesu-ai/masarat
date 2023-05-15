@@ -89,11 +89,6 @@ export default defineConfig({
           }
 
         ],
-
-        // ui: {
-        //   // This is an DEMO router. You can remove this to fit your site
-        //   router: ({ document }) => `/${document._sys.filename}`,
-        // },
       },
 
       {
@@ -179,7 +174,6 @@ export default defineConfig({
 
         ],
         ui: {
-          // This is an DEMO router. You can remove this to fit your site
           router: ({ document }) => `/service/${document._sys.filename}`,
         },
       },
@@ -259,7 +253,7 @@ export default defineConfig({
             type: "string",
             name: "title_ar",
             label: "Title In Arabic",
-            required: true,
+
           },
           {
             type: "image",
@@ -283,7 +277,7 @@ export default defineConfig({
             type: "string",
             name: "shortDescription_ar",
             label: "Short Description In Arabic",
-            // required: true,
+           
 
             ui: {
               component: "textarea"
@@ -360,6 +354,16 @@ export default defineConfig({
               component: "textarea"
             }
           },
+          {
+            type: "string",
+            name: "opinion_ar",
+            label: "Opinion In Arabic",
+            required: true,
+
+            ui: {
+              component: "textarea"
+            }
+          },
 
 
 
@@ -382,7 +386,7 @@ export default defineConfig({
             type: "string",
             name: "question_ar",
             label: "Question In Arabic",
-            // required: true,
+            
           },
 
           {
@@ -399,7 +403,6 @@ export default defineConfig({
             type: "string",
             name: "answer_ar",
             label: "Answer In Arabic",
-            // required: true,
 
             ui: {
               component: "textarea"
@@ -639,13 +642,10 @@ export default defineConfig({
                   }
 
                 ],
-                disabled: true,
+                
               }
 
-
             ],
-
-
 
           }
 
@@ -725,8 +725,6 @@ export default defineConfig({
                     required: true,
 
                   },
-
-
 
                 ],
                 disabled: true,

@@ -3,6 +3,7 @@ import SliderShow from '../molecules/SliderShow';
 import Image from 'next/image';
 import Card from '../atoms/Card';
 import Heading from '../molecules/Heading';
+import Notation from '../atoms/Notation';
 
 
 const responsive = [
@@ -38,7 +39,7 @@ const OurTeamMember = ({teamMeambers=[]}) => {
       <Heading keyword='Meet the team' title='Profession Expert team'/>
       <div className=' mx-auto mt-12'>
         <SliderShow
-          slidePerPage={7}
+          slidePerPage={6}
           showDot={false}
           responsiveSlide= {responsive}
           // showArrow={true}
@@ -58,7 +59,8 @@ const OurTeamMember = ({teamMeambers=[]}) => {
                     height={227}
                   />
 
-                  <div className='z-40 hidden group-hover:block absolute bottom-0 right-5 bg-white rounded-lg px-2 py-2 xl:py-3.5 xl:px-5'>
+                  <div className='text-center z-40 hidden group-hover:block absolute bottom-0 lg:-bottom-5 right-5 bg-white rounded-lg px-2 py-2 xl:py-3.5 xl:px-5'>
+                    <Notation/>
                     <p className='text-sm font-bold text-blackPearl'>
                       {item?.name}
                     </p>
