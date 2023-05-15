@@ -13,8 +13,6 @@ import { useTranslation } from 'react-i18next';
 const Footer = ({ footerInfo = {}, socialMediaAccount = {} }) => {
   const { t, i18n } = useTranslation();
 
-  console.log({footerInfo})
-
   return (
     <footer className='bg-gradient-darkBlack'>
       <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-5 md:pt-14 md:pb-11'>
