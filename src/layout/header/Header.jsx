@@ -86,7 +86,7 @@ const Header = ({ isTransparent = false }) => {
                   <li key={item.name}>
                     <NavLink
                       path={item?.path}
-                      className='text-blackPearl/50 hover:text-blackPearl hover:font-medium'
+                      className='text-blackPearl/50 hover:text-blackPearl font-[300] hover:font-medium'
                     >
                       {item?.name}
                     </NavLink>
