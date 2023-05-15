@@ -130,7 +130,7 @@ const Header = ({ isTransparent = false }) => {
               ))}
           </div>
 
-          <div className='flex justify-start mt-6 mx-10'>
+          <div className='flex items-center justify-start mt-6 mx-10'>
 
             <LangChange />
 
