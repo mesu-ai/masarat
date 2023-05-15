@@ -31,7 +31,7 @@ export default defineConfig({
           {
             name: 'homeheroSection',
             label: 'Home Page Hero Section',
-            list:true,
+            list: true,
             type: 'object',
             fields: [
               {
@@ -377,7 +377,7 @@ export default defineConfig({
           },
 
 
-        
+
         ],
         // ui: {
         //   // This is an DEMO router. You can remove this to fit your site
@@ -703,8 +703,8 @@ export default defineConfig({
                     name: "description",
                     label: "Footer Description",
                     required: true,
-                    ui:{
-                      component:'textarea'
+                    ui: {
+                      component: 'textarea'
                     }
                   },
                   {
@@ -712,10 +712,10 @@ export default defineConfig({
                     name: "description_ar",
                     label: "Footer Description In Arabic",
 
-                    ui:{
-                      component:'textarea'
+                    ui: {
+                      component: 'textarea'
                     }
-                    
+
                   }
                 ]
               },
@@ -733,7 +733,7 @@ export default defineConfig({
                     type: 'string',
                     name: 'tweeter',
                     label: 'Tweeter',
-                    required:true,
+                    required: true,
 
                   },
                   {
@@ -746,11 +746,11 @@ export default defineConfig({
                     type: 'string',
                     name: 'youtube',
                     label: 'Youtube',
-                    required:true,
+                    required: true,
 
                   },
-                  
-                  
+
+
 
                 ],
                 disabled: true,
