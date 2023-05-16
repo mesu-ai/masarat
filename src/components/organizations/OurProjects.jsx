@@ -6,6 +6,7 @@ import project2 from '@/assets/images/project2.png';
 import project3 from '@/assets/images/project3.png';
 import Card from '../atoms/Card';
 import Heading from '../molecules/Heading';
+import Notation from '../atoms/Notation';
 
 const projectsdatas = [
   {
@@ -58,9 +59,10 @@ const OurProjects = ({projects=[]}) => {
               height={277}
             />
 
-            <div className='z-40 shadow-lg hidden group-hover:block absolute -bottom-10 right-10 bg-white rounded-lg px-2 py-2 xl:py-3.5 xl:px-5'>
+            <div className='text-center z-40 shadow-lg hidden group-hover:block absolute -bottom-10 right-10 bg-white rounded-lg p-5 sm:p-3 xl:p-4 min-w-[150px]  lg:min-w-[222px] '>
+              <Notation/>
               <HeadingL className='text-blackPearl'>{item?.name}</HeadingL>
-              <HeadingL className='text-slateBlue'>
+              <HeadingL className='text-slateBlue '>
                 {item?.type}
               </HeadingL>
             </div>

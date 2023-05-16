@@ -4,6 +4,7 @@ import HeroSection from '@/components/organizations/HeroSection';
 import Header from '@/layout/header/Header';
 import Footer from '@/layout/footer/Footer';
 import bgimage from '@/assets/images/heroBg.png';
+import bgimageAr from '@/assets/images/heroBgAr.png';
 import ContactUsBanner from '@/components/organizations/ContactUsBanner';
 import OurServices from '@/components/organizations/OurServices';
 import OurProjects from '@/components/organizations/OurProjects';
@@ -11,6 +12,8 @@ import OurSolution from '@/components/organizations/OurSolution';
 import OurPartner from '@/components/organizations/OurPartner';
 import { getAllPosts } from '@/lib/api';
 import OurTeamMember from '@/components/organizations/OurTeamMember';
+import { useTranslation } from 'react-i18next';
+import i18n from '@/i18n/config';
 // import { getAllData } from '@/lib/customApi';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -22,9 +25,16 @@ const bgstyle = {
   backgroundPosition: 'center',
 };
 
+const bgstyleAr = {
+  backgroundImage: `url(${bgimageAr.src})`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+};
+
 const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[],ourServices=[],contactBanner={},heroSection={}}) => {
 
- 
+ const {i18n}=useTranslation();
 
   return (
     <>
@@ -40,11 +50,10 @@ const Home = ({clientReviews=[] , ourPartners=[],ourMembers=[],ourProjects=[],ou
 
 
 Home.getLayout = (page) => {
-  // console.log(page?.props?.children?.props)
-  // page?.props?.children?.props?.clientReviews
+ 
   const {clientReviews,heroSection,socialMediaAccount,footerInfo}=page?.props?.children?.props;
   return(<>
-    <div style={bgstyle}>
+    <div style={i18n.language=== 'en' ? bgstyle : bgstyleAr}>
       <div>
         <Header />
         <HeroSection clientReviews={clientReviews} heroSection={heroSection}/>

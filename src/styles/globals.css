@@ -2,29 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url('https://fonts.cdnfonts.com/css/neo-sans-arabic');
+
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+  font-family: 'Neo Sans Arabic', sans-serif;
+  /* font-family: 'Neo Sans', sans-serif; */
+
+}
+
 
 /* custome gradient color  */
 
@@ -67,7 +54,7 @@ body {
 
 /* custome container */
 
-/* .ltr\:container-left {
+.ltr\:container-left {
   margin-right: 0;
   margin-left: 0;
 }
@@ -75,108 +62,59 @@ body {
 .rtl\:container-right {
   margin-right: 0;
   margin-left: 0;
-} */
+}
 
 @media (min-width: 640px) {
   .ltr\:container-left {
     margin-right: 0;
     margin-left: calc(50vw - 320px);
   }
-  /* .rtl\:container-right {
-    margin-left: 0;
-    margin-right: calc(50vw - 320px);
-  } */
-}
-@media (min-width: 768px) {
-  .ltr\:container-left {
-    margin-right: 0;
-    margin-left: calc(50vw - 384px);
-  }
-  /* .rtl\:container-right {
-    margin-left: 0;
-    margin-right: calc(50vw - 384px);
-  } */
-}
-@media (min-width: 1024px) {
-  .ltr\:container-left {
-    margin-right: 0;
-    margin-left: calc(50vw - 512px);
-  }
-  /* .rtl\:container-right {
-    margin-left: 0;
-    margin-right: calc(50vw - 512px);
-  } */
-}
-@media (min-width: 1280px) {
-  .ltr\:container-left {
-    margin-right: 0;
-    margin-left: calc(50vw - 640px);
-  }
-  /* .rtl\:container-right {
-    margin-left: 0;
-    margin-right: calc(50vw - 640px);
-  } */
-}
-@media (min-width: 1536px) {
-  .ltr\:container-left {
-    margin-right: 0;
-    margin-left: calc(50vw - 768px);
-  }
-  /* .rtl\:container-right {
-    margin-left: 0;
-    margin-right: calc(50vw - 768px);
-  } */
-}
-@media (min-width: 640px) {
-  /* .ltr\:container-left {
-    margin-right: 0;
-    margin-left: calc(50vw - 320px);
-  } */
   .rtl\:container-right {
     margin-left: 0;
     margin-right: calc(50vw - 320px);
   }
 }
 @media (min-width: 768px) {
-  /* .ltr\:container-left {
+  .ltr\:container-left {
     margin-right: 0;
     margin-left: calc(50vw - 384px);
-  } */
+  }
   .rtl\:container-right {
     margin-left: 0;
     margin-right: calc(50vw - 384px);
   }
 }
 @media (min-width: 1024px) {
-  /* .ltr\:container-left {
+  .ltr\:container-left {
     margin-right: 0;
     margin-left: calc(50vw - 512px);
-  } */
+  }
   .rtl\:container-right {
     margin-left: 0;
     margin-right: calc(50vw - 512px);
   }
 }
 @media (min-width: 1280px) {
-  /* .ltr\:container-left {
+  .ltr\:container-left {
     margin-right: 0;
     margin-left: calc(50vw - 640px);
-  } */
+  }
   .rtl\:container-right {
     margin-left: 0;
     margin-right: calc(50vw - 640px);
   }
 }
 @media (min-width: 1536px) {
-  /* .ltr\:container-left {
+  .ltr\:container-left {
     margin-right: 0;
     margin-left: calc(50vw - 768px);
-  } */
+  }
   .rtl\:container-right {
     margin-left: 0;
     margin-right: calc(50vw - 768px);
   }
 }
+
 
 .ourPartner-flex {
   display: flex !important;

@@ -21,9 +21,11 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'gradient-timberGreen': 'gradient-timberGreen(from 102.53deg, #0f241fb3 at 3.7% , #0F241E 102.89% var(--tw-gradient-stops))'
+        'gradient-conic':'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-timberGreen': 'gradient-timberGreen(from 102.53deg, #0f241fb3 at 3.7% , #0F241E 102.89% var(--tw-gradient-stops))',
+        
+
+
       },
 
       boxShadow: {
