@@ -1,6 +1,6 @@
 ---
 homeheroSection:
-  - titleKeyword: Best Supportive Team Ever!!
+  - titleKeyword: Best Supportive Team Ever you can get!!
     titleKeyword_ar: أفضل فريق داعم على الإطلاق
     title: We Support To Grow Your Business!!
     title_ar: نحن ندعم تنمية أعمالك
@@ -11,5 +11,6 @@ homeheroSection:
       اختر مسارات ديجيتال لتحصل على تطوير البرمجيات ودعم الاستشارات التقنية
       والذكاء الاصطناعي لمنتجاتك الرقمية.
 ---
+
 
 
