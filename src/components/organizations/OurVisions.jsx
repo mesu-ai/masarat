@@ -4,7 +4,7 @@ import ParagraphText from '../atoms/ParagraphText';
 
 const OurVisions = () => {
   return (
-    <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 text-center'>
+    <div id='vision' className='container mx-auto px-6 sm:px-0 xl:px-10  pt-20 xl:pt-36 text-center'>
       <Heading
         className='mb-6 sm:mb-10 lg:mb-16'
         keyword='Our Visions'

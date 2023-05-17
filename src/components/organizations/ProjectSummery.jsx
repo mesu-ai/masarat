@@ -8,7 +8,7 @@ import ParagraphText from '../atoms/ParagraphText';
 const ProjectSummery = ({aboutSummery={}}) => {
   
   return (
-    <div className=' container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 '>
+    <div className=' container mx-auto px-6 sm:px-0 xl:px-10  '>
       <div className='bg-thinGreen grid sm:grid-cols-3 gap-7 text-center rounded-[36px] py-[45px] md:py-[70px]'>
         
           <div  className='sm:space-y-4'>

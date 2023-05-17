@@ -12,9 +12,9 @@ const footerRoutes = [
 
   {
     title: 'About us', lists: [
-      { name: 'Our Vision',name_ar:'رؤيتنا', path: '/ourVision', exact: true },
-      { name: 'Our Team',name_ar:'فريقنا', path: '/#team', exact: true },
-      { name: 'Our Works',name_ar:'أعمالنا', path: '/ourWorks', exact: true }
+      { name: 'Our Vision',name_ar:'رؤيتنا', path: '/aboutUs#vision', exact: true },
+      { name: 'Our Team',name_ar:'فريقنا', path: '/aboutUs#team', exact: true },
+      { name: 'Our Works',name_ar:'أعمالنا', path: '/aboutUs#work', exact: true }
     ]
   },
 

@@ -43,7 +43,7 @@ const projectsdatas = [
 
 const OurProjects = ({projects=[]}) => {
   return (
-    <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 '>
+    <div className='container mx-auto px-6 sm:px-0 xl:px-10 '>
       <Heading className='text-center' keyword='Our Projects' title='Latest Project We Have Delivered'/>
       <div className='mt-4 grid  sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-14  py-12 '>
         {projects && projects.map((item, index) => (

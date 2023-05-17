@@ -1,4 +1,4 @@
-const TwitterIcon = ({ width = 18, height = 15, className = '' }) => {
+const TwitterIcon = ({ width = 20, height = 16, className = '' }) => {
   return (
     <svg
       width={width}
