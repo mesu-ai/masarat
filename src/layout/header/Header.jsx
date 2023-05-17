@@ -106,10 +106,10 @@ const Header = ({ isTransparent = false }) => {
         </div>
       </div>
 
-      {/* style={bgstyle} */}
+     
       {open && (
         <ul
-          // style={bgstyle}
+         
           className='block bg-white lg:hidden  absolute pt-4 h-screen w-full right-0  z-50 scroll '
         >
           <div className='px-10 pt-2 pb-3 space-y-3'>
