@@ -1,10 +1,9 @@
 ---
-name: hjhj
+name: Computer Science
 name_ar: رياضات
 icon: /stategyIcon.png
-shortDescription: nmnmvbvvvvvvvvvvvvvvvv
+shortDescription: Learn More from me.
 shortDescription_ar: dsrfdfdssssssssssss
-serviceDetails: |
-  # Hello Dear
+serviceDetails_ar: ''
 ---
 
