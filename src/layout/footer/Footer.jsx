@@ -25,7 +25,7 @@ const Footer = ({ footerInfo = {}, socialMediaAccount = {} }) => {
                 alt='logo'
               />
             </NavLink>
-            <p className='text-sm text-white/50  xl:max-w-md'>
+            <p className='mt-8 text-sm text-white/50  xl:max-w-md'>
             {i18n.language === 'en'
                   ? footerInfo?.description
                   : footerInfo?.description_ar

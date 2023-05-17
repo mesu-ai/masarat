@@ -47,8 +47,8 @@ const Header = ({ isTransparent = false }) => {
 
   return (
    
-    <nav className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3'>
-      <div className='relative'>
+    <nav className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 '>
+      <div className='relative pt-14 pb-8'>
         <div className='absolute inset-y-0 right-0 rtl:right-auto rtl:left-0 flex items-center lg:hidden'>
           <button
             type='button'
@@ -80,13 +80,13 @@ const Header = ({ isTransparent = false }) => {
           </div>
 
           <div className='hidden lg:flex justify-center'>
-            <ul className='flex flex-row justify-center items-center space-x-4'>
+            <ul className='flex flex-row justify-center items-center gap-8 xl:gap-10'>
               {headerRoutes &&
                 headerRoutes?.map((item) => (
                   <li key={item.name}>
                     <NavLink
                       path={item?.path}
-                      className='text-blackPearl/50 hover:text-blackPearl hover:font-medium'
+                      className='text-base  text-blackPearl/50 hover:text-blackPearl font-medium hover:font-medium'
                     >
                       {item?.name}
                     </NavLink>
@@ -95,7 +95,7 @@ const Header = ({ isTransparent = false }) => {
             </ul>
           </div>
 
-          <div className='hidden lg:flex items-center'>
+          <div className='hidden lg:flex items-center gap-8'>
 
             <LangChange />
 
@@ -122,7 +122,7 @@ const Header = ({ isTransparent = false }) => {
                 >
                   <NavLink
                     path={item.path}
-                    className='block text-start mx-5  text-blackPearl/50 hover:text-blackPearl hover:font-medium'
+                    className='block ltr:text-start rtl:text-end mx-5 my-4 text-blackPearl/50 hover:text-blackPearl hover:font-medium'
                   >
                     {item.name}
                   </NavLink>
@@ -130,7 +130,7 @@ const Header = ({ isTransparent = false }) => {
               ))}
           </div>
 
-          <div className='flex items-center justify-start mt-6 mx-10'>
+          <div className='flex items-center justify-start gap-10 mt-6 mx-10'>
 
             <LangChange />
 

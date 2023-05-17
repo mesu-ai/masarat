@@ -3,12 +3,40 @@
 @tailwind utilities;
 
 
-/* @import url('https://fonts.cdnfonts.com/css/neo-sans-arabic'); */
+/* font neo sans arabic */
+
+@font-face {
+  font-family: 'Neo Sans Arabic';
+  src: url('../assets/font/NeoSansArabic.woff2') format('woff2'),
+      url('../assets/font/NeoSansArabic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Neo Sans Arabic';
+  src: url('../assets/font/NeoSansArabic-Medium.woff2') format('woff2'),
+      url('../assets/font/NeoSansArabic-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Neo Sans Arabic';
+  src: url('../assets/font/NeoSansArabic-Bold.woff2') format('woff2'),
+      url('../assets/font/NeoSansArabic-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
 
 body {
-  /* font-family: 'Neo Sans Arabic', sans-serif; */
-  /* font-family: 'Neo Sans', sans-serif; */
+  font-family: 'Neo Sans Arabic';
 
 }
 
