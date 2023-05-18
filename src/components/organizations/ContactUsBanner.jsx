@@ -14,7 +14,7 @@ const ContactUsBanner = ({contactBanner={}}) => {
   const { t, i18n } = useTranslation();
   
   return (
-    <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 mt-28 mb-20'>
+    <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 mt-36 mb-20'>
       <Card className='grid md:grid-cols-2 rounded-[32px] bg-lightGreen/50 py-10 px-10 md:py-0'>
         <div className='hidden md:block'>
           <Image

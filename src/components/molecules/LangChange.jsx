@@ -37,7 +37,7 @@ const LangChange = () => {
         id='country'
         name='country'
         value={i18n?.language}
-        className='max-h-14 py-3 px-7 text-slateBlue  block border border-slateBlue bg-transparent rounded-md focus:outline-none  sm:text-base'
+        className='min-h-[3.1rem]  px-5 text-slateBlue  block border-[1.2px] border-slateBlue bg-transparent rounded-md focus:outline-none  sm:text-base'
         onChange={(e) => changeLanguageOnSelect(e.target.value)}
       >
         {languages.map((language) => (

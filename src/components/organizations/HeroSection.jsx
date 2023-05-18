@@ -18,8 +18,8 @@ const HeroSection = ({ clientReviews = [],heroSection={} }) => {
 
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 '>
-      <div className='grid grid-cols-2'>
-        <div>
+      <div className='grid grid-cols-3 lg:grid-cols-2'>
+        <div className=' col-span-3 sm:col-span-2 lg:col-span-1'>
           <li className='list-none flex items-center gap-6 mb-6'>
             <SupportIcon />
             <HeadingXL>{i18n.language === 'en'
@@ -63,7 +63,6 @@ const HeroSection = ({ clientReviews = [],heroSection={} }) => {
           </div>
         </div>
       </div>
-      <div />
     </div>
   );
 };

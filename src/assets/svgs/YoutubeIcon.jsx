@@ -1,5 +1,5 @@
 // 21,15
-const YoutubeIcon = ({ width = 18, height = 15, className = '' }) => {
+const YoutubeIcon = ({ width = 20, height = 16, className = '' }) => {
   return (
     <svg
       width={width}

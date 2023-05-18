@@ -17,6 +17,10 @@ const BreadCrumb = () => {
           ? 'Service Details'
           : route.pathname.includes('contactUs') 
           ? 'Contact us'
+          : route.pathname.includes('termsAndConditions') 
+          ? 'Terms And Condition'
+          : route.pathname.includes('privacyPolicy') 
+          ? 'Privacy Policy'
           : 'Nothing'}
       </Heading6XL>
     
@@ -30,6 +34,10 @@ const BreadCrumb = () => {
           ? 'Service Details'
           : route.pathname.includes('contactUs') 
           ? 'Contact us'
+          : route.pathname.includes('termsAndConditions') 
+          ? 'Terms And Condition'
+          : route.pathname.includes('privacyPolicy') 
+          ? 'Privacy Policy'
           : 'Nothing'}
       </h3>
     </div>

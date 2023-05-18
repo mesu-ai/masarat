@@ -653,6 +653,75 @@ export default defineConfig({
       },
 
       {
+        name: "policyAndconditions",
+        label: "Policy & Conditions",
+        path: "content/policyAndconditions",
+        // ui: {
+        //   allowedActions: {
+        //     create: false,
+        //     delete: false,
+        //   },
+        // },
+        fields: [
+          {
+            name: 'masaratPolicyConditions',
+            label: 'Masarat Policy & Condition Section',
+            type: 'object',
+            list: true,
+
+            templates: [
+              {
+                label: 'Masarat Privary Policy',
+                name: 'masaratPrivaryPolicy',
+                fields: [
+                  {
+                    type: "rich-text",
+                    name: "privacyPolicy",
+                    label: "Privacy Policy",
+                    isBody: true,
+                    required: true,
+                  },
+                  {
+                    type: "rich-text",
+                    name: "privacyPolicy_ar",
+                    label: "Privacy Policy In Arabic",
+                    isBody: true,
+                    required: true,
+                  },
+                ]
+              },
+              {
+                label: 'Masarat Terms & Conditions',
+                name: 'masaratTermsConditions',
+                fields: [
+                  {
+                    type: "rich-text",
+                    name: "termsConditions",
+                    label: "Terms & Conditions",
+                    isBody: true,
+                    required: true,
+                  },
+                  {
+                    type: "rich-text",
+                    name: "termsConditions_ar",
+                    label: "Terms & Conditions In Arabic",
+                    isBody: true,
+                    required: true,
+                  },
+                ]
+              },
+
+            ],
+
+
+
+          }
+
+        ],
+      
+      },
+
+      {
         name: "footerSection",
         label: "Footer",
         path: "content/footerSection",
@@ -729,7 +798,6 @@ export default defineConfig({
                 ],
                 disabled: true,
               }
-
 
             ],
 

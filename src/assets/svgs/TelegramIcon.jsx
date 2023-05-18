@@ -1,4 +1,4 @@
-const TelegramIcon = ({ width = 18, height = 15, className = '' }) => {
+const TelegramIcon = ({ width = 20, height = 16, className = '' }) => {
   return (
     <svg
       width={width}

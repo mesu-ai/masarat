@@ -34,7 +34,7 @@ const responsive = [
 
 const OurTeamMember = ({teamMeambers=[]}) => {
   return (
-    <div id='team' className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36'>
+    <div id='team' className='container mx-auto px-6 sm:px-0 xl:px-10  pt-20 xl:pt-36'>
       
       <Heading keyword='Meet the team' title='Profession Expert team'/>
       <div className=' mx-auto mt-12'>
