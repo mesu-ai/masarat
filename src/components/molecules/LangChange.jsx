@@ -8,6 +8,13 @@ import SupportIcon from '@/assets/svgs/SupportIcon';
 const LangChange = () => {
   const { i18n } = useTranslation();
 
+  const bgstyle = {
+    backgroundImage: `url(${i18n.language==='en' ? enFlag.src : saFlag.src})`,
+    backgroundSize: '30px 30px',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: `${i18n.language==='en' ? 'center left 5px' : 'center right 5px'}`,
+  };
+
   const languages = [
     {
       code: 'en',
@@ -33,11 +40,13 @@ const LangChange = () => {
   };
 
   return (
+    <form>
       <select
+        style={bgstyle}
         id='country'
         name='country'
         value={i18n?.language}
-        className='min-h-[3.1rem]  px-5 text-slateBlue  block border-[1.2px] border-slateBlue bg-transparent rounded-md focus:outline-none  sm:text-base'
+        className='ltr:ps-10 ltr:pe-3 rtl:pe-10 rtl:ps-3 min-h-[3.1rem] text-slateBlue  block border-[1.2px] border-slateBlue bg-transparent rounded-md focus:outline-none text-base'
         onChange={(e) => changeLanguageOnSelect(e.target.value)}
       >
         {languages.map((language) => (
@@ -45,11 +54,17 @@ const LangChange = () => {
             disabled={i18n?.language === language.code}
             key={language.code}
             value={language.code}
+            
           >
-            {language?.title}
+            
+           {language?.title}
           </option>
         ))}
+
       </select>
+
+    </form>
+      
     
   );
 };
