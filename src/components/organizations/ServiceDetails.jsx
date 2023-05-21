@@ -11,14 +11,13 @@ import HtmlToMarkdown from '../molecules/HtmlToMarkdown';
 
 const ServiceDetails = ({ services = [], service = {} }) => {
   const router = useRouter();
-  // console.log(router?.query?.slug)
 
   const [selectService, setSelectService] = useState(
     router?.query?.slug ? service : services[0]
   );
   const { i18n } = useTranslation();
 
- 
+
 
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 2xl:pt-20'>
@@ -34,37 +33,33 @@ const ServiceDetails = ({ services = [], service = {} }) => {
                   key={index}
                   type='button'
                   onClick={() => setSelectService(serviceItem)}
-                  className={`w-full group rounded-lg shadow-lightShadow hover:bg-timberGreen  flex items-center justify-between py-3 px-5 ${
-                    serviceItem?.name === selectService?.name
-                      ? 'bg-timberGreen'
-                      : ''
-                  }`}
+                  className={`w-full group rounded-lg shadow-lightShadow hover:bg-timberGreen  flex items-center justify-between py-3 px-5 ${serviceItem?.name === selectService?.name
+                    ? 'bg-timberGreen'
+                    : ''
+                    }`}
                 >
                   <p
-                    className={`font-medium text-blackPearl group-hover:text-white ${
-                      serviceItem?.name === selectService?.name
-                        ? 'text-white'
-                        : ''
-                    }`}
+                    className={`font-medium text-blackPearl group-hover:text-white ${serviceItem?.name === selectService?.name
+                      ? 'text-white'
+                      : ''
+                      }`}
                   >
                     {i18n.language === 'en'
                       ? serviceItem?.name
                       : serviceItem?.name_ar
-                      ? serviceItem?.name_ar
-                      : serviceItem?.name}
+                        ? serviceItem?.name_ar
+                        : serviceItem?.name}
                   </p>
                   <NextIcon
-                    className={`group-hover:hidden rtl:rotate-180 ${
-                      serviceItem?.name === selectService?.name ? 'hidden' : ''
-                    }`}
+                    className={`group-hover:hidden rtl:rotate-180 ${serviceItem?.name === selectService?.name ? 'hidden' : ''
+                      }`}
                     color='#657791 '
                   />
                   <NextIcon
-                    className={`group-hover:block rtl:rotate-180 ${
-                      serviceItem?.name === selectService?.name
-                        ? 'block'
-                        : 'hidden'
-                    }`}
+                    className={`group-hover:block rtl:rotate-180 ${serviceItem?.name === selectService?.name
+                      ? 'block'
+                      : 'hidden'
+                      }`}
                   />
                 </button>
               ))}
@@ -77,8 +72,8 @@ const ServiceDetails = ({ services = [], service = {} }) => {
               {i18n.language === 'en'
                 ? selectService?.name
                 : selectService?.name_ar
-                ? selectService?.name_ar
-                : selectService?.name}
+                  ? selectService?.name_ar
+                  : selectService?.name}
             </Heading5XL>
           </div>
           <div className='mt-14'>
@@ -87,8 +82,8 @@ const ServiceDetails = ({ services = [], service = {} }) => {
                 i18n.language === 'en'
                   ? selectService?.serviceDetails
                   : selectService?.serviceDetails_ar
-                  ? selectService?.serviceDetails_ar
-                  : selectService?.serviceDetails
+                    ? selectService?.serviceDetails_ar
+                    : selectService?.serviceDetails
               }
             />
 

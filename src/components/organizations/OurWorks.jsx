@@ -3,8 +3,7 @@ import Heading from '../molecules/Heading';
 // import VideoPlayer from '../molecules/VideoPlayer';
 // import cartoon from '@/assets/video/cartoon.mp4';
 
-const OurWorks = ({ourvideo}) => {
-  console.log(ourvideo[0]?.workingVideoLink)
+const OurWorks = ({ ourvideo }) => {
   // const videoRef = useRef(null);
   // const [isPlaying, setIsPlaying] = useState(false);
   // const [error, setError] = useState(false);
@@ -28,13 +27,13 @@ const OurWorks = ({ourvideo}) => {
   return (
     <div id='work' className='container mx-auto px-6 sm:px-0 xl:px-10  mb-20 xl:mb-36 pt-20 xl:pt-36 text-center'>
       <Heading
-       
+
         keyword='Our Works'
         title='This is How We Works'
       />
       <div className='flex justify-center rounded-3xl mt-16'>
         <iframe
-         className='rounded-3xl w-[56rem] h-96 lg:h-[32rem]'
+          className='rounded-3xl w-[56rem] h-96 lg:h-[32rem]'
           // width='900'
           // height='505'
           allowFullScreen

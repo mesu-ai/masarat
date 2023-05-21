@@ -8,9 +8,8 @@ import projectManager from '@/assets/images/projectManager.png';
 import { useTranslation } from 'react-i18next';
 
 
-const ProjectManagerInfo = ({aboutManagement={}}) => {
-  const {i18n}=useTranslation();
-  // console.log({aboutManagement})
+const ProjectManagerInfo = ({ aboutManagement = {} }) => {
+  const { i18n } = useTranslation();
 
   return (
     <div className='container mx-auto grid sm:grid-cols-3 gap-10 xl:gap-20 px-6 sm:px-0 xl:px-10  py-0 lg:py-3 mb-20 xl:mb-36'>
@@ -26,17 +25,17 @@ const ProjectManagerInfo = ({aboutManagement={}}) => {
       <div className='col-span-2  my-auto'>
         <div className='space-y-6'>
           <Heading5XL>
-          {i18n.language === 'en'
-                ? aboutManagement?.quote?.title
-                : aboutManagement?.quote?.title_ar
+            {i18n.language === 'en'
+              ? aboutManagement?.quote?.title
+              : aboutManagement?.quote?.title_ar
                 ? aboutManagement?.quote?.title_ar
                 : aboutManagement?.quote?.title}
           </Heading5XL>
 
           <ParagraphText>
-          {i18n.language === 'en'
-                ? aboutManagement?.quote?.description
-                : aboutManagement?.quote?.description_ar
+            {i18n.language === 'en'
+              ? aboutManagement?.quote?.description
+              : aboutManagement?.quote?.description_ar
                 ? aboutManagement?.quote?.description_ar
                 : aboutManagement?.quote?.description}
           </ParagraphText>

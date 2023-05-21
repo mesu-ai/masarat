@@ -4,14 +4,13 @@ import matter from 'gray-matter'
 
 // const postsDirectory = join(process.cwd(), 'content/clientReview')
 
-export function getPostSlugs(pathName='') {
+export function getPostSlugs(pathName = '') {
   const postsDirectory = join(process.cwd(), pathName)
   return fs.readdirSync(postsDirectory)
 }
 
-export function getPostBySlug(slug, fields=[], pathName='') {
+export function getPostBySlug(slug, fields = [], pathName = '') {
   const postsDirectory = join(process.cwd(), pathName)
-  console.log(postsDirectory)
 
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
@@ -37,9 +36,7 @@ export function getPostBySlug(slug, fields=[], pathName='') {
   return items
 }
 
-export function getAllPosts(fields = [], pathName='') {
-  console.log(pathName)
-  
+export function getAllPosts(fields = [], pathName = '') {
   const slugs = getPostSlugs(pathName)
 
   const posts = slugs

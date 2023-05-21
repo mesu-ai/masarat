@@ -11,7 +11,7 @@ import InputField from '../atoms/InputField';
 import Button from '../atoms/Button';
 import { useTranslation } from 'react-i18next';
 
-const ContractForm = ({contactInfo={}}) => {
+const ContractForm = ({ contactInfo = {} }) => {
   const [data, setData] = useState({});
   const { t } = useTranslation();
 
@@ -25,7 +25,6 @@ const ContractForm = ({contactInfo={}}) => {
   };
 
   const handleSubmit = (e) => {
-    // console.log(data);
     e.preventDefault();
   };
 

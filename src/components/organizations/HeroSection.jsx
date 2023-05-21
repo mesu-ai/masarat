@@ -11,10 +11,8 @@ import { getAllData } from '@/lib/customApi';
 import Link from 'next/link';
 
 
-const HeroSection = ({ clientReviews = [],heroSection={} }) => {
-  const { t,i18n } = useTranslation();
-
-  // console.log(heroSection);
+const HeroSection = ({ clientReviews = [], heroSection = {} }) => {
+  const { t, i18n } = useTranslation();
 
   return (
     <div className='container mx-auto px-6 sm:px-0 xl:px-10  py-0 lg:py-3 '>
@@ -23,24 +21,24 @@ const HeroSection = ({ clientReviews = [],heroSection={} }) => {
           <li className='list-none flex items-center gap-6 mb-6'>
             <SupportIcon />
             <HeadingXL>{i18n.language === 'en'
-                  ? heroSection?.titleKeyword
-                  : heroSection?.titleKeyword_ar
-                  ? heroSection?.titleKeyword_ar
-                  : heroSection?.titleKeyword}
+              ? heroSection?.titleKeyword
+              : heroSection?.titleKeyword_ar
+                ? heroSection?.titleKeyword_ar
+                : heroSection?.titleKeyword}
             </HeadingXL>
           </li>
           <Heading6XL>{i18n.language === 'en'
-                  ? heroSection?.title
-                  : heroSection?.title_ar
-                  ? heroSection?.title_ar
-                  : heroSection?.title}
-                  </Heading6XL>
+            ? heroSection?.title
+            : heroSection?.title_ar
+              ? heroSection?.title_ar
+              : heroSection?.title}
+          </Heading6XL>
           <ParagraphText className='text-slateBlue mt-10'>
-          {i18n.language === 'en'
-                  ? heroSection?.shortDescription
-                  : heroSection?.shortDescription_ar
-                  ? heroSection?.shortDescription_ar
-                  : heroSection?.shortDescription}
+            {i18n.language === 'en'
+              ? heroSection?.shortDescription
+              : heroSection?.shortDescription_ar
+                ? heroSection?.shortDescription_ar
+                : heroSection?.shortDescription}
           </ParagraphText>
 
           <Link href='/contactUs'>
