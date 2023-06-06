@@ -13,6 +13,7 @@ const serviceDetailsPage = ({
   socialMediaAccount = {},
   footerInfo = {},
 }) => {
+  console.log({serivce})
   return (
     <div>
       <ServiceDetails services={allServices?.allServices} service={serivce} />
