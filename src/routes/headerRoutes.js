@@ -1,9 +1,9 @@
 const headerRoutes = [
-  { name: 'Home', path: '/', exact: true },
-  { name: 'About us', path: '/aboutUs', exact: true },
-  { name: 'Products & Services', path: '/productAndService', exact: true },
-  { name: 'Partners', path: '/#ourpartner', exact: true },
-  { name: 'Contact Us', path: '/contactUs', exact: true },
+  { name: 'Home',name_ar:'بيت', path: '/', exact: true },
+  { name: 'About us',name_ar:'عن', path: '/aboutUs', exact: true },
+  { name: 'Products & Services',name_ar:'منتجات وخدمات', path: '/productAndService', exact: true },
+  { name: 'Partners',name_ar:'شركاء', path: '/#ourpartner', exact: true },
+  { name: 'Contact Us', name_ar:'اتصل بنا', path: '/contactUs', exact: true },
 ];
 
 export default headerRoutes;
