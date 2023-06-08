@@ -1,6 +1,6 @@
 ---
-name: Dhaka Stock Excenge
-name_ar: رياضات
+name: Riyadh Stock Excenge
+name_ar: شركة مسارات في الرياض
 icon: /stategyIcon.png
 shortDescription: >-
   Digital services offer a number of advantages over traditional services. They
