@@ -88,7 +88,7 @@ const Header = ({ isTransparent = false }) => {
                       path={item?.path}
                       className='text-base  text-blackPearl/50 hover:text-blackPearl font-medium hover:font-medium'
                     >
-                      {item?.name}
+                      {i18n.language=== 'en' ? item?.name : item?.name_ar }
                     </NavLink>
                   </li>
                 ))}
@@ -124,7 +124,7 @@ const Header = ({ isTransparent = false }) => {
                     path={item.path}
                     className='block ltr:text-start rtl:text-end mx-5 my-4 text-blackPearl/50 hover:text-blackPearl hover:font-medium'
                   >
-                    {item.name}
+                     {i18n.language=== 'en' ? item?.name : item?.name_ar}
                   </NavLink>
                 </li>
               ))}

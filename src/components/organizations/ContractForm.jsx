@@ -10,6 +10,7 @@ import Heading5XL from '../atoms/Heading5XL';
 import InputField from '../atoms/InputField';
 import Button from '../atoms/Button';
 import { useTranslation } from 'react-i18next';
+import { toast } from 'react-toastify';
 
 const ContractForm = ({ contactInfo = {} }) => {
   const [data, setData] = useState({});
@@ -25,7 +26,21 @@ const ContractForm = ({ contactInfo = {} }) => {
   };
 
   const handleSubmit = (e) => {
+    console.log(data)
+    // toast.success('Message Sent Successfully !');
+    toast.success('🦄 Wow so easy!', {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      });
+   
     e.preventDefault();
+
   };
 
 

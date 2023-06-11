@@ -5,6 +5,7 @@ import i18n from '@/i18n/config'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import '@/styles/globals.css'

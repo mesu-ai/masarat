@@ -10,44 +10,6 @@ import ArrowNext from '@/assets/svgs/ArrowNext';
 import Heading from '../molecules/Heading';
 import Link from 'next/link';
 
-// const servicedatas = [
-//   {
-//     icon: statagyIcon,
-//     title: 'Digital Strategy',
-//     shortDecption:
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-//   },
-//   {
-//     icon: statagyIcon,
-//     title: 'Digital Strategy',
-//     shortDecption:
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-//   },
-//   {
-//     icon: statagyIcon,
-//     title: 'Digital Strategy',
-//     shortDecption:
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-//   },
-//   {
-//     icon: statagyIcon,
-//     title: 'Digital Strategy',
-//     shortDecption:
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-//   },
-//   {
-//     icon: statagyIcon,
-//     title: 'Digital Strategy',
-//     shortDecption:
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-//   },
-//   {
-//     icon: statagyIcon,
-//     title: 'Digital Strategy',
-//     shortDecption:
-//       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ',
-//   },
-// ];
 
 const OurServices = ({ services = [] }) => {
   const {t, i18n } = useTranslation();
