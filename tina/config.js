@@ -111,7 +111,7 @@ export default defineConfig({
 
           },
         ],
-       
+
       },
 
       {
@@ -205,7 +205,7 @@ export default defineConfig({
           },
 
         ],
-        
+
       },
 
       {
@@ -235,7 +235,7 @@ export default defineConfig({
           },
 
         ],
-       
+
       },
       {
         name: "teamWorkingProcess",
@@ -277,14 +277,14 @@ export default defineConfig({
             type: "string",
             name: "shortDescription_ar",
             label: "Short Description In Arabic",
-           
+
 
             ui: {
               component: "textarea"
             }
           },
         ],
-       
+
       },
 
       {
@@ -307,7 +307,7 @@ export default defineConfig({
           },
 
         ],
-        
+
       },
 
       {
@@ -368,7 +368,7 @@ export default defineConfig({
 
 
         ],
-       
+
       },
       {
         name: "faq",
@@ -386,7 +386,7 @@ export default defineConfig({
             type: "string",
             name: "question_ar",
             label: "Question In Arabic",
-            
+
           },
 
           {
@@ -409,7 +409,7 @@ export default defineConfig({
             }
           },
         ],
-        
+
       },
 
       {
@@ -557,7 +557,7 @@ export default defineConfig({
             }
           ]
         }],
-       
+
       },
 
       {
@@ -642,7 +642,7 @@ export default defineConfig({
                   }
 
                 ],
-                
+
               }
 
             ],
@@ -718,7 +718,7 @@ export default defineConfig({
           }
 
         ],
-      
+
       },
 
       {
@@ -806,7 +806,7 @@ export default defineConfig({
           }
 
         ],
-      
+
       },
 
 
