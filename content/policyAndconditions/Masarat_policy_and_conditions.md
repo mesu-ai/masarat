@@ -34,18 +34,14 @@ masaratPolicyConditions:
       ###### إذا كان لديك أي أسئلة أو استفسارات حول سياسة الخصوصية الخاصة بنا،
       يرجى الاتصال بنا باستخدام المعلومات المقدمة أدناه.
     _template: masaratTermsConditions
-  - privacyPolicy: >+
+  - privacyPolicy: >
       # Updated as of July 28th, 2023
-
 
 
       At Masarat Digital, we value your trust and respect your privacy. This
       Privacy Policy outlines the types of personal information we collect, how
       we use, share, and protect this information, and the choices you have to
       restrict our usage of this data.
-
-
-
 
 
       ### 1. Information Collection
@@ -57,18 +53,12 @@ masaratPolicyConditions:
       details, and company information.
 
 
-
-
-
       ### 2. Usage of Information
 
 
       The data we collect is used to provide and improve our services, respond
       to your inquiries, send updates about our offerings, and for other
       legitimate business purposes.
-
-
-
 
 
       ### 3. Data Sharing
@@ -80,9 +70,6 @@ masaratPolicyConditions:
       your information confidential.
 
 
-
-
-
       ### 4. Protection of Information
 
 
@@ -91,17 +78,11 @@ masaratPolicyConditions:
       to authorized individuals.
 
 
-
-
-
       ### 5. Cookies
 
 
       We use "cookies" to enhance user experience and analyze website traffic.
       You can choose to disable cookies through your browser settings.
-
-
-
 
 
       ### 6. Third-party Links
@@ -113,9 +94,6 @@ masaratPolicyConditions:
       of every site you visit.
 
 
-
-
-
       ### 7. Consent
 
 
@@ -123,17 +101,11 @@ masaratPolicyConditions:
       to its terms.
 
 
-
-
-
       ### 8. Changes to this Privacy Policy
 
 
       We may update our Privacy Policy from time to time. Thus, we advise you to
       review this page periodically for any changes.
-
-
-
 
 
       ### 9. Contact Us
@@ -144,14 +116,7 @@ masaratPolicyConditions:
       please do not hesitate to contact us at info@masaratdigital.com.
 
 
-
-
-
       Your trust is our main concern. Thank you for choosing Masarat Digital.
-
-
-
-
     privacyPolicy_ar: >
       ## نحن في \[اسم شركتك] ملتزمون بحماية خصوصية معلوماتك الشخصية. فيما يلي
       ملخص لسياسة الخصوصية الخاصة بنا:
