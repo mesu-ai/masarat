@@ -13,6 +13,15 @@ homeheroSection:
 
 
       Test
+  - titleKeyword: About Us
+    title: About Us
+    title_ar: About Us
+    shortDescription: >-
+      At Masarat Digital, we believe in harnessing the transformative power of
+      advanced technologies to drive businesses and industries forward. We
+      specialize in AI and software development, tech consulting, and strategic
+      digital services, shaping the future of HR, Healthcare, Supply Chain, and
+      Sports industries.
 ---
 
 
