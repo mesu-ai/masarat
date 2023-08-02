@@ -1,13 +1,10 @@
 ---
-name: Digital Strategy
+name: Intelligent Automation
 name_ar: كريكيت
 icon: /Number.png
 shortDescription: >-
-  Digital strategy refers to the comprehensive plan and approach taken by
-  organizations to leverage digital technologies, platforms, and channels to
-  achieve their business goals. It involves utilizing digital tools and
-  resources strategically to improve operations, enhance customer experience,
-  and drive growth and innovation.
+  We deliver robotic process automation and digital workforce solutions,
+  including IA discovery workshops and total cost of automation calculations.
 shortDescription_ar: >-
   الاستراتيجية الرقمية تشير إلى الخطة والنهج الشامل الذي يتبعه المؤسسات
   للاستفادة من التقنيات والمنصات الرقمية والقنوات بهدف تحقيق أهدافها التجارية.
@@ -81,4 +78,5 @@ serviceDetails: >
   changing needs of your organization and its target audience in the digital
   landscape.
 ---
+
 
