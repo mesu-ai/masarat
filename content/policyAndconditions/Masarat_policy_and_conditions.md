@@ -35,7 +35,7 @@ masaratPolicyConditions:
       يرجى الاتصال بنا باستخدام المعلومات المقدمة أدناه.
     _template: masaratTermsConditions
   - privacyPolicy: >
-      # Updated as of July 28th, 2023
+      # **Updated as of July 28th, 2023**
 
 
       At Masarat Digital, we value your trust and respect your privacy. This
