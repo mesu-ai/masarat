@@ -1,5 +1,6 @@
 ---
 homeheroSection:
+  - {}
   - titleKeyword: Masarat Digital | Transforming Industries with Advanced Digital Solutions
     titleKeyword_ar: أفضل فريق داعم على الإطلاق
     title: Welcome to Masarat Digital - Your Hub of Innovation and Technology
