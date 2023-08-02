@@ -5,8 +5,8 @@ homeheroSection:
     title: Welcome to Masarat Digital - Your Hub of Innovation and Technology
     title_ar: نحن ندعم تنمية أعمالك
     shortDescription: >-
-      Choose Masarat Digital to get software development, AI & Tech Consulting
-      support for your digital products.!!
+      Step into an innovative phase of your business growth powered by our
+      forward-thinking and flexible technology solutions.
     shortDescription_ar: >
       اختر مسارات ديجيتال لتحصل على تطوير البرمجيات ودعم الاستشارات التقنية
       والذكاء الاصطناعي لمنتجاتك الرقمية. 
