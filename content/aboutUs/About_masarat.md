@@ -1,15 +1,30 @@
 ---
 aboutMasarat:
-  - title: We Have 15 Years Of Experience On Business Development area
+  - title: >-
+      Welcome to Masarat Digital, a cutting-edge tech company reshaping business
+      landscapes across the globe.
     title_ar: لدينا 15 عاما من الخبرة في مجال تطوير الأعمال
     coverPhoto: /aboutBanner.png
-    description: >-
-      Masarat Digital is a Technology company that provide software development,
-      AI & Tech Consulting. Masarat Digital Company is advance technology
-      enabler in various industries/ tracks / paths (HR, Healthcare, Supply
-      Chain & Sports). For the consulting area, Masarat is focusing on digital
-      strategy, process reengineering, digital marketing, digital
-      transformation, digital enablement, and advanced analytics.
+    description: >
+      As an innovative tech company, we focus on artificial intelligence (AI),
+      software development, and tech consulting. Born in Saudi Arabia, we've
+      broadened our scope to serve various industries, including Human
+      Resources, Healthcare, Supply Chain, Agriculture, and Sports. Our diverse
+      suite of advanced products and services forms a one-stop-shop for digital
+      innovation, tailored to provide cutting-edge solutions.
+
+
+      From our humble beginnings in 2018 to a strategic reboot in 2022, we've
+      grown to become a beacon of technological innovation and progress. Our
+      unique operational model stems from a strong focus on forging valuable
+      partnerships and creating carefully curated products. This approach allows
+      us to empower various industries through the use of advanced technologies.
+
+
+      Our ambition fuels our drive to become the innovation and business hub of
+      the region, attracting international partners for collaboration. We're
+      committed to developing unique solutions that cater to our clients' needs,
+      thereby contributing to their growth and success.
     description_ar: >-
       مسارات ديجيتال هي شركة تكنولوجية تقدم خدمات تطوير البرمجيات والاستشارات
       التقنية والذكاء الاصطناعي. شركة مسارات الرقمية هي عامل تمكين تكنولوجي
@@ -43,5 +58,6 @@ aboutMasarat:
     cooperationCompany: 3000+
     _template: projectSummery
 ---
+
 
 
