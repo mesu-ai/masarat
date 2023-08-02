@@ -2,7 +2,7 @@
 homeheroSection:
   - titleKeyword: Masarat Digital | Transforming Industries with Advanced Digital Solutions
     titleKeyword_ar: أفضل فريق داعم على الإطلاق
-    title: We Support To Grow Your Business!!
+    title: Welcome to Masarat Digital - Your Hub of Innovation and Technology
     title_ar: نحن ندعم تنمية أعمالك
     shortDescription: >-
       Choose Masarat Digital to get software development, AI & Tech Consulting
