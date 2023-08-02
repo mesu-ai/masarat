@@ -1,61 +1,7 @@
 ---
 masaratPolicyConditions:
-  - termsConditions: >+
-      ### Information Collection:
-
-
-      1. We collect personal information when you provide it voluntarily.
-
-      2. We also collect non-personal information related to your interaction
-      with our software and services.
-
-      3. Use of Information:
-
-      4. We use the collected information to enhance and improve our software
-      and services.
-
-      5. Personalized user experiences, responding to inquiries, and providing
-      updates and new features are part of our services.
-
-      6. Data Sharing:
-
-      7. We may engage trusted third-party service providers to assist us in
-      delivering and improving our software and services.
-
-      8. We may disclose information if required by law or to protect our
-      rights, property, or safety, as well as that of others.
-
-      9. Data Security:
-
-      10. We implement reasonable security measures to safeguard your personal
-      information.
-
-      11. However, please note that no method of transmission over the Internet
-      or electronic storage is completely secure.
-
-      12. Marketing Communications:
-
-      13. With your consent, we may send you promotional emails and marketing
-      materials.
-
-      14. You have the right to opt-out of receiving such communications at any
-      time.
-
-      15. Children's Privacy:
-
-      16. Our software and services are not intended for children under the age
-      of 13.
-
-      17. We do not knowingly collect personal information from children under
-      13. If we discover such data, we will promptly delete it.
-
-
-      ##### For more information, please read our complete Privacy Policy. Your
-      privacy and the security of your information are important to us.
-
-
-
-    termsConditions_ar: >+
+  - termsConditions: "## Updated as of July 28th, 2023\n\n\nWelcome to Masarat Digital. By using our website and services, you are agreeing to these terms. Please read them carefully.\n\n\n\n\n### 1. Use of Site\n\nYou are authorized to use this site for your personal and non-commercial use. You agree to use this site in accordance with all applicable laws and regulations.\n\n\n\n\n### 2. Intellectual Property\n\nAll content, graphics, and other intellectual property included on our site are the property of Masarat Digital and are protected by copyright laws. You agree not to reproduce, republish, or redistribute any of our intellectual property without our express written consent.\n\n\n\n\n### 3. Your Account\n\nWhen you create an account with us, you must provide us with information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the terms.\n\n\n\n\n### 4. Privacy\n\nOur Privacy Policy details how we collect and use your information. Please review it carefully.\n\n\n\n\n### 5. Links to Other Sites\n\nOur site may contain links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We have no control over and assume no responsibility for the content, privacy policies or practices of any third-party sites or services.\n\n\n\n\n### 6. Limitation of Liability\n\nWe do not guarantee that our website will be secure or free from bugs or viruses. You are responsible for configuring your information technology to access our website.\_\n\n\n\n\n### 7. Changes\n\nWe may revise these terms and conditions at any time by amending this page. Please check this page from time to time to take notice of any changes we made, as they are binding on you.\n\n\n\n\n### 8. Contact Us\n\nIf you have any questions about these Terms, please contact us at info@masaratdigital.com.\n\n\n\n\nBy using our site, you signify your acceptance of these terms and conditions.\n\n\n\n\nThank you for choosing Masarat Digital.\n\n\n\n\n"
+    termsConditions_ar: >
       ## نحن في \[اسم شركتك] ملتزمون بحماية خصوصية معلوماتك الشخصية. فيما يلي
       ملخص لسياسة الخصوصية الخاصة بنا:
 
@@ -87,12 +33,8 @@ masaratPolicyConditions:
 
       ###### إذا كان لديك أي أسئلة أو استفسارات حول سياسة الخصوصية الخاصة بنا،
       يرجى الاتصال بنا باستخدام المعلومات المقدمة أدناه.
-
-
-
-
     _template: masaratTermsConditions
-  - privacyPolicy: >+
+  - privacyPolicy: >
       #### Thank you for choosing \[Your Company Name]. This Privacy Policy
       outlines how we collect, use, disclose, and protect the information we
       obtain from users ("you" or "users") of our software and services. We are
@@ -204,9 +146,7 @@ masaratPolicyConditions:
       If you have any questions, comments, or concerns regarding this Privacy
       Policy or our privacy practices, please contact us at \[Your Contact
       Information].
-
-
-    privacyPolicy_ar: >+
+    privacyPolicy_ar: >
       ## نحن في \[اسم شركتك] ملتزمون بحماية خصوصية معلوماتك الشخصية. فيما يلي
       ملخص لسياسة الخصوصية الخاصة بنا:
 
@@ -233,10 +173,7 @@ masaratPolicyConditions:
 
       ###### إذا كان لديك أي أسئلة أو استفسارات حول سياسة الخصوصية الخاصة بنا،
       يرجى الاتصال بنا باستخدام المعلومات المقدمة أدناه.
-
-
-
-
     _template: masaratPrivaryPolicy
 ---
+
 
