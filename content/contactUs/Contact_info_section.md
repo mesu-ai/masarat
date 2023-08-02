@@ -17,10 +17,11 @@ masaratcontactInfo:
       الإلكترونية ومنصات التواصل الاجتماعي ومقدمي الخدمات عبر الإنترنت.
     _template: contactBanner
   - location: 'Al Dabab Street, Al Ma''azer Dist.Riyadh'
-    phone: (01) 4044875
-    email: info@masadigi.sa
+    phone: '(01) 4044875 '
+    email: ' info@masadigi.sa'
     _template: contactInfo
 ---
+
 
 
 
