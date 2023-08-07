@@ -13,14 +13,6 @@ homeheroSection:
 
 
       Test
-  - titleKeyword: .
-    title: Our Mission & Vision
-    title_ar: Our Mission & Vision
-    shortDescription: >
-      At the heart of our operations is a mission to create value in various
-      industries using advanced technologies. We envision ourselves as the go-to
-      innovation hub in the region, attracting international partners and
-      businesses looking for unique digital solutions.
 ---
 
 
