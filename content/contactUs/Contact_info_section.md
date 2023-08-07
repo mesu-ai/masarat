@@ -1,6 +1,10 @@
 ---
 masaratcontactInfo:
-  - _template: contactBanner
+  - title: Connect with Masarat Digital
+    shortDescription: >-
+      Feel free to reach out with your questions, concerns, or ideas. Our
+      dedicated team is always eager to engage in meaningful dialogues.
+    _template: contactBanner
   - location: 'Al Dabab Street, Al Ma''azer Dist.Riyadh'
     phone: '(01) 4044875 '
     email: ' info@masadigi.sa'
