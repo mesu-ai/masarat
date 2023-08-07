@@ -13,7 +13,7 @@ homeheroSection:
 
 
       Test
-  - titleKeyword: Our Mission & Vision
+  - titleKeyword: .
     title: Our Mission & Vision
     title_ar: Our Mission & Vision
     shortDescription: >
