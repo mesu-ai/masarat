@@ -1,5 +1,5 @@
 ---
-name: Artificial Intelligence & Software Solutions
+name: 'Artificial Intelligence Services '
 name_ar: شركة مسارات في الرياض
 icon: /stategyIcon.png
 shortDescription: >-
