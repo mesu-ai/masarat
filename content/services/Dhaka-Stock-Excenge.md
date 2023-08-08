@@ -22,7 +22,7 @@ serviceDetails_ar: >
   أسرع وأسهل ، ويمكن الوصول إليها من أي مكان ، ويمكن تخصيصها لاحتياجات المستخدم
   الفردية. كما يمكن أن تكون الخدمات الرقمية أكثر تكلفة فعالية من الخدمات
   التقليدية.
-serviceDetails: >+
+serviceDetails: >
   Masarat Digital's AI & Software Solutions represent a new frontier in business
   intelligence. We utilize AI to analyze vast datasets, extract meaningful
   insights, and create actionable strategies. By deploying advanced techniques
@@ -45,6 +45,6 @@ serviceDetails: >+
   ever-changing business landscape with confidence.
 
 
-  ## Learn More →
+  ### Learn More →
 ---
 
