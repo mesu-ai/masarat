@@ -28,7 +28,7 @@ serviceDetails: >+
   the potential of Intelligent Automation. Through these workshops, we aim to
   unravel the complexities of automation, helping you understand how it can be
   tailored to meet your business needs. Moreover, our total cost of automation
-  calculations provide a clear picture of the potential financial benefits that
+  calculations provides a clear picture of the potential financial benefits that
   automation can bring to your business.
 
 
