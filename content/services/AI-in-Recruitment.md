@@ -22,8 +22,8 @@ serviceDetails: >+
 
   Computer vision for CV parsing allows recruiters to extract relevant
   information from resumes swiftly and accurately. It saves a significant amount
-  of time that is typically spent on manual CV screening, and reduces the risk
-  of overlooking qualified candidates. Natural Language Processing aids in
+  of time that is typically spent on manual CV screening and reduces the risk of
+  overlooking qualified candidates. Natural Language Processing aids in
   candidate profile searching, making it easier to locate potential candidates
   from a vast pool of applicants.
 
