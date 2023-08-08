@@ -19,7 +19,6 @@ serviceDetails: >+
   enabling a more efficient, accurate, and effective recruitment process.
 
 
-
   Computer vision for CV parsing allows recruiters to extract relevant
   information from resumes swiftly and accurately. It saves a significant amount
   of time that is typically spent on manual CV screening and reduces the risk of
@@ -28,15 +27,13 @@ serviceDetails: >+
   from a vast pool of applicants.
 
 
-
   By applying numerical data analysis for trend forecasting, we provide insights
   into hiring trends, enabling companies to stay ahead in the competitive
   market. These predictive insights help businesses plan their hiring
   strategies, ensuring they have the right talent when needed.
 
 
-
-  Learn More →
+  ### Learn More →
 
 
 
