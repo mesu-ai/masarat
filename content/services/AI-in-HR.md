@@ -37,7 +37,7 @@ serviceDetails: >+
   competitive edge to businesses.
 
 
-  ### &#xA;CAT: Learn More →
+  ### &#xA;Learn More →
 
 
 
