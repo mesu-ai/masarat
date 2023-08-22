@@ -2,7 +2,7 @@
 aboutMasarat:
   - title: >-
       Welcome to Masarat Digital, a cutting-edge tech company reshaping business
-      landscapes across the globe.
+      landscapes across the globe.,
     title_ar: لدينا 15 عاما من الخبرة في مجال تطوير الأعمال
     coverPhoto: /aboutBanner.png
     description: >
