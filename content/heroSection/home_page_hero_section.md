@@ -2,7 +2,7 @@
 homeheroSection:
   - titleKeyword: Crafting Digital Solutions for Modern Business Challenges
     titleKeyword_ar: أفضل فريق داعم على الإطلاق
-    title: Gym center
+    title: Welcome to Masarat Digital - Your Hub of Innovation and Technology
     title_ar: نحن ندعم تنمية أعمالك
     shortDescription: >-
       Step into an innovative phase of your business growth powered by our
